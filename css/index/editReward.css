@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: red; }
+
+.ui-addReward {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #eee;
+  padding-top: .2rem; }
+
+.ui-addReward__item {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: .88rem;
+  font-size: .32rem;
+  padding: .1rem .4rem .1rem 2rem; }
+  .ui-addReward__item > p {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: .88rem;
+    line-height: .88rem;
+    padding-left: .3rem; }
+  .ui-addReward__item > input {
+    display: block;
+    width: 100%;
+    height: .68rem;
+    line-height: .4rem;
+    padding: 0 .12rem;
+    outline: none;
+    -webkit-border-radius: .08rem;
+       -moz-border-radius: .08rem;
+            border-radius: .08rem;
+    border: 1px solid #999;
+    background-color: #fff; }
+  .ui-addReward__item > select {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: .68rem;
+    padding-right: .52rem;
+    border: 1px solid #999;
+    background-color: #fff; }
+  .ui-addReward__item > i {
+    display: block;
+    position: absolute;
+    width: .4rem;
+    height: .3rem;
+    top: .32rem;
+    right: .64rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: .36rem .2rem;
+       -moz-background-size: .36rem .2rem;
+         -o-background-size: .36rem .2rem;
+            background-size: .36rem .2rem;
+    background-image: url(../../image/index/downArrow.png); }
+
+.ui-addReward__buttom {
+  display: block;
+  width: 100%;
+  height: 1.4rem;
+  font-size: 0;
+  padding-top: .3rem; }
+  .ui-addReward__buttom > span {
+    display: inline-block;
+    width: 50%;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .36rem;
+    color: #333;
+    text-align: center; }
+    .ui-addReward__buttom > span:active {
+      background-color: #ddd; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVkaXRSZXdhcmQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGtCQUFpQjtBQUNqQjs7SUFFRztBQUNIOztJQUVHO0FBQ0gsMEJBQXlCO0FBQ3pCOzs7SUFHRztBQUNILG1CQUFrQjtBQUNsQixrQkFBaUI7QUFDakI7Ozs7O0lBS0c7QUFDSCxVQUFTO0FBQ1QsVUFBUztBQUNULGFBQVk7QUFDWixZQUFXO0FBQ1gsWUFBVztBQUNYLFdBQVU7QUFDVixZQUFXO0FBQ1gsV0FBVTtBQUNWLFdBQVU7QUFDVixXQUFVO0FBQ1YsU0FBUTtBQUNSLFdBQVU7QUFDVixXQUFVO0FBQ1YsV0FBVTtBQUNWLFlBQVc7QUFDWDtFQUNFLFdBQVU7RUFDVixZQUFXO0VBQ1gsdUJBQXNCLEVBQUU7O0FBRTFCO0VBQ0UsZ0JBQWU7RUFDZixpQkFBZ0I7RUFDaEIsV0FBVTtFQUNWLFNBQVE7RUFDUixhQUFZO0VBQ1osYUFBWTtFQUNaLHdCQUF1QjtFQUN2QixvQkFBbUIsRUFBRTs7QUFFdkI7RUFDRSxnQkFBZTtFQUNmLG9CQUFtQjtFQUNuQixhQUFZO0VBQ1osZ0JBQWU7RUFDZixtQkFBa0I7RUFDbEIsaUNBQWdDLEVBQUU7RUFDbEM7SUFDRSxnQkFBZTtJQUNmLG9CQUFtQjtJQUNuQixRQUFPO0lBQ1AsU0FBUTtJQUNSLGFBQVk7SUFDWixnQkFBZTtJQUNmLHFCQUFvQjtJQUNwQixxQkFBb0IsRUFBRTtFQUN4QjtJQUNFLGdCQUFlO0lBQ2YsYUFBWTtJQUNaLGdCQUFlO0lBQ2Ysb0JBQW1CO0lBQ25CLG1CQUFrQjtJQUNsQixlQUFjO0lBQ2QsK0JBQXNCO09BQXRCLDRCQUFzQjtZQUF0Qix1QkFBc0I7SUFDdEIsd0JBQXVCO0lBQ3ZCLHdCQUF1QixFQUFFO0VBQzNCO0lBQ0UsZ0JBQWU7SUFDZixvQkFBbUI7SUFDbkIsYUFBWTtJQUNaLGdCQUFlO0lBQ2YsdUJBQXNCO0lBQ3RCLHdCQUF1QjtJQUN2Qix3QkFBdUIsRUFBRTtFQUMzQjtJQUNFLGdCQUFlO0lBQ2Ysb0JBQW1CO0lBQ25CLGNBQWE7SUFDYixlQUFjO0lBQ2QsYUFBWTtJQUNaLGVBQWM7SUFDZCxvQ0FBbUM7SUFDbkMsOEJBQTZCO0lBQzdCLHVDQUE4QjtPQUE5QixvQ0FBOEI7U0FBOUIsa0NBQThCO1lBQTlCLCtCQUE4QjtJQUM5Qix3REFBdUQsRUFBRTs7QUFFN0Q7RUFDRSxnQkFBZTtFQUNmLGFBQVk7RUFDWixnQkFBZTtFQUNmLGNBQWE7RUFDYixvQkFBbUIsRUFBRTtFQUNyQjtJQUNFLHVCQUFzQjtJQUN0QixZQUFXO0lBQ1gsZUFBYztJQUNkLG9CQUFtQjtJQUNuQixtQkFBa0I7SUFDbEIsYUFBWTtJQUNaLG9CQUFtQixFQUFFO0lBQ3JCO01BQ0Usd0JBQXVCLEVBQUUiLCJmaWxlIjoiaW5kZXgvZWRpdFJld2FyZC5jc3MiLCJzb3VyY2VSb290IjoiLi4vc2Fzcy8ifQ== */

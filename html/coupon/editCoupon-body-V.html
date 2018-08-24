@@ -1,0 +1,81 @@
+    <div class="ui-sendCoupon__main">
+        <div class="ui-sendCoupon__choose">
+            <div class="ui-sendCoupon__chooseUser">
+                <p>选择发放类型:</p>
+                <div class="ui-sendCoupon__user" v-for="item in sendType">
+                    <div class="ui-chooseUser">
+                        <div class="ui-button" v-touch:tap="onChooseUserTap($index)">
+                            <div class="ui-userRadio" v-bind:class="{'isSelectUser':$index==choice}" v-touch:tap="onChooseUserTap"></div>
+                            <p>{{item.type}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-sendCoupon__chooseType">
+                <p>选择券类型:</p>
+                <div class="ui-sendCoupon__type">
+                    <div class="ui-chooseUser" v-if="isSelectCash">
+                        <div class="ui-button" v-touch:tap="onCashTap">
+                            <div class="ui-couponRadio" v-bind:class="{'isSelectCoupon':isSelectCash}" v-touch:tap="onCashTap"></div>
+                            <p>现金券</p>
+                        </div>
+                        <input type="number" class="ui-coupon__input" v-model="cash" v-on:input="onInputFaceValue">
+                        <p>元</p>
+                    </div>
+                    <div class="ui-chooseUser" v-else>
+                        <div class="ui-button" v-touch:tap="onCashTap">
+                            <div class="ui-couponRadio" v-bind:class="{'isSelectCoupon':isSelectCash}" v-touch:tap="onCashTap"></div>
+                            <p>现金券</p>
+                        </div>
+                        <input type="number" class="ui-coupon__input" readonly>
+                        <p>元</p>
+                    </div>
+                    <div class="ui-chooseUser" v-if="!isSelectCash">
+                        <div class="ui-button" v-touch:tap="onCouponTap">
+                            <div class="ui-couponRadio" v-bind:class="{'isSelectCoupon':!isSelectCash}" v-touch:tap="onCouponTap"></div>
+                            <p>优惠券</p>
+                        </div>
+                        <input type="number" class="ui-coupon__input" v-model="coupon" v-on:input="onInputFaceValue">
+                        <p>元</p>
+                        <p>限额</p>
+                        <input type="number" class="ui-limit" v-model="limit">
+                        <p>元</p>
+                    </div>
+                    <div class="ui-chooseUser" v-else>
+                        <div class="ui-button" v-touch:tap="onCouponTap">
+                            <div class="ui-couponRadio" v-bind:class="{'isSelectCoupon':!isSelectCash}" v-touch:tap="onCouponTap"></div>
+                            <p>优惠券</p>
+                        </div>
+                        <input type="number" class="ui-coupon__input" readonly>
+                        <p>元</p>
+                        <p>限额</p>
+                        <input type="number" class="ui-limit" v-model="limit">
+                        <p>元</p>
+                    </div>
+                </div>
+                <div class="ui-sendCoupon__workTime">
+                    <p>有效期为:</p>
+                    <input type="number" class="ui-coupon__input" v-model="deadline">
+                    <div class="ui-button" v-touch:tap="onSelectDayTap">
+                        <div class="ui-timeRadio" v-bind:class="{'isSelectTime':!isSelectTime}" v-touch:tap="onSelectDayTap"></div>
+                        <p>天</p>
+                    </div>
+                    <div class="ui-button" v-touch:tap="onSelectMonthTap">
+                        <div class="ui-timeRadio" v-bind:class="{'isSelectTime':isSelectTime}" v-touch:tap="onSelectMonthTap"></div>
+                        <p>月</p>
+                    </div>
+                </div>
+                <div class="ui-addCoupon__editRule">
+                    <p>使用规则:</p>
+                    <div class="ui-addCoupon__editRuleContent">
+                        <textarea v-model="editRule"></textarea>
+                    </div>
+                </div>
+                <div class="ui-sendCoupon__submit">
+                    <div class="ui-submit" v-touch:tap="onSubmitSendCouponTap">
+                        保&nbsp;存
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

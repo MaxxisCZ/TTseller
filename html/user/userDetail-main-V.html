@@ -1,0 +1,74 @@
+<div class="ui-list">
+	<div class="ui-listHead__portrait">
+		<span>用户详情</span>
+		<li style="background-image:url({{detail.avatar | trans-avatar}})" v-touch:tap="onAvatarTap"></li>
+	</div>
+	<div class="ui-list__detail">
+		<span>用户ID</span>
+		<p>{{detail.userid}}</p>
+	</div>
+	<div class="ui-list__detail">
+		<span>用户账号</span>
+		<p>{{detail.account}}</p>
+	</div>
+	<div class="ui-list__detail">
+		<span>推荐人账号</span>
+		<p>{{detail.referee}}</p>
+	</div>
+	<div class="ui-list__detail">
+		<span>用户名</span>
+		<input type="text" readonly="{{isEdit? 'readonly' : false}}" v-model="detail.name" />
+	</div>
+	<div class="ui-list__detail">
+		<span>昵称</span>
+		<input type="text" readonly="{{isEdit? 'readonly' : false}}" v-model="detail.nickname" />
+	</div>
+	
+	<div class="ui-list__detail">
+		<span>性别</span>
+		<select v-model="detail.selected" disabled="{{isEdit? 'disabled' : false}}">
+			<option v-for="option in options" v-bind:value="option.value">{{option.text}}</option>
+		</select>
+	</div>
+	<div class="ui-list__detail">
+		<span>出生年月</span>
+		<input readonly="true" v-model="detail.birthday" v-touch:tap="picker" />
+	</div>
+	<div class="ui-list__detail">
+		<span>籍贯</span>
+		<input type="text" readonly="{{isEdit? 'readonly' : false}}" v-model="detail.place" />
+	</div>
+	<div class="ui-list__detail">
+		<span>注册时间</span>
+		<p>{{detail.registerTime}}</p>
+	</div>
+	<div class="ui-list__detail">
+		<span>余额</span>
+		<p>{{detail.balance}}元</p>
+	</div>
+	<div class="ui-list__detail">
+		<span>积分</span>
+		<p>{{detail.points}}</p>
+	</div>
+	<div class="ui-list__detail">
+		<span>累积消费额</span>
+		<p>{{detail.sumconsume}}元</p>
+	</div>
+	<!-- <div class="ui-list__edit">
+		<i v-touch:tap="onEditUserInfoTap">
+			<span>{{edit}}</span>
+		</i>
+		<i v-touch:tap="onSaveDataTap">
+			<span>保存用户资料</span>
+		</i>x`
+	</div> -->
+	<div class="ui-list__note">
+		<span>回访记录</span>
+	</div>
+	<textarea  class="ui-list__text" v-model="content" placeholder="请在此处编写回访记录"></textarea>
+	<div class="ui-list__foot">
+		<p>
+			<span v-touch:tap="onSaveVisitTap">保存</span>
+		</p>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<div class="ui-list">
+	<span class="ui-list__top">请绑定本人的银行卡</span>
+	<div class="ui-list__header">
+		<dev class="ui-list__bank">
+			<span>{{selected}}</span>
+			<p></p>
+			<select v-model="selected" v-on:input="onSelectBankCard()">
+				<option v-for="option in options" v-bind:value="option.name">{{option.name}}</option>
+			</select>
+		</dev>
+	</div>
+	<div class="ui-list__item">
+		<div class="is-line">
+			<p>持卡人</p>
+			<input type="text" placeholder="您的姓名" v-model="oneName" v-on:input="onOneNameInput"/>
+			<i v-touch:tap="onExplainTap"></i>
+		</div>
+		<div class="is-line">
+			<p>卡号</p>
+			<input type="tel" placeholder="银行卡卡号" v-model="cardNO" v-on:input="onCardNoInput()"/>
+		</div>
+		<div class="is-line">
+			<p>开户网点</p>
+			<input type="tel" placeholder="开户网点地址" v-model="opening" />
+		</div>
+		<div class="is-line">
+			<p>再次输入</p>
+			<input type="tel" placeholder="银行卡卡号" v-model="numberAgain" v-on:input="onNumberAgainInput()"/>
+		</div>
+	</div>
+	<div class="ui-list__botton" v-touch:tap="onNextTap">
+		<span v-bind:class="{'is-next':isPass}">添加</span>
+	</div>
+</div>

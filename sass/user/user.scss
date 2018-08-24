@@ -1,0 +1,140 @@
+body{
+	font-size: 0;
+}
+
+.ui-list{
+	width: 100%;
+	background-color: #f7f6f3;
+	padding-top: 1.6rem;
+}
+
+.ui-list__search{
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: .65rem;
+	padding: 0rem 1.2rem .05rem .2rem;
+	background-color: #34c273;
+	&>input{
+		display: block;
+		width: 100%;
+		height: .6rem;
+		line-height: .28rem;
+		font-size: .24rem;
+		padding: 0 .26rem;
+		border-radius: .3rem;
+		background-color: #fff;
+	}
+	&>span{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 1.2rem;
+		height: .56rem;
+		background-size: .46rem .46rem;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: url(../../image/orderManage/search.png);
+	}
+}
+
+.ui-list__header{
+	display: flex;
+	position: fixed;
+	top: 0;
+	width: 100%;
+    height: .8rem;
+    background-color: #e9e9e9;
+    line-height: .8rem;
+    text-align: center;
+    font-size: .26rem;
+    color: #c6c6c6;
+	z-index: 99;
+    &>span {
+        flex: 1;
+        &.is-click{
+		    background-color: #fff;
+		    color: #565656;
+		    font-size: .26rem;
+		}
+    }
+}
+
+.ui-list__item{
+	display: block;
+	position: fixed;
+	top: .8rem;
+	width: 100%;
+	height: .8rem;
+	line-height: .8rem;
+	background-color: #616e88;
+	&>span{
+		display: inline-block;
+		width: 25%;
+		font-size: .26rem;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+.ui-list__detail{
+	display: block;
+	width: 100%;
+	height: .8rem;
+	line-height: .8rem;
+	font-size: .26rem;
+	color: #616e88;
+	background-color: #f7f6f3;
+	&>a{
+		display: block;
+		float: left;
+		// width: 1.8rem;
+		width: 27%;
+		// text-align: center;
+		padding-left: .2rem;
+	}
+	&>span{
+		display: block;
+		float: left;
+		// width: 1.2rem;
+		width: 22%;
+		text-align: center;
+	}
+	&>time{
+		display: block;
+		float: left;
+		height: 100%;
+		width: 28%;
+		text-align: center;
+		padding-top: .08rem;
+		& > p {
+			display: block;
+			width: 100%;
+			// height: .4rem;
+			line-height: .32rem;
+		}
+		&>span{
+			line-height: .68rem;
+		}
+	}
+	&>p{
+		display: block;
+		float: right;
+		width: 23%;
+		text-align: center;
+	}
+	&:nth-child(2n){
+		background-color: #fff;
+	}
+}
+
+.center-hack {
+    display: inline-block;
+    font-size: 0;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}

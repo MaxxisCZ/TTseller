@@ -1,0 +1,57 @@
+<div id="content">
+    <div class="ui-activityO__main">
+        <div>
+            <div class="ui-activityO__name">
+                <div class="ui-leftLine">
+                    <p>活动名称</p>
+                </div>
+                <input v-model="list.activityName">
+            </div>
+            <div class="ui-activityO__pic">
+                <div class="ui-leftLine">
+                    <p>活动图片</p>
+                </div>
+                <div style="background-image:url({{list.activityImage}})"></div>
+            </div>
+            <div class="ui-activityO__file">
+                <div class="ui-leftLine">
+                    <p>选择文件</p>
+                </div>
+                <div v-show="noChoosePic">未选择文件</div>
+                <div v-touch:tap="onUploadTap">上传</div>
+            </div>
+            <div class="ui-activityO__content">
+                <div class="ui-leftLine">
+                    <p>活动内容</p>
+                </div>
+                <textarea v-model="list.activityDescribe">{{list.activityDescribe}}</textarea>
+            </div>
+            <div class="ui-activityO__name">
+                <div class="ui-leftLine">
+                    <p>活动url</p>
+                </div>
+                <input v-model="list.activityUrl" v-on:change="isUrl">
+            </div>
+            <div class="ui-activityO__isNew">
+                <div class="ui-leftLine">
+                    <p>是否为最新活动</p>
+                </div>
+                <div v-touch:tap="onNewestActivity">
+                    <div class="ui-rightButton" v-show="list.activityIsNew">
+                        <div class="ui-out"></div>
+                        <div class="ui-in"></div>
+                    </div>
+                    <div class="ui-rightButton" v-show="!list.activityIsNew">
+                        <div class="ui-outGrey"></div>
+                        <div class="ui-inGrey"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-button">
+            <div>
+                <div v-touch:tap="onSaveTap">保存</div>
+            </div>
+        </div>
+    </div>
+</div>

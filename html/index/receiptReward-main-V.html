@@ -1,0 +1,57 @@
+<div class="ui-list">
+	<div class="ui-list__top" v-show="rewardList.length"></div>
+	<div class="111" v-for="item in rewardList">
+		<div class="ui-list__item is-title">
+			<p>奖项名称</p>
+			<p>类型</p>
+			<p>T币</p>
+		</div>
+		<div class="ui-list__item">
+			<p>{{item.name}}</p>
+			<p>{{item.coupon}}</p>
+			<p>{{item.tBill}}</p>
+		</div>
+		<div class="ui-list__itemFoot">
+			<div class="ui-list__describe">奖项描述</div>
+			<span>{{item.describe}}</span>
+			<div class="ui-list__probability is-text">概率</div>
+			<div class="ui-list__probability">{{item.probability}}</div>
+		</div>
+	</div>
+	<div class="ui-list__bottom" v-bind:class="{'is-edit':isShow}" v-show="isReward">
+		<span v-touch:tap="onSaveTap">保存提交</span>
+	</div>
+
+	<div class="ui-addReward" v-show="isShow">
+		<div class="ui-addReward__item">
+			<p>奖项名称:</p>
+			<input type="text" v-model="name"/>
+		</div>
+		<div class="ui-addReward__item">
+			<p>奖品类型:</p>
+			<select v-model="kindValue">
+				<option v-for="item in kind" v-bind:value="item.text">{{item.text}}</option>
+			</select>
+			<i></i>
+		</div>
+		<div class="ui-addReward__item">
+			<p>积分:</p>
+			<input type="number" v-model="point"/>
+		</div>
+		<div class="ui-addReward__item">
+			<p>选择券:</p>
+			<select v-model="couponValue">
+				<option v-for="item in couponList" v-bind:value="item.describe">{{item.describe}}</option>
+			</select>
+			<i></i>
+		</div>
+		<div class="ui-addReward__item">
+			<p>获奖概率:</p>
+			<input type="number" v-model="probability"/>
+		</div>
+		<div class="ui-addReward__buttom">
+			<span v-touch:tap="onAddRewardTap()">添加</span>
+			<span v-touch:tap="oncancelTap()">取消</span>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>添加小区</p>
+        </div>
+        <div class="ui-costRecord">
+            <div class="ui-amount">
+                <p>小区名称:</p>
+                <div>
+                    <input type="text" v-model="name">
+                </div>
+            </div>
+            <div class="ui-amount">
+                <p>首字母简写:</p>
+                <div>
+                    <input v-model="szm" v-on:input="isLetter">
+                </div>
+            </div>
+        </div>
+        <div>
+            <p v-touch:tap="onAddVillageTap">添&nbsp;&nbsp;&nbsp;加</p>
+        </div>
+    </div>
+</div>

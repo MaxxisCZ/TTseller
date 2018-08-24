@@ -1,0 +1,58 @@
+<div class="ui-list">
+	<div class="ui-list__item">
+		<span>商家名称：</span>
+		<input type="text" v-model="agentname" v-bind:readonly="!isNoagreemment"/>
+	</div>
+	<div class="ui-list__item">
+		<span>营业执照号码：</span>
+		<input type="text" v-model="licence"/>
+	</div>
+	<div class="ui-list__picture is-noborder">
+		<span>营业执照照片：</span>
+		<p class="is-noborder" style="background-image:url({{licencepicRoot | trans-avatar}})" v-touch:tap="onPictureTap('licencepic')">{{post1}}</p>
+	</div>
+	<div class="ui-list__item">
+		<span>法定代表人姓名：</span>
+		<input type="text" v-model="represent"/>
+	</div>
+	<div class="ui-list__item">
+		<span>法定代表人身份证：</span>
+		<input type="text" v-model="idcard"/>
+	</div>
+	<span class="ui-list__title">法定代表人身份证照片：</span>
+	<div class="ui-list__identity">
+		<span style="background-image:url({{idcardpic1Root | trans-avatar}})" v-touch:tap="onPictureTap('idcardpic1')">{{post6}}</span>
+		<span style="background-image:url({{idcardpic2Root | trans-avatar}})" v-touch:tap="onPictureTap('idcardpic2')">{{post7}}</span>
+	</div>
+	<div class="ui-list__picture">
+		<span>门头/招牌照片：</span>
+		<p style="background-image:url({{shopsignRoot | trans-avatar}})" v-touch:tap="onPictureTap('shopsign')">{{post2}}</p>
+	</div>
+	<div class="ui-list__picture">
+		<span>门店内景图1：</span>
+		<p style="background-image:url({{shoppic1Root | trans-avatar}})" v-touch:tap="onPictureTap('shoppic1')">{{post3}}</p>
+	</div>
+	<div class="ui-list__picture">
+		<span>门店内景图2：</span>
+		<p style="background-image:url({{shoppic2Root | trans-avatar}})" v-touch:tap="onPictureTap('shoppic2')">{{post4}}</p>
+	</div>
+	<div class="ui-list__picture">
+		<span>门店内景图3：</span>
+		<p style="background-image:url({{shoppic3Root | trans-avatar}})" v-touch:tap="onPictureTap('shoppic3')">{{post5}}</p>
+	</div>
+	<div class="ui-list__agreement" v-show="isNotPass">
+		<i v-bind:class="{'is-agree':isRead}" v-touch:tap="onSumbitTap()"></i>
+		<span>我已阅读并同意TT商家APP的相关条款</span>
+		<p v-touch:tap="onReadAgreementTap">阅读协议</p>
+	</div>
+	<div class="ui-list__bottom">
+		<span v-touch:tap="onPostTap" v-show="isNoagreemment">保存</span>
+		<span v-touch:tap="onPostReadTap" v-show="isNotPass">确认</span>
+		<p v-show="isPass">
+			<span v-touch:tap="onReadAgreementTap">阅读协议</span>
+		</p>
+		<p v-show="isPass">
+			<span v-touch:tap="onDownloadTap">下载协议</span>
+		</p>
+	</div>
+</div>

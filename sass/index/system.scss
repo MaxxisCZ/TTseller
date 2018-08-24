@@ -1,0 +1,175 @@
+.ui-list{
+	display: block;
+	width: 100%;
+	// height: 100%;
+	background-color: #f2f2f2;
+}
+
+.ui-list__phone{
+	display: block;
+	width: 100%;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: .36rem;
+	color: #262626;
+	text-align: center;
+}
+
+.ui-list__item{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: .96rem;
+	padding-left: .96rem;
+	background-color: #fff;
+	border-bottom: 1px solid #f2f2f2;
+	&>span{
+		display: block;
+		width: 100%;
+		line-height: .96rem;
+		font-size: .32rem;
+		color: #262626;
+		padding-left: .1rem;
+	}
+	&>i{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1rem;
+		height: .96rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		&.is-modifyPassword{
+			background-size: .52rem .52rem;
+			background-image: url(../../image/index/icon-system-modifyPassword.png);
+		}
+		&.is-changePwd{
+			left: .04rem;
+			background-size: .5rem .52rem;
+			background-image: url(../../image/index/changePwd.png);
+		}
+		&.is-systemInfor{
+			background-size: .5rem .5rem;
+			background-image: url(../../image/index/icon-system-systemInfor.png);
+		}
+		&.is-payment{
+			background-size: .42rem .52rem;
+			background-image: url(../../image/index/icon-system-payment.png);
+		}
+		&.is-freight{
+			background-size: .48rem .52rem;
+			background-image: url(../../image/index/freightSetUp.png);
+		}
+		&.is-print{
+			background-size: .48rem .52rem;
+			background-image: url(../../image/index/print.png);
+		}
+		&.is-discount{
+			background-size: .48rem .52rem;
+			background-image: url(../../image/index/discount.png);
+		}
+		&.is-reward{
+			background-size: .48rem .52rem;
+			background-image: url(../../image/index/reward.png);
+		}
+		&.is-scan{
+			background-size: .42rem .52rem;
+			background-image: url(../../image/index/icon-system-scan.png);
+		}
+		&.is-occun{
+			background-size: .48rem .48rem;
+			background-image: url(../../image/index/icon-system-occun.png);
+		}
+		&.is-cleanUp{
+			background-size: .48rem .48rem;
+			background-image: url(../../image/index/icon-system-clean.png);
+		}
+		&.is-about{
+			background-size: .48rem .48rem;
+			background-image: url(../../image/index/icon-system-about.png);
+		}
+		&.is-applyQuit{
+			background-size: .42rem .42rem;
+			background-image: url(../../image/index/applyQuit.png);
+		}
+	}
+	&>li{
+		display: block;
+		position: absolute;
+		right: .3rem;
+		top: .27rem;
+		height: .42rem;
+		line-height: .42rem;
+		font-size: .2rem;
+		color: #262626;
+		text-align: center;
+		background-color: #c9c9c9;
+		border-radius: .21rem;
+		padding: 0 .21rem;
+	}
+	&:active{
+        background-color: #EBEBEB;
+    }
+}
+
+.ui-list__bst{
+	display: block;
+	width: 100%;
+	height: 1.5rem;
+	text-align: center;
+	font-size: 0;
+	padding-top: .6rem;
+	background-color: #fff;
+	&>span{
+		display: inline-block;
+		width: 4rem;
+		line-height: .76rem;
+		font-size: .36rem;
+		color: #f7f7f7;
+		text-align: center;
+		background-color: #ffd558;
+		border-radius: .38rem;
+	}
+	
+}
+.ui-select{
+    display: block;
+    position: absolute;
+    right: 0.3rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0.8rem;
+    height: 0.4rem;
+    background-color: #fff;
+    border-radius: 0.4rem 0.4rem;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+    &.is-activeG{
+        background-color: #20d420;
+        &>span{
+            left: 0.4rem;
+        }
+    }
+    &.is-activeR{
+        background-color: #FF3030;
+        &>span{
+            left: 0.4rem;
+        }
+    }
+    &>span{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.4rem;
+        height: 0.4rem;
+        background-color: #fff;
+        border-radius: 0.4rem;
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        transition: left 0.2s;
+    }
+
+}
+

@@ -1,0 +1,95 @@
+.ui-list{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
+}
+
+.ui-list__item{
+	display: block;
+	width: 100%;
+	height: 1.45rem;
+	font-size: .32rem;
+	padding: 0 .2rem;
+	margin-top: .5rem;
+	background-color: #fff;
+	&>p{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: .72rem;
+		line-height: .72rem;
+		font-size: .32rem;
+		color: #282828;
+		padding: 0rem 1.4rem;
+		&>span{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1.4rem;
+			height: .72rem;
+			line-height: .72rem;
+			font-size: .28rem;
+			color: #282828;
+			text-align: center;
+		}
+		&>type{
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 1.4rem;
+			height: .72rem;
+			line-height: .72rem;
+			font-size: .28rem;
+			color: #34c273;
+			text-align: center;
+		}
+		&>input{
+			display: block;
+			width: 100%;
+			height: .72rem;
+			line-height: .4rem;
+			font-size: .32rem;
+			color: #afafaf;
+			border: none;
+			outline: none;
+			background-color: #fff;
+		}
+		&.is-line{
+			border-bottom: 1px solid #afafaf;
+		}
+	}
+}
+
+.ui-list__accept{
+	display: block;
+	width: 100%;
+	line-height: .7rem;
+	font-size: .2rem;
+	color: #afafaf;
+	padding-left: .2rem;
+	&>span{
+		width: 100%;
+		line-height: .7rem;
+		font-size: .2rem;
+		color: #34c273;
+	}
+}
+.ui-list__botton{
+	display: block;
+	// width: 100%;
+	padding: 0 .2rem;
+	border-radius: .06rem;
+	&>span{
+		display: block;
+		width: 100%;
+		line-height: .8rem;
+		font-size: .32rem;
+		color: #fff;
+		text-align: center;
+		background-color: #34c273;
+		border-radius: .06rem;
+	}
+}

@@ -1,0 +1,28 @@
+<div class="ui-list">
+	<div class="ui-list__header">
+		<span v-for="item in topList" v-bind:class="{'is-click':item.isSelect}" v-touch:tap="onChangeTap($index)">{{item.title}}</span>
+	</div>
+</div>
+<div class="ui-list__item">
+	<span>{{header1}}</span>
+	<span>{{header2}}</span>
+	<span>{{header3}}</span>
+	<span>{{header4}}</span>
+</div>
+<div class="ui-list__detail" v-for="item in list" v-touch:Tap="onUserDetailTap($index)">
+	<a>{{item.account}}</a>
+	<span v-show="isBalance">{{item.balance}}</span>
+	<span v-else>{{item.sumConsume}}</span>
+	<!-- <time v-show="isRegister"><b class="center-hack"></b><span>{{item.register}}</span></time> -->
+	<!-- <time v-else><b class="center-hack"></b><span>{{item.consumeTime}}</span></time> -->
+	<time v-show="isRegister">
+		<p>{{item.registerDate}}</p>
+		<p>{{item.registerTime}}</p>
+		<!-- <span v-else>--</span> -->
+	</time>
+	<time v-else>
+		<p>{{item.consumeDate}}</p>
+		<p>{{item.consumeTime}}</p>
+	</time>
+	<p>{{item.buyRate}}</p>
+</div>

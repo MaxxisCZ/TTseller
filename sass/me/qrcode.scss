@@ -1,0 +1,111 @@
+@import "../_config";
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+.ui-qrcode {
+    display: block;
+    padding: .5rem;
+}
+.ui-qrcode__bg {
+    display: block;
+    background-color: #fff;
+}
+.ui-qrcode__top {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2.7rem;
+    // background-color: $mainColor;
+    background-color: #fff;
+    font-size: 0;
+}
+.ui-qrcode__avatar {
+    display: block;
+    position: absolute;
+    top: 0.42rem;
+    left: 0.42rem;
+    width: 1.86rem;
+    height: 1.86rem;
+    @include bgi-cover(url(../../image/me/avatar3.jpg));
+    border-radius: 50px;
+    // border: 3px solid #FFF;
+    background-color: #ebebeb;
+}
+.ui-qrcode__row{
+    display: inline-block;
+    font-size: 0;
+}
+.ui-qrcode__name{
+    display: inline-block;
+    padding-left: 3rem;
+    padding-right: 0.2rem;
+    padding-top: 1rem;
+    font-size: 0.3rem;
+    color: #080808;
+    max-width: 4.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ui-qrcode__icon {
+    display: inline-block;
+    width: 0.32rem;
+    height: 0.32rem;
+    &.is-boy{
+        @include bgi-cover(url(../../image/me/boy.png));
+    }
+    &.is-girl{
+        @include bgi-cover(url(../../image/me/girl.png));
+    }
+}
+.ui-qrcode__row1{
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0;
+}
+.ui-qrcode__province{
+    display: inline-block;
+    padding-left: 3rem;
+    // padding-right: 0.2rem;
+    font-size: 0.3rem;
+    color: #080808;
+    // max-width: 3.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.ui-qrcode__city {
+    display: inline-block;
+    font-size: 0.3rem;
+    color: #080808;
+    max-width: 1.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ui-qrcode__bottom{
+    display: block;
+    padding-bottom: 1.6rem;
+    width: 100%;
+    // background-color: $mainColor;
+    background-color: #fff;
+}
+#qrcode-container {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 3.6rem;
+    height: 3.6rem;
+    text-align: center;
+    &>canvas{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ui-qrcode__mobile{
+    font-size: .32rem;
+    color: #080808;
+    text-align: center;
+    margin-bottom: 0.4rem;
+}

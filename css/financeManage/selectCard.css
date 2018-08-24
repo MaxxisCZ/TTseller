@@ -1,0 +1,112 @@
+.ui-list {
+  display: block;
+  width: 100%;
+  padding-top: .2rem;
+  background-color: #f7f6f3; }
+
+.ui-list__top {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: .2rem;
+  background-color: #f7f6f3; }
+
+.ui-list__card {
+  display: block;
+  width: 100%;
+  padding: .2rem; }
+  .ui-list__card > div {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    -webkit-border-radius: .1rem;
+       -moz-border-radius: .1rem;
+            border-radius: .1rem;
+    padding: .2rem 1.4rem;
+    background-color: #fff;
+    margin-bottom: .1rem; }
+    .ui-list__card > div > span {
+      display: block;
+      position: absolute;
+      height: .8rem;
+      padding-left: .4rem; }
+      .ui-list__card > div > span > title {
+        display: block;
+        height: .5rem;
+        line-height: .5rem;
+        font-size: .36rem;
+        color: black; }
+      .ui-list__card > div > span > li {
+        display: block;
+        line-height: .3rem;
+        font-size: .24rem;
+        color: black; }
+    .ui-list__card > div > p {
+      display: block;
+      position: absolute;
+      bottom: .16rem;
+      right: .25rem;
+      height: .4rem;
+      line-height: .36rem;
+      font-size: .32rem;
+      color: black; }
+      .ui-list__card > div > p.is-num {
+        font-size: .36rem;
+        right: .25rem;
+        bottom: .14rem; }
+    .ui-list__card > div > i {
+      display: block;
+      position: absolute;
+      top: .24rem;
+      right: .3rem;
+      width: .32rem;
+      height: .32rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: .32rem .32rem;
+         -moz-background-size: .32rem .32rem;
+           -o-background-size: .32rem .32rem;
+              background-size: .32rem .32rem;
+      background-image: url(../../image/financeManage/unSelected.png); }
+      .ui-list__card > div > i.is-selected {
+        background-image: url(../../image/financeManage/selected.png); }
+    .ui-list__card > div > a {
+      display: block;
+      position: absolute;
+      top: .2rem;
+      left: .3rem;
+      width: 1.4rem;
+      height: .75rem;
+      background-position: center center;
+      -webkit-background-size: .75rem .75rem;
+         -moz-background-size: .75rem .75rem;
+           -o-background-size: .75rem .75rem;
+              background-size: .75rem .75rem;
+      background-repeat: no-repeat; }
+
+.ui-list__bst {
+  display: block;
+  width: 100%;
+  height: .75rem;
+  margin-top: .66rem;
+  padding: 0rem .22rem; }
+  .ui-list__bst > span {
+    display: block;
+    width: 100%;
+    height: .75rem;
+    line-height: .75rem;
+    font-size: .36rem;
+    color: #ececec;
+    text-align: center;
+    -webkit-border-radius: .1rem;
+       -moz-border-radius: .1rem;
+            border-radius: .1rem;
+    background-color: #c6c6c6; }
+    .ui-list__bst > span.is-pass {
+      background-color: #34c273; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlbGVjdENhcmQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWU7RUFDZixhQUFZO0VBQ1osb0JBQW1CO0VBQ25CLDJCQUEwQixFQUFFOztBQUU5QjtFQUNFLGdCQUFlO0VBQ2YsaUJBQWdCO0VBQ2hCLFFBQU87RUFDUCxTQUFRO0VBQ1IsYUFBWTtFQUNaLGVBQWM7RUFDZCwyQkFBMEIsRUFBRTs7QUFFOUI7RUFDRSxnQkFBZTtFQUNmLGFBQVk7RUFDWixnQkFBZSxFQUFFO0VBQ2pCO0lBQ0UsZ0JBQWU7SUFDZixvQkFBbUI7SUFDbkIsYUFBWTtJQUNaLGdCQUFlO0lBQ2YsOEJBQXFCO09BQXJCLDJCQUFxQjtZQUFyQixzQkFBcUI7SUFDckIsdUJBQXNCO0lBQ3RCLHdCQUF1QjtJQUN2QixzQkFBcUIsRUFBRTtJQUN2QjtNQUNFLGdCQUFlO01BQ2Ysb0JBQW1CO01BQ25CLGVBQWM7TUFDZCxxQkFBb0IsRUFBRTtNQUN0QjtRQUNFLGdCQUFlO1FBQ2YsZUFBYztRQUNkLG9CQUFtQjtRQUNuQixtQkFBa0I7UUFDbEIsY0FBYSxFQUFFO01BQ2pCO1FBQ0UsZ0JBQWU7UUFDZixvQkFBbUI7UUFDbkIsbUJBQWtCO1FBQ2xCLGNBQWEsRUFBRTtJQUNuQjtNQUNFLGdCQUFlO01BQ2Ysb0JBQW1CO01BQ25CLGdCQUFlO01BQ2YsZUFBYztNQUNkLGVBQWM7TUFDZCxxQkFBb0I7TUFDcEIsbUJBQWtCO01BQ2xCLGNBQWEsRUFBRTtNQUNmO1FBQ0UsbUJBQWtCO1FBQ2xCLGVBQWM7UUFDZCxnQkFBZSxFQUFFO0lBQ3JCO01BQ0UsZ0JBQWU7TUFDZixvQkFBbUI7TUFDbkIsYUFBWTtNQUNaLGNBQWE7TUFDYixlQUFjO01BQ2QsZ0JBQWU7TUFDZiw4QkFBNkI7TUFDN0Isb0NBQW1DO01BQ25DLHdDQUErQjtTQUEvQixxQ0FBK0I7V0FBL0IsbUNBQStCO2NBQS9CLGdDQUErQjtNQUMvQixpRUFBZ0UsRUFBRTtNQUNsRTtRQUNFLCtEQUE4RCxFQUFFO0lBQ3BFO01BQ0UsZ0JBQWU7TUFDZixvQkFBbUI7TUFDbkIsWUFBVztNQUNYLGFBQVk7TUFDWixlQUFjO01BQ2QsZ0JBQWU7TUFDZixvQ0FBbUM7TUFDbkMsd0NBQStCO1NBQS9CLHFDQUErQjtXQUEvQixtQ0FBK0I7Y0FBL0IsZ0NBQStCO01BQy9CLDhCQUE2QixFQUFFOztBQUVyQztFQUNFLGdCQUFlO0VBQ2YsYUFBWTtFQUNaLGdCQUFlO0VBQ2Ysb0JBQW1CO0VBQ25CLHNCQUFxQixFQUFFO0VBQ3ZCO0lBQ0UsZ0JBQWU7SUFDZixhQUFZO0lBQ1osZ0JBQWU7SUFDZixxQkFBb0I7SUFDcEIsbUJBQWtCO0lBQ2xCLGdCQUFlO0lBQ2Ysb0JBQW1CO0lBQ25CLDhCQUFxQjtPQUFyQiwyQkFBcUI7WUFBckIsc0JBQXFCO0lBQ3JCLDJCQUEwQixFQUFFO0lBQzVCO01BQ0UsMkJBQTBCLEVBQUUiLCJmaWxlIjoiZmluYW5jZU1hbmFnZS9zZWxlY3RDYXJkLmNzcyIsInNvdXJjZVJvb3QiOiIuLi9zYXNzLyJ9 */

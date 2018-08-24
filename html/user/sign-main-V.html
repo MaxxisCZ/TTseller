@@ -1,0 +1,13 @@
+<div class="ui-list">
+	<span class="ui-list__header">
+		账号：{{detail.account}}
+	</span>
+	<div class="ui-list__title">
+		<span>记录ID</span>
+		<time>签到记录</time>
+	</div>
+	<div class="ui-list__detail" v-for="item in detail.list">
+		<span>{{item.signID}}</span>
+		<time>{{item.signTime}}</time>
+	</div>
+</div>

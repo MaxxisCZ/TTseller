@@ -1,0 +1,17 @@
+.ui-list {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: .32rem;
+  background-color: #fff;
+  padding-top: 2.4rem; }
+  .ui-list > span {
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-left: -1.8rem;
+    width: 3.6rem; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV2YWx1YXRlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFlO0VBQ2YsYUFBWTtFQUNaLGNBQWE7RUFDYixtQkFBa0I7RUFDbEIsd0JBQXVCO0VBQ3ZCLHFCQUFvQixFQUFFO0VBQ3RCO0lBQ0UsdUJBQXNCO0lBQ3RCLG9CQUFtQjtJQUNuQixVQUFTO0lBQ1QsV0FBVTtJQUNWLHNCQUFxQjtJQUNyQixlQUFjLEVBQUUiLCJmaWxlIjoiaW5kZXgvZXZhbHVhdGUuY3NzIiwic291cmNlUm9vdCI6Ii4uL3Nhc3MvIn0= */

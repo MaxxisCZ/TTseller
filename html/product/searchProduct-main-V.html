@@ -1,0 +1,26 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div class="ui-body">
+    <div class="ui-product__searchTitle">
+        <span>搜索产品</span>
+    </div>
+    <div class="ui-product__searchItem">
+        <span>父类</span>
+        <select v-model="father">
+            <option v-for="option in fatherList" v-bind:value="option.fatherName">{{option.fatherName}}</option>
+        </select>
+        <i></i>
+        <p v-touch:tap="onFatherTap(father)">搜索</p>
+    </div>
+    <div class="ui-product__searchItem">
+        <span>子类</span>
+        <select v-model="child">
+            <option v-for="option in childList" v-bind:value="option.childName">{{option.childName}}</option>
+        </select>
+        <i></i>
+        <p v-touch:tap="onChildTap(child)">搜索</p>
+    </div>
+    <div class="ui-product__searchID">
+        <input placeholder="产品id或产品名称" v-model="productNameOrID"/>
+        <p v-touch:tap="onProductTap()">搜索</p>
+    </div>
+</div>

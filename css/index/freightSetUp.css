@@ -1,0 +1,110 @@
+.ui-list {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  background-color: #fff;
+  padding-top: .6rem; }
+
+.ui-list__freight {
+  display: block;
+  width: 100%;
+  height: .8rem;
+  font-size: 0; }
+  .ui-list__freight > p {
+    display: inline-block;
+    width: 4rem;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    color: #5c5f6a;
+    padding-left: .6rem; }
+  .ui-list__freight > input {
+    display: inline-block;
+    width: 1.4rem;
+    height: .64rem;
+    line-height: .48rem;
+    font-size: .36rem;
+    text-align: center;
+    color: #5c5f6a;
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+    margin: .08rem 0;
+    padding-top: .08rem; }
+  .ui-list__freight > span {
+    display: inline-block;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    color: #5c5f6a;
+    padding-left: .1rem; }
+
+.ui-list__code {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: .8rem;
+  font-size: 0;
+  padding-left: 2.2rem; }
+  .ui-list__code > p {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.2rem;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    color: #5c5f6a;
+    padding-left: .6rem; }
+  .ui-list__code > input {
+    display: inline-block;
+    position: absolute;
+    top: .08rem;
+    left: 2.2rem;
+    width: 1.6rem;
+    height: .64rem;
+    line-height: .48rem;
+    font-size: .4rem;
+    color: #5c5f6a;
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+    padding-left: .1rem; }
+  .ui-list__code > span {
+    display: inline-block;
+    position: absolute;
+    top: .08rem;
+    left: 3.8rem;
+    height: .64rem;
+    line-height: .64rem;
+    font-size: .4rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #5c5f6a;
+    padding: 0 .24rem;
+    letter-spacing: .06rem;
+    margin-left: .08rem;
+    background-color: #f8f8f8; }
+
+.ui-list__bst {
+  display: block;
+  width: 100%;
+  height: .8rem;
+  padding: 1rem .75rem; }
+  .ui-list__bst > span {
+    display: block;
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .4rem;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius: .1rem;
+       -moz-border-radius: .1rem;
+            border-radius: .1rem;
+    background-color: #34c273; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZyZWlnaHRTZXRVcC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZTtFQUNmLGFBQVk7RUFDWixjQUFhO0VBQ2IsY0FBYTtFQUNiLHdCQUF1QjtFQUN2QixvQkFBbUIsRUFBRTs7QUFFdkI7RUFDRSxnQkFBZTtFQUNmLGFBQVk7RUFDWixlQUFjO0VBQ2QsY0FBYSxFQUFFO0VBQ2Y7SUFDRSx1QkFBc0I7SUFDdEIsYUFBWTtJQUNaLGVBQWM7SUFDZCxvQkFBbUI7SUFDbkIsbUJBQWtCO0lBQ2xCLGdCQUFlO0lBQ2YscUJBQW9CLEVBQUU7RUFDeEI7SUFDRSx1QkFBc0I7SUFDdEIsZUFBYztJQUNkLGdCQUFlO0lBQ2YscUJBQW9CO0lBQ3BCLG1CQUFrQjtJQUNsQixvQkFBbUI7SUFDbkIsZ0JBQWU7SUFDZixjQUFhO0lBQ2IsZUFBYztJQUNkLDJCQUEwQjtJQUMxQixrQkFBaUI7SUFDakIscUJBQW9CLEVBQUU7RUFDeEI7SUFDRSx1QkFBc0I7SUFDdEIsZUFBYztJQUNkLG9CQUFtQjtJQUNuQixtQkFBa0I7SUFDbEIsZ0JBQWU7SUFDZixxQkFBb0IsRUFBRTs7QUFFMUI7RUFDRSxnQkFBZTtFQUNmLG9CQUFtQjtFQUNuQixhQUFZO0VBQ1osZUFBYztFQUNkLGNBQWE7RUFDYixzQkFBcUIsRUFBRTtFQUN2QjtJQUNFLHVCQUFzQjtJQUN0QixvQkFBbUI7SUFDbkIsUUFBTztJQUNQLFNBQVE7SUFDUixlQUFjO0lBQ2QsZUFBYztJQUNkLG9CQUFtQjtJQUNuQixtQkFBa0I7SUFDbEIsZ0JBQWU7SUFDZixxQkFBb0IsRUFBRTtFQUN4QjtJQUNFLHVCQUFzQjtJQUN0QixvQkFBbUI7SUFDbkIsYUFBWTtJQUNaLGNBQWE7SUFDYixlQUFjO0lBQ2QsZ0JBQWU7SUFDZixxQkFBb0I7SUFDcEIsa0JBQWlCO0lBQ2pCLGdCQUFlO0lBQ2YsY0FBYTtJQUNiLGVBQWM7SUFDZCwyQkFBMEI7SUFDMUIscUJBQW9CLEVBQUU7RUFDeEI7SUFDRSx1QkFBc0I7SUFDdEIsb0JBQW1CO0lBQ25CLGFBQVk7SUFDWixjQUFhO0lBQ2IsZ0JBQWU7SUFDZixxQkFBb0I7SUFDcEIsa0JBQWlCO0lBQ2pCLG1CQUFrQjtJQUNsQixvQkFBbUI7SUFDbkIsZ0JBQWU7SUFDZixtQkFBa0I7SUFDbEIsd0JBQXVCO0lBQ3ZCLHFCQUFvQjtJQUNwQiwyQkFBMEIsRUFBRTs7QUFFaEM7RUFDRSxnQkFBZTtFQUNmLGFBQVk7RUFDWixlQUFjO0VBQ2Qsc0JBQXFCLEVBQUU7RUFDdkI7SUFDRSxnQkFBZTtJQUNmLGFBQVk7SUFDWixlQUFjO0lBQ2Qsb0JBQW1CO0lBQ25CLGtCQUFpQjtJQUNqQixhQUFZO0lBQ1osb0JBQW1CO0lBQ25CLDhCQUFxQjtPQUFyQiwyQkFBcUI7WUFBckIsc0JBQXFCO0lBQ3JCLDJCQUEwQixFQUFFIiwiZmlsZSI6ImluZGV4L2ZyZWlnaHRTZXRVcC5jc3MiLCJzb3VyY2VSb290IjoiLi4vc2Fzcy8ifQ== */

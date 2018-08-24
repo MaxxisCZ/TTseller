@@ -1,0 +1,29 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>添加子分类</p>
+        </div>
+        <div class="ui-childProdut">
+            <div class="ui-child__name">
+                <p>子产品类型名称:</p>
+                <div>
+                    <input type="text" v-model="childName">
+                </div>
+            </div>
+            <div class="ui-father__type">
+                <p>父产品类型:</p>
+                <div>
+                    <select class="fatherTypeSelect" v-model="fatherID" v-on:change="selectChange">
+                        <option v-for="item in fatherList" v-bind:value="item.fatherID">{{item.fatherName}}</option>
+                    </select>
+                    <input type="text" readonly  v-model="fatherName">
+                </div>
+            </div>
+        </div>
+        <div>
+            <p v-touch:tap="onChildSubmit">添加</p>
+        </div>
+    </div>
+</div>

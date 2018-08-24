@@ -1,0 +1,28 @@
+<div class="ui-qrcode">
+    <div class="ui-qrcode__bg">
+        <div class="ui-qrcode__top">
+            <div class="ui-qrcode__avatar" style="background-image:url({{avatar}})">
+            </div>
+            <div class="ui-qrcode__row">
+                <div class="ui-qrcode__name">
+                    {{name}}
+                </div>
+                <!-- <div class="ui-qrcode__icon" v-bind:class="{'is-boy':sex==1,'is-girl':sex==2}" v-show="show">
+                </div> -->
+            </div>
+            <div class="ui-qrcode__row1">
+                <div class="ui-qrcode__province">
+                    {{agent}}
+                </div>
+               <!--  <div class="ui-qrcode__city">
+                    {{city}}
+                </div> -->
+            </div>
+        </div>
+        <div class="ui-qrcode__mobile">{{mobile}}</div>
+        <div class="ui-qrcode__bottom">
+            <div id="qrcode-container" class="ui-qrcode__qrcode" style="background-image:url({{qrcode}})">
+            </div>
+        </div>
+    </div>
+</div>

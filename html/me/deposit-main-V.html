@@ -1,0 +1,54 @@
+<div class="ui-list">
+	<div class="ui-list__top">
+		<div class="ui-list__topItem" v-bind:class="{'is-selected':item.isSelected}" v-for="item in toplist" v-touch:tap="onTopTap($index)">{{item.title}}</div>
+	</div>
+	<div class="ui-list__deposit" v-show="isCharge">
+		<div class="ui-list__pay">
+			<div class="ui-list__payTop">
+				<span>选择充值方式</span>
+			</div>
+			<div class="ui-list__payStyle" v-touch:tap="onPayStyleTap(1)">
+				<i class="ui-list__payIcon is-aliPay"></i>
+				<span>支付宝支付</span>
+				<i class="ui-list__payChoice" v-bind:class="{'is-selected':isAliPay}"></i>
+			</div>
+			<div class="ui-list__payStyle" v-touch:tap="onPayStyleTap(2)">
+				<i class="ui-list__payIcon is-wetChatPay"></i>
+				<span>微信支付</span>
+				<i class="ui-list__payChoice" v-bind:class="{'is-selected':isWeChat}"></i>
+			</div>
+		</div>
+		<div class="ui-list__payMoneyTitle">
+			<span>充值金额</span>
+		</div>
+		<div class="ui-list__payMoney">
+			<i class="ui-list__payMoneyIcon">￥</i>
+			<div class="ui-list__payMoneyInput">
+				<input type="number" placeholder="请输入保证金" v-model="money" v-on:input="onMoneyInput"/>
+			</div>
+		</div>
+		<div class="ui-list__buttom">
+			<span v-touch:tap="onChargeTap" v-bind:class="{'is-input':isInputMoney}">充值</span>
+		</div>
+	</div>
+
+	<div class="ui-list__order" v-else>
+		<div class="ui-list__orderTop">
+			<span class="is-id">充值id</span>
+			<span class="is-number">订单号</span>
+			<span class="is-time">时间</span>
+			<span class="is-money">金额</span>
+			<span class="is-style">付款方式</span>
+			<span class="is-del">删除</span>
+		</div>
+		<div class="ui-list__orderList" v-for="item in chargeList">
+			<span class="is-id">{{item.id}}</span>
+			<span class="is-number">{{item.number}}</span>
+			<span class="is-time">{{item.time}}</span>
+			<span class="is-money">{{item.money}}</span>
+			<span class="is-style"><b class="center-hack"></b><span>{{item.style}}</span></span>
+			<span class="is-del">删除</span>
+		</div>
+	</div>
+	
+</div>

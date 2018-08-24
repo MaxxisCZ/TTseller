@@ -1,0 +1,22 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>搜索产品</p>
+        </div>
+        <div class="ui-costRecord">
+            <div class="ui-queryTitle">
+                <p>请输入产品ID或产品名称</p>
+            </div>
+            <div class="ui-queryInput">
+                <div>
+                    <input type="text" v-model="productNameOrID" >
+                </div>
+            </div>
+        </div>
+        <div>
+            <p v-touch:tap="onSearchNameTap">搜索</p>
+        </div>
+    </div>
+</div>

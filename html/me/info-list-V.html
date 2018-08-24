@@ -1,0 +1,90 @@
+<div class="ui-info">
+    <div class="ui-list">
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                姓名
+            </div>
+            <div class="ui-list__input">
+                <input type="text" v-model="detail.name" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                性别
+            </div>
+            <div class="ui-list__input">
+                <select class="sex" v-model="detail.sex">
+                    <option value="2">
+                        女
+                    </option>
+                    <option value="1">
+                        男
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                出生年月
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" v-touch:tap="picker" class="birth" v-model="detail.birth"></input>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                手机号码
+            </div>
+            <!-- <div class="ui-list__input">
+                <input type="tel" disabled v-model="detail.phone" />
+            </div> -->
+            <span class="ui-list__noInput">{{detail.phone}}</span>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                邮箱
+            </div>
+            <div class="ui-list__input">
+                <input type="text" v-model="detail.email" />
+            </div>
+        </div>
+        <!-- <div class="ui-list__item">
+            <div v-touch:tap="onRegionTap" class="ui-list__title">
+                住址
+            </div>
+            <div class="ui-list__input">
+                <textarea v-model="detail.addr" type="text"></textarea>
+            </div>
+        </div> -->
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                登录名
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" v-model="detail.loginName" type="text" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                所属代理商
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" v-model="detail.agentName" type="text" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div v-model="detail.position" class="ui-list__title">
+                职位
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" type="text" />
+            </div>
+        </div>
+        <div class="ui-list__addr">
+            <span v-touch:tap="onRegionTap">住址</span>
+            <textarea v-model="detail.addr" type="text"></textarea>
+        </div>
+        <div class="ui-change__btn" v-touch:tap="onInfoPostTap">
+            修改资料
+        </div>
+    </div>

@@ -1,0 +1,26 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>记录成本</p>
+        </div>
+        <div class="ui-costRecord">
+            <div class="ui-amount">
+                <p>支出金额:</p>
+                <div>
+                    <input v-model="money" type="number">
+                </div>
+            </div>
+            <div class="ui-amount">
+                <p>支出理由:</p>
+                <div>
+                    <input v-model="reason" type="text">
+                </div>
+            </div>
+        </div>
+        <div v-touch:tap="onRecordTap">
+            <p>记录</p>
+        </div>
+    </div>
+</div>

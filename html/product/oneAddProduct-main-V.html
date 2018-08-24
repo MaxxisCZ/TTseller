@@ -1,0 +1,38 @@
+<div class="ui-list">
+	<div class="ui-list__search">
+		<div class="ui-list__searchItem">
+			<i v-touch:tap="onSearchTap"></i>
+			<input type="text" v-model="searchText" placeholder="菜品搜索"/>
+		</div>
+	</div>
+	<div class="ui-search">
+		<div class="ui-search__text">父类</div>
+		<select v-model="father">
+			<option v-for="option in fatherList" v-bind:value="option.fatherID">{{option.fatherName}}</option>
+		</select>
+		<i></i>
+		<div class="ui-search__button" v-touch:tap="onSearchClassTap(father,4)">搜索</div>
+	</div>
+	<div class="ui-search is-subclass">
+		<div class="ui-search__text">子类</div>
+		<select v-model="child">
+			<option v-for="option in childList" v-bind:value="option.childID">{{option.childName}}</option>
+		</select>
+		<i></i>
+		<div class="ui-search__button" v-touch:tap="onSearchClassTap(child,5)">搜索</div>
+	</div>
+	<div class="ui-list__title">
+		<span>名称</span>
+		<span>价格</span>
+		<span>重量</span>
+		<span>一键添加</span>
+	</div>
+	<div class="ui-list__item" v-for="item in list">
+		<p v-touch:tap="onaddProductDetailTap($index)">
+			<span><b class="center-hack"></b><span>{{item.name}}</span></span>
+			<span>￥{{item.price}}元</span>
+			<span><b class="center-hack"></b><span>{{item.weight}}</span></span>
+		</p>
+		<i v-touch:tap="onAddSingleTap($index)"></i>
+	</div>
+</div>

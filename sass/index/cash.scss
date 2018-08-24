@@ -1,0 +1,242 @@
+.ui-list{
+	display: block;
+	width: 100%;
+	background-color: #ececec;
+}
+
+.ui-list__card{
+	display: block;
+	width: 100%;
+	// height: 2.7rem;
+	padding: .1rem .2rem;
+	background-color: #fff;
+	&>div{
+		display: block;
+		width: 100%;
+		height: 2.7rem;
+		padding: .1rem 0rem;
+		&>ul{
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 2.5rem;
+			padding: .1rem .15rem;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100% 100%;
+			&>span{
+				display: block;
+				position: relative;
+				width: 3rem;
+				height: .75rem;
+				padding-left: 1.1rem;
+				&>i{
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 1rem;
+					height: .75rem;
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: .75rem .75rem;
+					// background-image: url(../../image/index/icon-cash-abcIcon.png);
+				}
+				&>title{
+					display: block;
+					height: .5rem;
+					line-height: .5rem;
+					font-size: .36rem;
+					color: #fff;
+					}
+					&>li{
+						display: block;
+						font-size: .1rem;
+						color: #fff;
+					}
+				}
+			&>a{
+				display: block;
+				position: absolute;
+				top: .1rem;
+				right: .15rem;
+				width: .45rem;
+				height: .45rem;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: .45rem .45rem;
+				&.is-ok{
+					background-image: url(../../image/index/icon-cash-selectOK.png);
+				}
+				&.is-circle{
+					background-image: url(../../image/index/icon-cash-cricle.png);
+				}
+			}
+			&>p{
+				display: block;
+				position: absolute;
+				bottom: .4rem;
+				right: .25rem;
+				height: .4rem;
+				line-height: .4rem;
+				font-size: .36rem;
+				color: #fff;
+				&.is-num{
+					bottom: .1rem;
+				}
+			}
+			&.is-abc{
+				background-image: url(../../image/index/icon-cash-abcCard.png);
+				&>span{
+					&>i{
+						background-image: url(../../image/index/icon-cash-abcIcon.png);
+					}
+				}
+			}
+			&.is-business{
+				background-image: url(../../image/index/icon-cash-businessCard.png);
+				&>span{
+					&>i{
+						background-image: url(../../image/index/icon-cash-businessIcon.png);
+					}
+				}
+			}
+		}
+	}
+}
+
+.ui-list__cardType{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 1.2rem;
+	background-color: #fff;
+	padding: .2rem 1.3rem;
+	margin-top: .1rem;
+	&>span{
+		display: block;
+		width: 100%;
+		// height: .4rem;
+		line-height: .5rem;
+		font-size: .36rem;
+		color: #3a3a3a;
+	}
+	&>p{
+		display: block;
+		width: 100%;
+		// height: .2rem;
+		line-height: .3rem;
+		font-size: .2rem;
+		color: #a0a0a0;
+	}
+	&>i{
+		display: block;
+		position: absolute;
+		left: .5rem;
+		top: .3rem;
+		width: .7rem;
+		height: .7rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: .7rem .7rem;
+		background-image: url(../../image/index/icon-cash-abc.png);
+	}
+	&>a{
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 1.3rem;
+		height: 1.3rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: .2rem .3rem;
+		background-image: url(../../image/index/icon-cash-arrowRight.png);
+	}
+}
+
+.ui-list__cash{
+	display: block;
+	width: 100%;
+	height: 4rem;
+	padding: .2rem;
+	background-color: #fff;
+	margin-top: .1rem;
+	&>ul{
+		display: block;
+		height: .36rem;
+		line-height: .36rem;
+		font-size: .24rem;
+		color: #858585;
+	}
+	&>p{
+		display: block;
+		position: relative;
+		width: 100%;
+		padding-left: .75rem;
+		margin-top: .2rem;
+		// border-bottom: 2px solid #c6c6c6;
+		&>i{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: .75rem;
+			height: .75rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: .45rem .53rem;
+			background-image: url(../../image/index/icon-cash-rmb.png);
+		}
+		&>input{
+			display: block;
+			width: 100%;
+			height: .75rem;
+			font-size: .36rem;
+			color: #858585;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid #c6c6c6;
+		}
+	}
+	&>tip{
+		display: block;
+		width: 100%;
+		height: .6rem;
+		&>li{
+			display: inline-block;
+			float: left;
+			line-height: .6rem;
+			font-size: .24rem;
+			color: #858585;
+		}
+		&>span{
+			display: inline-block;
+			float: right;
+			line-height: .6rem;
+			font-size: .24rem;
+			color: #34c273;
+		}	
+	}
+	
+	&>bst{
+		display: block;
+		width: 100%;
+		height: 1.65rem;
+		padding: .45rem 0rem;
+		&>span{
+			display: block;
+			width: 100%;
+			height: .75rem;
+			line-height: .75rem;
+			font-size: .36rem;
+			color: #ececec;
+			text-align: center;
+			background-color: #c6c6c6;
+			border-radius: .1rem;
+			&.is-confirm{
+				background-color: #34c273;
+			}
+		}
+	}
+}

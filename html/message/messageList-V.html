@@ -1,0 +1,30 @@
+<div class="ui-list">
+    <div class="ui-list__item" v-for="item in list" v-touch:tap="onDetailTap(item,$event)" v-show="!noData">
+        <div class="ui-msgToolbar">
+            <span class="is-red" data-action="delete">删除</span>
+        </div>
+        <div class="ui-list__itemBody">
+            <div v-bind:class="{'is-redDot':item.isRead==0}" >
+            </div>
+            <p class="ui-list__itemTitle">
+                {{item.message_title}}
+            </p>
+            <p class="ui-list__itemTime">
+                {{item.message_time}}
+            </p>
+            <p class="ui-list__itemContent">
+                {{item.message_overview}}
+            </p>
+            <i class="ui-list__del" v-bind:class="{'is-selected':item.isSelected}"></i>
+        </div>
+    </div>
+    <div class="ui-list__footerShirly" v-show="isShowFooter"></div>
+    <div class="ui-list__footer" v-show="isShowFooter">
+        <p>
+            <span class="is-read" v-touch:tap="onReadTap">已读</span>
+        </p>
+        <p>
+            <span class="is-del" v-touch:tap="onDeleteTap">删除</span>
+        </p>
+    </div>
+</div>

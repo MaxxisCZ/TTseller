@@ -1,0 +1,78 @@
+@charset "UTF-8";
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+
+.ui-list__itemContent {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: .8rem;
+    padding-left: 2.4rem;
+}
+
+.ui-list__itemContent>span:first-child {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.4rem;
+    line-height: .8rem;
+    font-size: .34rem;
+    font-weight: 400;
+    color: #333;
+    text-align: right;
+}
+.ui-list__itemContent>span:last-child {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: 2.4rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    font-weight: 400;
+    color: #333;
+    text-align: left;
+}
+
+.ui-list__itemContent>input {
+    display: block;
+    width: 50%;
+    height: .8rem;
+    line-height: .54rem;
+    font-size: .3rem;
+    color: #3f3f3f;
+    padding: 0 .08rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: #eee;
+}
+
+.ui-list__buttom {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    padding: .6rem .6rem 0;
+}
+
+.ui-list__buttom>span {
+    display: block;
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .36rem;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius: .1rem;
+    -moz-border-radius: .1rem;
+    border-radius: .1rem;
+    background-color: #81e08d;
+}
+
+.ui-list__buttom>span:active {
+    background-color: #81f08d;
+}

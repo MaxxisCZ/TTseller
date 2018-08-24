@@ -1,0 +1,56 @@
+@import "../_config";
+body,html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+.ui-bankList{
+    display: block;
+    height: 100%;
+}
+.ui-bankList__item{
+    display: block;
+    position: relative;
+    margin-top: 0.26rem;
+}
+.ui-bankList__bankBg{
+    display: block;
+    margin-left: 0.18rem;
+    margin-right: 0.18rem;
+    @include bgi-cover(url(../../image/me/bank_bg.png));
+    height: 2.2rem;
+    border-radius: 8px;
+}
+.ui-bankList__bankIcon{
+    display: block;
+    position: absolute;
+    left:0.42rem;
+    top: 0.16rem;
+    @include bgi-cover(url(../../image/me/bankIcon.png));
+    width: 0.68rem;
+    height: 0.68rem;
+}
+.ui-bankList__bankName{
+    display: block;
+    position: absolute;
+    left: 1.3rem;
+    top: 0.2rem;
+    font-size: 0.36rem;
+    color: #FFF;
+}
+.ui-bankList__card{
+    display: block;
+    position: absolute;
+    left: 1.3rem;
+    top: 0.6rem;
+    font-size: 0.18rem;
+    color: #FFF;
+}
+.ui-bankList__bankNumber{
+    display: block;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.4rem;
+    font-size: 0.36rem;
+    color: #FFF;
+}

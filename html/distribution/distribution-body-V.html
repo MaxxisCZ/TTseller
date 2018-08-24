@@ -1,0 +1,64 @@
+<div id="content">
+    <div class="ui-distribution__main">
+        <div class="ui-distribution__headerList">
+            <div class="ui-listChoic">
+                <p v-touch:tap="onChangeTap1" v-bind:class="{'isTap':isSelect1}">配送员列表</p>
+                <p v-touch:tap="onChangeTap2" v-bind:class="{'isTap':isSelect2}">配送时段列表</p>
+                <p v-touch:tap="onChangeTap3" v-bind:class="{'isTap':isSelect3}">配送小区列表</p>
+            </div>
+            <div v-show="isSelect1">
+                <div class="ui-titleP">
+                    <p>序号</p>
+                    <p>姓名</p>
+                    <p>手机号</p>
+                    <p>删除</p>
+                </div>
+                <div class="ui-isList" v-for="item in shopperList">
+                    <div class="ui-detailP" v-touch:tap="onShopperDetailTap($index)">
+                        <p>{{item.shopperID}}</p>
+                        <p>{{item.shopperName}}</p>
+                        <p>{{item.shopperPhone}}</p>
+                    </div>
+                    <p v-touch:tap="onDeleteStaffTap($index)">删除</p>
+                </div>
+            </div>
+            <div v-show="isSelect2">
+                <div class="ui-title">
+                    <p>序号</p>
+                    <p>时段</p>
+                    <p>删除</p>
+                </div>
+                <div class="ui-hasList" v-for="item in timeList">
+                    <div class="ui-detail" v-touch:tap="onTimeDetailTap($index)">
+                        <p>{{item.timeID}}</p>
+                        <p>{{item.timePeriod}}</p>
+                    </div>
+                    <p v-touch:tap="onDeleteTimeTap($index)">删除</p>
+                </div>
+            </div>
+            <div class="ui-list" v-show="isSelect3">
+                <div class="ui-search">
+                    <p>
+                        <i v-touch:tap="onSearchTap()"></i>
+                        <input type="text" placeholder="小区名称" v-model="villageName" @keyup.enter="onSearchTap()"/>
+                    </p>
+                </div>
+                <div class="ui-check">
+                    <span v-for="item in checkTop" v-bind:class="{'is-selected':item.isSelect}" v-touch:tap="onCheckTap($index)">{{item.title}}</span>
+                </div>
+                <div class="ui-title is-village">
+                    <p>序号</p>
+                    <p>小区名称</p>
+                    <p>删除</p>
+                </div>
+                <div class="ui-hasList" v-for="item in villagesList ">
+                    <div class="ui-detail" v-touch:tap="onVillagesDetailTap($index)">
+                        <p>{{item.villagesID}}</p>
+                        <p>{{item.villagesName}}</p>
+                    </div>
+                    <p v-touch:tap="onDeleteVillagesTap($index)">删除</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

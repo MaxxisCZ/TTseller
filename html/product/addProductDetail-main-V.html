@@ -1,0 +1,246 @@
+<div class="ui-productDetail__body">
+    <p class="ui-title">产品详情</p>
+    <div class="ui-body__info">
+        <div class="ui-info__fullLine">
+            <p>菜品名称</p>
+            <input type="text" v-model="productDetail.productName" v-bind:readonly="isProductEdit">
+            <p>菜品价格</p>
+            <input type="number" v-model="productDetail.price" v-bind:readonly="isProductEdit">
+        </div>
+        <div class="ui-info__fullLine">
+            <p>菜品库存</p>
+            <input v-model="productDetail.procount" v-bind:readonly="isProductEdit">
+            <p>品牌名</p>
+            <input v-model="productDetail.ptbrand" v-bind:readonly="isProductEdit">
+        </div>
+        <div class="ui-info__notFullLine">
+            <p>重量范围</p>
+            <div>
+                <input type="number" v-model="productDetail.weight1" v-bind:readonly="isProductEdit">
+                <div></div>
+                <input type="number" v-model="productDetail.weight2" v-bind:readonly="isProductEdit">
+            </div>
+            <p>限购数量</p>
+            <input v-model="productDetail.xgsl" v-bind:readonly="isProductEdit">
+        </div>
+        <div class="ui-info__rightFullLine">
+            <p>菜品编号</p>
+            <input type="text" style="text-align: center;" v-model="productDetail.ptnum" v-bind:readonly="isProductEdit">
+            <p>重量单位</p>
+            <div>
+                <select class="shortWeightSelect" v-model="productDetail.zldw_id" v-on:change="weightUnitDetailChange" v-bind:disabled="isProductEdit">
+                    <option v-for="item in weight" v-bind:value="item.unitsID">{{item.unitsName}}</option>
+                </select>
+                <input type="text" disabled="disabled" v-model="productDetail.zldw">
+            </div>
+        </div>
+        <div class="ui-info__fullLine">
+            <p>市场价</p>
+            <input type="number" v-model="productDetail.marketprice" v-bind:readonly="isProductEdit">
+            <p>序列号</p>
+            <input type="number" v-model="productDetail.rank" v-bind:readonly="isProductEdit">
+        </div>
+        <div class="ui-info__rightFullLine">
+            <p>成本价</p>
+            <input type="number" style="text-align: center;" v-model="productDetail.costprice" v-bind:readonly="isProductEdit">
+            <p>计价单位</p>
+            <div>
+                <select class="shortSelect" v-model="productDetail.dw_id" v-on:change="priceUnitsDetailChange" v-bind:disabled="isProductEdit">
+                    <option v-for="item in price" v-bind:value="item.unitsID">{{item.unitsName}}</option>
+                </select>
+                <input type="text" disabled="disabled" v-model="productDetail.dw">
+            </div>
+        </div>
+        <div class="ui-info__rightNotFullLine">
+            <p class="ui-vegetable__type">菜品父分类</p>
+            <div>
+                <select class="shortLongSelect" v-model="productDetail.fatherID" v-on:change="selectFatherChange">
+                    <option v-for="item in fatherList" v-bind:value="item.fatherID">{{item.fatherName}}</option>
+                </select>
+                <input class="ui-input" type="text" disabled="disabled" v-model="productDetail.fatherName">
+            </div>
+            <p>菜品子分类</p>
+            <div>
+                <select class="shortSelect" v-model="productDetail.cateid" v-on:change="selectChildChange">
+                    <option v-for="item in childList" v-bind:value="item.childID">{{item.childName}}</option>
+                </select>
+                <input type="text" disabled="disabled" v-model="productDetail.cate">
+            </div>
+        </div>
+        <div class="ui-info__rightFullLine">
+            <p>是否特价</p>
+            <div>
+                <select class="shortSelect" v-model="productDetail.issale" v-bind:disabled="isProductEdit">
+                    <optgroup label="是否特价">
+                        <option>是</option>
+                        <option>否</option>
+                    </optgroup>
+                </select>
+                <input type="text" disabled="disabled" v-model="productDetail.issale">
+            </div>
+            <p>是否限时</p>
+            <div>
+                <select class="shortSelect" v-model="productDetail.istime" v-bind:disabled="isProductEdit">
+                    <optgroup label="是否限时">
+                        <option>是</option>
+                        <option>否</option>
+                    </optgroup>
+                </select>
+                <input type="text" disabled="disabled" v-model="productDetail.istime">
+            </div>
+        </div>
+        <div class="ui-info__rightFullLine">
+            <p>是否热卖</p>
+            <div>
+                <select class="shortSelect" v-model="productDetail.ishot" v-bind:disabled="isProductEdit">
+                    <optgroup label="是否热卖">
+                        <option>是</option>
+                        <option>否</option>
+                    </optgroup>
+                </select>
+                <input type="text" disabled="disabled" v-model="productDetail.ishot">
+            </div>
+            <p>菜品产地</p>
+            <input type="text" v-model="productDetail.place" style="text-align: center;" v-bind:readonly="isProductEdit">
+        </div>
+        <div class="ui-info__rightFullLine">
+            <p>论斤显示</p>
+            <div>
+                <select class="shortSelect" v-model="productDetail.isweight" v-bind:disabled="isProductEdit">
+                    <optgroup label="论斤显示">
+                        <option>是</option>
+                        <option>否</option>
+                    </optgroup>
+                </select>
+                <input type="text" v-model="productDetail.isweight" disabled="disabled">
+            </div>
+            <p>是否新品</p>
+            <div>
+                <select class="shortSelect" v-model="productDetail.isnew" v-bind:disabled="isProductEdit">
+                    <optgroup label="是否新品">
+                        <option>是</option>
+                        <option>否</option>
+                    </optgroup>
+                </select>
+                <input type="text" v-model="productDetail.isnew" disabled="disabled">
+            </div>
+        </div>
+        <div class="ui-info__allLine">
+            <p>限时时段</p>
+            <div>
+                <div>
+                    <p>{{productDetail.time1}}</p>
+                    <input type="datetime-local" v-model="startTime" placeholder="yyyy-mm-dd hh:mm:ss" v-on:input="startTimeChange" v-bind:readonly="IOS" v-touch:tap="openStartTimePicker">
+                    </input>
+                </div>
+                <div></div>
+                <div>
+                    <p>{{productDetail.time2}}</p>
+                    <input type="datetime-local" v-model="endTime" placeholder="yyyy-mm-dd hh:mm:ss" v-on:input="endTimeChange" v-bind:readonly="IOS" v-touch:tap="openEndTimePicker">
+                    </input>
+                </div>
+            </div>
+        </div>
+        <div class="ui-info__halfLine">
+            <p>是否置顶</p>
+            <div>
+                <select class="shortSelect" v-model="productDetail.isTop">
+                    <optgroup label="是否置顶">
+                        <option>是</option>
+                        <option selected="selected">否</option>
+                    </optgroup>
+                </select>
+                <input type="text" disabled="disabled" v-model="productDetail.isTop">
+            </div>
+        </div>
+        <div class="ui-info__almostLine">
+            <p>市场价与产品价比例</p>
+            <div>
+                <input input="number" v-model="productDetail.marketprice/productDetail.price | translate-price">
+            </div>
+        </div>
+        <div class="ui-info__almostLine" v-show="ischeckDetail">
+            <p>未通过理由</p>
+            <div>
+                <input input="number" v-model="productDetail.unpassReason">
+            </div>
+        </div>
+        <div class="ui-pic__big">
+            <div class="ui-info__fullLine">
+                <p>菜品小图</p>
+                <p>菜品大图</p>
+            </div>
+            <div class="ui-addBigPic">
+                <div>
+                    <div style="background-image:url({{productDetail.image1}})"></div>
+                </div>
+                <div>
+                    <div style="background-image:url({{productDetail.image2}})"></div>
+                </div>
+            </div>
+            <!-- <div class="ui-pic__choose">
+                <div>
+                    <div v-touch:tap="onUploadMinTap('detailMin')">选择文件</div>
+                </div>
+                <div>
+                    <div v-touch:tap="onUploadMaxTap('detailMax')">选择文件</div>
+                </div>
+            </div>
+            <div>
+                <p>未选择任何文件</p>
+                <p>未选择任何文件</p>
+            </div> -->
+        </div>
+    </div>
+    <p class="ui-describe">菜品描述</p>
+    <div cllass="ui-product__describe">
+        <div class="detail-describe">{{{productDetail.descibe}}}</div>
+    </div>
+    <!-- <div class="ui-product__add">
+        <div>
+            <div v-touch:tap="onEditProductTap" v-show="isProductEdit">编辑产品</div>
+            <div v-touch:tap="onSaveProductTap" v-show="!isProductEdit">保存产品</div>
+        </div>
+        <div>
+            <div v-touch:tap="onAddSpecifications">添加规格</div>
+        </div>
+    </div> -->
+    <div class="ui-product__Specifications" v-for="item in productDetail.ggs">
+        <div>
+            <p>规格{{item.ggTitle}}</p>
+            <!-- <div v-touch:tap="onDeletSpeTap($index)"></div> -->
+        </div>
+        <div class="ui-Specifications__detailone">
+            <table>
+                <tr>
+                    <td>价格:</td>
+                    <td>{{item.ggprice}}</td>
+                    <td>库存:</td>
+                    <td>{{item.ggkc}}</td>
+                    <td>计价单位:</td>
+                    <td>{{item.ggdwid}}</td>
+                    <td>市场价:</td>
+                    <td>{{item.ggscj}}</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>最小重量:</td>
+                    <td>{{item.ggxzl}}</td>
+                    <td>最大重量:</td>
+                    <td>{{item.ggdzl}}</td>
+                    <td>重量单位:</td>
+                    <td>{{item.ggzldwid}}</td>
+                    <td>限购数量:</td>
+                    <td>{{item.ggxgsl}}</td>
+                    <td>成本价</td>
+                    <td>{{item.ggcbj}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="ui-list__button">
+        <span v-touch:tap="onAddSingleTap">一键添加</span>
+    </div>
+</div>
+</div>

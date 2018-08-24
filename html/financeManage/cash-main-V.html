@@ -1,0 +1,50 @@
+<div class="ui-list">
+    <div class="ui-list__top">
+        <p v-for="item in topList" v-bind:class="{'is-selected':item.isSelected}" v-touch:tap="onCashTap($index)">{{item.title}}</p>
+    </div>
+    <div v-show="isCash">
+        <div class="ui-list__card" v-touch:tap="onSelectCardTap">
+            <i style="background-image:url({{cardDetail.logo | trans-avatar}})"></i>
+            <span>{{cardDetail.bank}}</span>
+            <p>尾号<span>{{cardDetail.lastNumber}}</span>储蓄卡</p>
+            <a></a>
+        </div>
+        <div class="ui-list__entry">
+            <span>提现金额</span>
+            <p>
+                <i></i>
+                <span>
+                    <input type="number" v-model="money"/>
+                </span>
+            </p>
+            <div>
+                <p>可用余额{{balance}}元</p>
+                <!-- <span>全部提现</span> -->
+            </div>
+        </div>
+        <div class="ui-list__bst">
+            <span v-bind:class="{'is-pass':money}" v-touch:tap="onConfirmTap">确认转出</span>
+        </div>
+    </div>
+
+    <div class="ui-list__cashNote" v-else>
+        <div class="ui-list__title">
+            <p>订单id</p>
+            <p>卡id</p>
+            <p>金额</p>
+            <p class="is-time">时间</p>
+            <p>状态</p>
+            <p>操作</p>
+        </div>
+        <div class="ui-list__detail" v-for="item in detail">
+            <p>{{item.orderID}}</p>
+            <p>{{item.cardID}}</p>
+            <p>{{item.money}}</p>
+            <p class="is-time">{{item.time}}</p>
+            <p>{{item.state}}</p>
+            <p class="is-del" v-touch:tap="onDeleteTap($index)" v-show="item.isDel">删除</p>
+            <p class="is-del" v-touch:tap="onDeleteTap($index)" v-else>撤销</p>
+        </div>
+    </div>
+    
+</div>

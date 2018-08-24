@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF; }
+
+.ui-bankList {
+  display: block;
+  height: 100%; }
+
+.ui-bankList__item {
+  display: block;
+  position: relative;
+  margin-top: 0.26rem; }
+
+.ui-bankList__bankBg {
+  display: block;
+  margin-left: 0.18rem;
+  margin-right: 0.18rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-image: url(../../image/me/bank_bg.png);
+  height: 2.2rem;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px; }
+
+.ui-bankList__bankIcon {
+  display: block;
+  position: absolute;
+  left: 0.42rem;
+  top: 0.16rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-image: url(../../image/me/bankIcon.png);
+  width: 0.68rem;
+  height: 0.68rem; }
+
+.ui-bankList__bankName {
+  display: block;
+  position: absolute;
+  left: 1.3rem;
+  top: 0.2rem;
+  font-size: 0.36rem;
+  color: #FFF; }
+
+.ui-bankList__card {
+  display: block;
+  position: absolute;
+  left: 1.3rem;
+  top: 0.6rem;
+  font-size: 0.18rem;
+  color: #FFF; }
+
+.ui-bankList__bankNumber {
+  display: block;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.4rem;
+  font-size: 0.36rem;
+  color: #FFF; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhbmsuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGtCQUFpQjtBQUNqQjs7SUFFRztBQUNIOztJQUVHO0FBQ0gsMEJBQXlCO0FBQ3pCOzs7SUFHRztBQUNILG1CQUFrQjtBQUNsQixrQkFBaUI7QUFDakI7Ozs7O0lBS0c7QUFDSCxVQUFTO0FBQ1QsVUFBUztBQUNULGFBQVk7QUFDWixZQUFXO0FBQ1gsWUFBVztBQUNYLFdBQVU7QUFDVixZQUFXO0FBQ1gsV0FBVTtBQUNWLFdBQVU7QUFDVixXQUFVO0FBQ1YsU0FBUTtBQUNSLFdBQVU7QUFDVixXQUFVO0FBQ1YsV0FBVTtBQUNWLFlBQVc7QUFDWDtFQUNFLFdBQVU7RUFDVixZQUFXO0VBQ1gsd0JBQXVCLEVBQUU7O0FBRTNCO0VBQ0UsZ0JBQWU7RUFDZixjQUFhLEVBQUU7O0FBRWpCO0VBQ0UsZ0JBQWU7RUFDZixvQkFBbUI7RUFDbkIscUJBQW9CLEVBQUU7O0FBRXhCO0VBQ0UsZ0JBQWU7RUFDZixzQkFBcUI7RUFDckIsdUJBQXNCO0VBQ3RCLDhCQUE2QjtFQUM3QixvQ0FBbUM7RUFDbkMsZ0NBQXVCO0tBQXZCLDZCQUF1QjtPQUF2QiwyQkFBdUI7VUFBdkIsd0JBQXVCO0VBQ3ZCLG1EQUFrRDtFQUNsRCxnQkFBZTtFQUNmLDRCQUFtQjtLQUFuQix5QkFBbUI7VUFBbkIsb0JBQW1CLEVBQUU7O0FBRXZCO0VBQ0UsZ0JBQWU7RUFDZixvQkFBbUI7RUFDbkIsZUFBYztFQUNkLGNBQWE7RUFDYiw4QkFBNkI7RUFDN0Isb0NBQW1DO0VBQ25DLGdDQUF1QjtLQUF2Qiw2QkFBdUI7T0FBdkIsMkJBQXVCO1VBQXZCLHdCQUF1QjtFQUN2QixvREFBbUQ7RUFDbkQsZ0JBQWU7RUFDZixpQkFBZ0IsRUFBRTs7QUFFcEI7RUFDRSxnQkFBZTtFQUNmLG9CQUFtQjtFQUNuQixjQUFhO0VBQ2IsYUFBWTtFQUNaLG9CQUFtQjtFQUNuQixhQUFZLEVBQUU7O0FBRWhCO0VBQ0UsZ0JBQWU7RUFDZixvQkFBbUI7RUFDbkIsY0FBYTtFQUNiLGFBQVk7RUFDWixvQkFBbUI7RUFDbkIsYUFBWSxFQUFFOztBQUVoQjtFQUNFLGdCQUFlO0VBQ2Ysb0JBQW1CO0VBQ25CLGVBQWM7RUFDZCxnQkFBZTtFQUNmLG9CQUFtQjtFQUNuQixhQUFZLEVBQUUiLCJmaWxlIjoibWUvYmFuay5jc3MiLCJzb3VyY2VSb290IjoiLi4vc2Fzcy8ifQ== */

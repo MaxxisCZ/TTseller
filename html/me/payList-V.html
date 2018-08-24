@@ -1,0 +1,42 @@
+<div class="ui-payList">
+    <div class="ui-payList__account">
+        账号：18622222222
+    </div>
+    <div class="ui-payList__menu">
+        <p>
+            付款金额
+        </p>
+        <p>
+            付款时间
+        </p>
+        <p>
+            付款状态
+        </p>
+        <p>
+            付款原因
+        </p>
+        <p>
+            类型
+        </p>
+    </div>
+    <div class="ui-list">
+        <div class="ui-list__item" v-for="item in list">
+            <p>
+                {{item.money}}
+            </p>
+            <p>
+                <span>{{item.time}}</span>
+                <span>{{item.min}}</span>
+            </p>
+            <p>
+                {{item.status}}
+            </p>
+            <p>
+                {{item.reason}}
+            </p>
+            <p>
+                {{item.type}}
+            </p>
+        </div>
+    </div>
+</div>

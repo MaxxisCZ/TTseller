@@ -1,0 +1,17 @@
+<div class="ui-bankList">
+    <div class="ui-bankList__item" v-for="item in list">
+        <div class="ui-bankList__bankBg" style="background-image:url({{item.bankBg}})">
+        </div>
+        <div class="ui-bankList__bankIcon" style="background-image:url({{item.bankIcon}})">
+        </div>
+        <div class="ui-bankList__bankName">
+            {{item.bankName}}
+        </div>
+        <div class="ui-bankList__card">
+            {{item.card}}
+        </div>
+        <div class="ui-bankList__bankNumber">
+            {{item.bankNumber}}
+        </div>
+    </div>
+</div>

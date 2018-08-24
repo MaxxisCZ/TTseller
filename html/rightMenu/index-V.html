@@ -1,0 +1,6 @@
+<div id="content">
+    <div class="ui-shadow" v-touch:tap="onCancelTap"></div>
+    <div class="ui-list__select" >
+        <p v-for="item in list" v-touch:tap="onShowTap($index)">{{item}}</p>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="header" class="ui-header is-base" v-bind:class="{'isHome':isHome}">
+    <div class="ui-header__leftBtn" v-touch:tap="onTapLeftBtn" >
+        <i class="is-arrow"></i>
+    </div>
+    <div v-touch:tap="onTitleTap" class="ui-header__title" style="padding: .14rem 2.0rem .1rem 2.0rem;">
+      <!--  <div class="ui-header__bMapCity" v-touch:tap="onTapCity">{{city}}</div>  -->
+    	<div class="ui-header__inputItem">
+    		<i></i>
+    		<input type="text" style="outline:none;" v-model="searchContent" placeholder="请输入关键字" @keyup.enter="onTapSearch(searchContent)"/>
+    	</div>
+    	<div class="ui-header__inputBg" ></div>
+    </div>
+    <div class="ui-header__rightBtn" v-touch:tap="onTapSearch(searchContent)" v-show="isSearch">
+    	<span class="ui-header__bMapSearch">搜索</span>
+    </div>
+    <div class="ui-header__rightBtn" v-touch:tap="onTapConfirm()" v-else>
+    	<span class="ui-header__bMapConfirm">确认</span>
+    </div>
+</div>

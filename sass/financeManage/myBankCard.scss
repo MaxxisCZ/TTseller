@@ -1,0 +1,70 @@
+.ui-list{
+	display: block;
+	width: 100%;
+	background-color: #ececec;
+}
+
+.ui-list__card{
+	display: block;
+	width: 100%;
+	// background-color: #fff;
+	&>div{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 2.7rem;
+		border-radius: .1rem;
+		padding: .2rem .1rem .2rem 1.6rem;
+		background-color: #fff;
+		margin-bottom: .1rem;
+		&>i{
+			display: block;
+			position: absolute;
+			top: .2rem;
+			left: .3rem;
+			width: 1.5rem;
+			height: .75rem;
+			background-position: center center;
+			background-size: .75rem .75rem;
+			background-repeat: no-repeat;
+		}
+		&>span{
+			display: block;
+			position: absolute;
+			// width: 3rem;
+			height: .75rem;
+			padding-left: .4rem;
+			&>title{
+				display: block;
+				height: .5rem;
+				line-height: .5rem;
+				font-size: .4rem;
+				color: black;
+				}
+			&>li{
+				display: block;
+				font-size: .24rem;
+				color: black;
+			}
+		}
+		&>p{
+			display: block;
+			position: absolute;
+			bottom: .16rem;
+			// right: 1.34rem;
+			right: .25rem;
+			height: .4rem;
+			line-height: .36rem;
+			font-size: .4rem;
+			color: black;
+			&.is-num{
+				font-size: .44rem;
+				right: .25rem;
+				bottom: .14rem;
+			}
+		}
+	}
+	&.is-card {
+		padding: .2rem;
+	}
+}

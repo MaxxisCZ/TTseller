@@ -1,0 +1,30 @@
+<div class="ui-list">
+	<div class="ui-list__head">
+		<span>请输入6位数字作为支付密码</span>
+	</div>
+	<div class="ui-list__item">
+		<div class="ui-list__psd" v-touch:tap="onOpenTap">
+			<!-- <input type="tel" v-model="pwd" v-on:input="onPasswordInput" maxlength="6"/> -->
+			<p><span v-bind:class="{'ui-list__spot':isFir}"></span></p>
+			<p><span v-bind:class="{'ui-list__spot':isSec}"></span></p>
+			<p><span v-bind:class="{'ui-list__spot':isThr}"></span></p>
+			<p><span v-bind:class="{'ui-list__spot':isFou}"></span></p>
+			<p><span v-bind:class="{'ui-list__spot':isFif}"></span></p>
+			<p><span v-bind:class="{'ui-list__spot':isSix}"></span></p>
+		</div>
+	</div>
+	<div class="ui-list__bst">
+		<span v-touch:tap="onNextTap">下一步</span>
+	</div>
+	<div class="ui-list__keyboard" v-show="isShow">
+		<span v-touch:tap="onCloseTap">隐藏</span>
+		<p>
+			<span v-for="item in numberList" v-touch:tap="onPasswordInput($index)" v-bind:class="{'is-space':!item.number}">
+				<i>{{item.number}}</i>
+			</span>
+			<span v-touch:tap="onDeleteTap">
+				<i class="is-del">删除</i>
+			</span>
+		</p>
+	</div>
+</div>

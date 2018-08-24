@@ -1,0 +1,117 @@
+.ui-list{
+    display: block;
+    width: 100%;
+    padding-top: 1.76rem;
+}
+
+.ui-list__Top{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .88rem;
+    font-size: 0;
+    background-color: #e9e9e9;
+    &>span{
+        display: inline-block;
+        width: 33.3%;
+        line-height: .88rem;
+        font-size: .28rem;
+        color: #c6c6c6;
+        text-align: center;
+        &.is-select{
+            font-size: .28rem;
+            color: #565656;
+            background-color: #fff;
+        }
+    }
+}
+
+.ui-list__title{
+    display: block;
+    position: fixed;
+    top: .88rem;
+    left: 0;
+    width: 100%;
+    height: .88rem;
+    font-size: 0;
+    background-color: #616f88;
+    &>span{
+        display: inline-block;
+        line-height: .88rem;
+        font-size: .28rem;
+        color: #fff;
+        text-align: center;
+        &.is-num{
+            width: 15%;
+        }
+        &.is-time{
+            width: 29%;
+        }
+        &.is-sumSale{
+            width: 20%;
+        }
+        &.is-sumOrder{
+            width: 16%;
+        }
+        &.is-sumPeolpe{
+            width: 20%;
+        }
+    }
+}
+
+.ui-list__detail{
+    display: block;
+    top: .62rem;
+    left: 0;
+    width: 100%;
+    height: .62rem;
+    font-size: 0;
+    background-color: #f7f6f3;
+    &>span{
+        display: inline-block;
+        line-height: .62rem;
+        font-size: .26rem;
+        color: #616e88;
+        text-align: center;
+        &.is-num{
+            width: 15%;
+        }
+        &.is-time{
+            width: 29%;
+        }
+        &.is-sumSale{
+            width: 20%;
+        }
+        &.is-sumOrder{
+            width: 16%;
+        }
+        &.is-sumPeolpe{
+            width: 20%;
+        }
+    }
+    &:nth-child(2n){
+        background-color: #fff;
+    }
+}
+
+.ui-list__yearMonth{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 199;
+    font-size: .36rem;
+    color: #919191;
+    &>select{
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        font-size: .32rem;
+        color: #0000ff;
+        text-align: center;
+        background-color: #fff;
+        border: none;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="ui-list">
+	<div class="ui-list__top">
+		<span>订单id</span>
+		<span>订单状态</span>
+		<span>下单时间</span>
+		<span>收货人</span>
+	</div>
+	<div class="ui-list__detail" v-for="item in detail" v-touch:tap="onOrderDetailTap($index)">
+		<span>{{item.orderID}}</span>
+		<span>{{item.state}}</span>
+		<span class="is-time"><b class="center-hack"></b><span>{{item.time}}</span></span>
+		<span>{{item.person}}</span>
+	</div>
+</div>

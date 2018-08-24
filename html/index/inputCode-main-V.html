@@ -1,0 +1,19 @@
+<div class="ui-list">
+	<div class="ui-list__header">
+		<span>您正在重置支付密码</span>
+	</div>
+	<div class="ui-list__item">
+		<div class="ui-list__box">
+			<p>手机号码</p>
+			<input type="tel" v-model="mobile" readOnly/>
+		</div>
+		<div class="ui-list__box is-code">
+			<p>验证码</p>
+			<input type="text" v-model="code" placeholder="输入验证码"/>
+			<i v-touch:tap="onGetCodeTap">{{codeText}}</i>
+		</div>
+	</div>
+	<div class="ui-list__bst">
+		<p v-touch:tap="onSumbitTap">确认</p>
+	</div>
+</div>

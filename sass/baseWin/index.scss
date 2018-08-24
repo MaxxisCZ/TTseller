@@ -1,0 +1,191 @@
+@import "../_config";
+
+html,
+body{
+	font-size: 50px;
+	overflow: hidden;
+}
+
+#header {
+	box-sizing: content-box;
+	z-index: 999;
+}
+
+.ui-header {
+    display: block;
+    // position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.34rem;
+    color: #fff;
+    background-color: $mainColor;
+    box-sizing: content-box;
+    z-index: 999;
+    &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $mainColor;
+        transform: scale(1, 0.5);
+        transform-origin: center center;
+    }
+}
+
+.ui-header__leftBtn,
+.ui-header__rightBtn {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0.88rem;
+    height: 0.88rem;
+    text-align: center;
+    z-index: 9;
+    &>i{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.ui-header__leftBtn {
+    width: auto;
+    padding-left: 0.42rem;
+    left: 0;
+    width: 1rem;
+    // height:.4rem;
+    font-size: 0;
+    &>i{
+        &.is-arrow{
+            display: block;
+            position: absolute;
+            left: 0.4rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 0.24rem;
+            height: 0.42rem;
+            @include bgi-full( url(../../image/common/icon-arrow-back.png) );
+        }
+    }
+    &>span{
+        display: inline-block;
+        font-size: 0.34rem;
+        color: #ffd7b0;
+    }
+    &:active{
+        opacity: 0.3;
+    }
+}
+
+.ui-header__rightBtn {
+    right: 0;
+}
+
+.is-cancelAll {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.is-selectAll {
+    display: block;
+    width: .88rem;
+    height: .88rem;
+    background-color: blue;
+}
+
+.ui-header__title{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.88rem;
+    box-sizing: border-box;
+    @include ellipsis;
+    text-align: center;
+}
+
+.ui-mainFooter{
+    display: flex;
+    flex-flow: row;
+    -webkit-box-orient: horizontal;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    // @include top-line;
+}
+
+.ui-mainFooter__item{
+    display: block;
+    flex: 1;
+    height: 100%;
+    padding-top: 8px;
+    text-align:center;
+    font-size: 0;
+    &.is-active{
+        .ui-mainFooter__icon{
+            &.is-home{
+                background-size: 22px 22px;
+                @include bgi-center( url(../../image/main/appGreen.png) );
+            }
+            &.is-message{
+                background-size: 22px 22px;
+                @include bgi-center( url(../../image/main/messageGreen.png) );
+            }
+            &.is-service{
+                background-size: 22px 22px;
+                @include bgi-center( url(../../image/main/serviceGreen.png) );
+            }
+            &.is-me{
+                background-size: 22px 22px;
+                @include bgi-center( url(../../image/main/meGreen.png) );
+            }
+        }
+        .ui-mainFooter__title{
+            color: #3b6dd0;
+        }
+    }
+}
+
+.ui-mainFooter__icon{
+    display: inline-block;
+    width:22px;
+    height:22px;
+    // height: 100%;
+    &.is-home{
+        background-size: 22px 22px;
+        @include bgi-center( url(../../image/main/appGrey.png) );
+    }
+    &.is-message{
+        background-size: 22px 22px;
+        @include bgi-center( url(../../image/main/messageGrey.png) );
+    }
+    &.is-service{
+        background-size: 22px 22px;
+        @include bgi-center( url(../../image/main/serviceGrey.png) );
+    }
+    &.is-me{
+        background-size: 22px 22px;
+        @include bgi-center( url(../../image/main/meGrey.png) );
+    }
+}
+
+.ui-mainFooter__title{
+    margin-top: 5px;
+    font-size: 10px;
+    color: #646464;
+    text-align: center;
+}

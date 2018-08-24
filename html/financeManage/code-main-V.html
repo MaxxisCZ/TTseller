@@ -1,0 +1,12 @@
+<div class="ui-list">
+	<div class="ui-list__top">
+		<span>请输入手机{{phone}}收到的短信校验码</span>
+	</div>
+	<div class="ui-list__code">
+		<input type="text" v-model="code" v-on:input="onCodeInput"/>
+		<span v-touch:tap="onGetCodeTap">{{codeText}}</span>
+	</div>
+	<div class="ui-list__botton">
+		<span v-bind:class="{'is-next':isPass}" v-touch:tap="onSumbit">下一步</span>
+	</div>
+</div>

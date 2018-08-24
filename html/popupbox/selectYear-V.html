@@ -1,0 +1,17 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>选择年份</p>
+        </div>
+        <div class="ui-choose">
+            <select id="xxx" v-model="selected">
+                <option v-for="option in options" v-bind:value="option.value">{{option.text}}</option>
+            </select>
+        </div>
+        <div>
+            <p v-touch:tap="onSumbitTap">确认</p>
+        </div>
+    </div>
+</div>

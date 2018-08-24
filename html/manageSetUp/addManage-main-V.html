@@ -1,0 +1,62 @@
+<div class="ui-list">
+	<div class="ui-list__item">
+		<span>姓名</span>
+		<input v-model="oneDetail.name" />
+	</div>
+	<div class="ui-list__item">
+		<span>性别</span>
+		<select v-model="oneDetail.sex">
+			<option v-for="option in options" v-bind:value="option.value">{{option.text}}</option>
+		</select>
+	</div>
+	<div class="ui-list__item">
+		<span>出生年月</span>
+		<input class="is-date" type="date" v-model="oneDetail.birth" placeholder="请选择出生日期" />
+	</div>
+	<div class="ui-list__item">
+		<span>手机号</span>
+		<input v-model="oneDetail.mobile" />
+	</div>
+	<div class="ui-list__item">
+		<span>邮箱</span>
+		<input v-model="oneDetail.email" />
+	</div>
+	<div class="ui-list__item is-addr">
+		<span>住址</span>
+		<textarea rows="4" v-model="oneDetail.place"></textarea>
+		<!-- <textarea rows="4" autofocus v-model="oneDetail.place"></textarea> -->
+	</div>
+	<div class="ui-list__item">
+		<span>登录名</span>
+		<input v-model="oneDetail.loginname" />
+	</div>
+	<div class="ui-list__item">
+		<span>登录密码</span>
+		<input v-model="oneDetail.password" placeholder="请输入至少6位密码" />
+	</div>
+	<div class="ui-list__item">
+		<span>职位</span>
+		<input v-model="oneDetail.position" />
+	</div>
+
+	<div class="ui-list__botton">
+		<p>
+			<span class="is-confirm" v-touch:tap="onSubmitTap">确认</span>
+		</p>
+		<p>
+			<span class="is-suspend">取消</span>
+		</p>
+	</div>
+
+	<!-- <div class="ui-list__power">
+		<p>添加权限</p>
+		<span v-for="item in addList" v-touch:tap="onSelectedTap($index)">
+			<i v-bind:class="{'is-selected':item.isSelect}"></i>
+			{{item.powerName}}
+		</span>
+	</div>
+
+	<div class="ui-list__addPower">
+		<span v-touch:tap="onPowerTap">添加权限</span>
+	</div> -->
+</div>

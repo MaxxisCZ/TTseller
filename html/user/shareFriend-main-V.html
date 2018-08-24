@@ -1,0 +1,19 @@
+<div class="ui-list">
+	<span class="ui-list__header">
+		账号：{{detail.account}}
+	</span>
+	<div class="ui-list__title">
+		<span>账号</span>
+		<span>积累消费额</span>
+		<span>购买次数</span>
+		<span>最近消费时间</span>
+	</div>
+	<div class="ui-list__detail" v-for="item in detail.list">
+		<span>{{item.phone}}</span>
+		<span>{{item.consumption}}</span>
+		<span>{{item.times}}</span>
+		<span>
+			<p>{{item.time}}</p>
+		</span>
+	</div>
+</div>

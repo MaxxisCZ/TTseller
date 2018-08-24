@@ -1,0 +1,7 @@
+<div class="ui-mapList">
+	<div class="ui-list__item" v-for="item in list" v-touch:tap="onSelectTap($index)">
+		<p>{{item.name}}</p>
+		<span>{{item.address}}</span>
+		<i v-bind:class="{'is-select':item.isSelect}"></i>
+	</div>
+</div>

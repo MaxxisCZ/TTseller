@@ -1,0 +1,24 @@
+<div class="ui-list" v-for="item in list">
+    <div class="ui-list__item">
+        <div class="ui-list__time">
+            <p>
+                {{item.time}}
+            </p>
+            <p>
+                {{item.hour}}
+            </p>
+        </div>
+        <div class="ui-list__circle" v-bind:class="{'is-negative':item.isNegative}">
+        </div>
+        <div class="ui-list__title">
+            <p>
+                {{item.moneyDetail}}
+            </p>
+            <p>
+                {{item.text}}
+            </p>
+        </div>
+    </div>
+    <div class="is-line">
+    </div>
+</div>

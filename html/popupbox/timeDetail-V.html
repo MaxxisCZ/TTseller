@@ -1,0 +1,37 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>配送时间详情</p>
+        </div>
+        <div class="ui-costRecord">
+            <div class="ui-amount">
+                <p>时间点1</p>
+                <div>
+                    <input type="text"  v-model="start">
+                </div>
+            </div>
+            <div class="ui-amount">
+                <p>时间点2</p>
+                <div>
+                    <input type="text"  v-model="end">
+                </div>
+            </div>
+        </div>
+       <div class="ui-cancleAndOkButton">
+           <!-- <div class="ui-btnChoice"> -->
+                <div>
+                    <div class="sure" v-touch:tap="onSubmitTap">确定</div>
+                </div>
+                <div>
+                    <div class="no" v-touch:tap="onCancelTap">
+                        取消
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+        <div v-show="isbutton">
+        </div>
+    </div>
+</div>

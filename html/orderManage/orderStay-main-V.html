@@ -1,0 +1,18 @@
+<div class="ui-list">
+	<div class="ui-list__search">
+		<input type="text" placeholder="输入订单号或手机号搜索相关订单" v-model="searchText">
+		<span v-touch:tap="onSearchTap"></span>
+	</div>
+	<div class="ui-list__header">
+		<span class="is-id">订单ID</span>
+		<span class="is-time">交货时间</span>
+		<span class="is-state">收货人</span>
+		<span class="is-name">{{state}}</span>
+	</div>
+	<div class="ui-list__detail" v-for="item in detail">
+		<span class="is-id" v-touch:tap="onDetailTap($index)">{{item.ID}}</span>
+		<span class="is-time" v-touch:tap="onDetailTap($index)"><b class="center-hack"></b><span>{{item.time}}</span></span>
+		<span class="is-state" v-touch:tap="onDetailTap($index)">{{item.person}}</span>
+		<span class="is-name" v-touch:tap="onDeleteTap($index)">{{item.state}}</span>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+<div class="ui-list__item">
+	<div class="ui-list__itemContent">
+		<span>辐射距离：</span>
+		<input type="tel" placeholder="至少3公里" v-model="range"/>
+    <span>公里</span>
+	</div>
+	<div class="ui-list__buttom">
+		<span v-touch:tap="onradiationTap">保存</span>
+	</div>
+</div>

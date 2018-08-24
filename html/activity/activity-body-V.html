@@ -1,0 +1,21 @@
+<div id="content">
+    <div class="ui-activity__main">
+        <div class="ui-activity__headerList">
+            <div class="ui-title">
+                <p>序号</p>
+                <p>活动名称</p>
+                <p>发布时间</p>
+                <p>删除</p>
+            </div>
+            <div class="ui-isList" v-for="item in list" >
+                <div class="ui-list__detail" v-touch:tap="onDetailTap($index)">
+                    <p>{{item.activityID}}</p>
+                    <p>{{item.activityName}}</p>
+                    <p>{{item.activityTime}}</p>
+                   
+                </div>
+                 <p v-touch:tap="onDeleteTap($index)">删除</p>
+            </div>
+        </div>
+    </div>
+</div>

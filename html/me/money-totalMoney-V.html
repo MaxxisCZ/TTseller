@@ -1,0 +1,42 @@
+<div class="ui-money">
+    <div class="ui-totalMoney">
+        <p class="ui-totalMoney__text">
+            总资产：<span>{{money}}</span>元
+        </p>
+    </div>
+    <div class="ui-totalMoney__row has-arrow" v-touch:tap="onMonthBillTap">
+        <p class="ui-totalMoney__month">
+            {{year}}年{{month}}月
+        </p>
+        <!-- <p class="ui-totalMoney__month" v-else>
+            本月
+        </p> -->
+        <p class="ui-totalMoney__bill" v-touch:tap="onMonthBillTap">
+            查看月账单
+        </p>
+    </div>
+</div>
+<div class="ui-list" v-for="item in list">
+    <div class="ui-list__item">
+        <div class="ui-list__time">
+            <p>
+                {{item.time}}
+            </p>
+            <p>
+                {{item.hour}}
+            </p>
+        </div>
+        <div class="ui-list__circle" v-bind:class="{'is-negative':item.isNegative}">
+        </div>
+        <div class="ui-list__title">
+            <p>
+                {{item.moneyDetail}}
+            </p>
+            <p>
+                {{item.text}}
+            </p>
+        </div>
+    </div>
+    <div class="is-line">
+    </div>
+</div>

@@ -1,0 +1,220 @@
+@charset "utf-8";
+@import "../_config";
+html {
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+body,
+.ui-activity__main {
+    background-color: #ffffff;
+}
+
+.ui-activityO__main {
+    width: 100%;
+    height: 100%;
+    font-size: .3rem;
+}
+
+.ui-activityO__name {
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    // margin-top: .3rem;
+    padding-top: .3rem;
+    color: #454545;
+    &>input {
+        outline: none;
+        display: inline-block;
+        width: 52%;
+        height: .6rem;
+        line-height: .6rem;
+        border: none;
+        background-color: #e7e7e7;
+        padding-left: .1rem;
+    }
+}
+
+.ui-leftLine {
+    text-align: center;
+    display: inline-block;
+    width: 38%;
+}
+
+.ui-activityO__pic {
+    width: 100%;
+    margin-top: .4rem;
+    &>div:first-child {
+        position: relative;
+        width: 38%;
+        &>p {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            height: 1.77rem;
+            line-height: 0;
+            color: #454545;
+            padding-top: .4rem;
+        }
+    }
+    &>div:last-child {
+        display: inline-block;
+        width: 1.83rem;
+        height: 1.77rem;
+        background-color: #e7e7e7;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.ui-activityO__file {
+    margin-top: .14rem;
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    color: #454545;
+    &>p {
+        display: inline-block;
+    }
+    &>div {
+        display: inline-block;
+    }
+    &>div:nth-child(2) {
+        text-align: center;
+        width: 1.8rem;
+        height: .5rem;
+        line-height: .5rem;
+        background-color: #e7e7e7;
+    }
+    &>div:last-child {
+        text-align: center;
+        width: 1.55rem;
+        height: .5rem;
+        line-height: .5rem;
+        background-color: #6cce78;
+        margin-left: .14rem;
+        color: #ffffff;
+    }
+}
+
+.ui-activityO__content {
+    margin-top: .14rem;
+    width: 100%;
+    height: 1.92rem;
+    &>div:first-child {
+        position: relative;
+        width: 38%;
+        &>p {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            height: 1.77rem;
+            line-height: 0;
+            color: #454545;
+            padding-top: .4rem;
+        }
+    }
+    &>textarea {
+        display: inline-block;
+        width: 3.69rem;
+        height: 1.92rem;
+        border: none;
+        padding: .1rem;
+        background-color: #e7e7e7;
+        background-repeat: no-repeat;
+        background-size: cover;
+        outline: none;
+    }
+}
+
+.ui-activityO__isNew {
+    width: 100%;
+    height: .75rem;
+    line-height: .75rem;
+    color: #454545;
+    position: relative;
+    padding-top: .3rem;
+}
+
+.ui-rightButton {
+    position: absolute;
+    left: 40%;
+    // top: 22%;
+    top: .36rem;
+}
+
+.ui-out {
+    height: .53rem;
+    width: .84rem;
+    background-color: #8adbb2;
+    border-radius: 50px;
+}
+
+.ui-in {
+    position: absolute;
+    top: 6%;
+    right: .03rem;
+    height: .46rem;
+    width: .46rem;
+    background-color: #fff;
+    z-index: 99;
+    border-radius: 50px;
+}
+
+.ui-outGrey {
+    height: .53rem;
+    width: .84rem;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+}
+
+.ui-inGrey {
+    position: absolute;
+    top: 6%;
+    right: .33rem;
+    height: .46rem;
+    width: .46rem;
+    background-color: #fff;
+    z-index: 99;
+    border-radius: 50px;
+}
+
+.ui-button {
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: .8rem;
+    &>div {
+        text-align: center;
+        position: relative;
+        &>div {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 1.55rem;
+            height: .7rem;
+            line-height: .7rem;
+            background-color: #6cce78;
+            color: #ffffff;
+            border-radius: .1rem;
+        }
+    }
+    // &>div:last-child {
+    //     text-align: center;
+    //     width: 1.55rem;
+    //     height: .5rem;
+    //     line-height: .5rem;
+    //     background-color: #6cce78;
+    //     border: 0 solid transparent;
+    //     color: #ffffff;
+    // }
+}

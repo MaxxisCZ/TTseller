@@ -1,0 +1,71 @@
+<div class="ui-list">
+	<!-- <div class="ui-list__phone">
+		<span>18626253547</span>
+	</div> -->
+
+	<div class="ui-list__item" v-touch:tap="onchangePsw()">
+		<span>修改密码</span>
+		<i class="is-modifyPassword"></i>
+	</div>
+	<div class="ui-list__item">
+		<span>系统消息</span>
+		<i class="is-systemInfor"></i>
+		<div v-touch:tap="onSelectorInforTap()" v-if="selector" class="ui-select" v-bind:class="{'is-activeG': selectG}"><span></span></div>
+	</div>
+	<div class="ui-list__item" v-touch:tap="onPswTap($event)">
+		<span>支付密码</span>
+		<i class="is-payment"></i>
+		<!-- <div v-if="selector" class="ui-select" v-bind:class="{'is-activeR': selectR}"><span></span></div> -->
+	</div>
+	<!-- <div class="ui-list__item" v-touch:tap="onChangePwdTap">
+		<span>修改支付密码</span>
+		<i class="is-changePwd"></i>
+	</div> -->
+	<div class="ui-list__item" v-touch:tap="onFreightTap">
+		<span>运费设置</span>
+		<i class="is-freight"></i>
+	</div>
+	<div class="ui-list__item" v-touch:tap="onPrintTap">
+		<span>打印设置</span>
+		<i class="is-print"></i>
+	</div>
+	<div class="ui-list__item" v-touch:tap="onRadiationTap">
+		<span>辐射距离设置</span>
+		<i class="is-radiation"></i>
+	</div>
+	<div class="ui-list__item" v-touch:tap="onDiscountTap">
+		<span>打折设置</span>
+		<i class="is-discount"></i>
+	</div>
+	<!--
+	<div class="ui-list__item" v-touch:tap="onReceiptTap">
+		<span>确认收货奖励</span>
+		<i class="is-reward"></i>
+	</div>
+-->
+	<div class="ui-list__item" v-touch:tap="onScanTap">
+		<span>扫一扫</span>
+		<i class="is-scan"></i>
+	</div>
+	<div class="ui-list__item">
+		<span>系统占用</span>
+		<i class="is-occun"></i>
+		<li>{{size}}Kb</li>
+	</div>
+	<div class="ui-list__item" v-touch:tap="onCleanCacheTap">
+		<span>清除缓存</span>
+		<i class="is-cleanUp"></i>
+	</div>
+	<div class="ui-list__item" v-touch:tap="onAboutUsTap">
+		<span>关于我们</span>
+		<i class="is-about"></i>
+	</div>
+	<div class="ui-list__item" >
+		<span v-show="isQuit" v-touch:tap="cannelyQuitTap">取消申请退出加盟</span>
+		<span v-show="!isQuit" v-touch:tap="onApplyQuitTap">申请退出加盟</span>
+		<i class="is-applyQuit"></i>
+	</div>
+	<div class="ui-list__bst">
+		<span v-touch:tap="onCleanLSTap()">注销并关闭</span>
+	</div>
+</div>

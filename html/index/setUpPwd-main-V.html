@@ -1,0 +1,62 @@
+<div class="ui-list" v-bind:class="{'is-close':isOpen}">
+	<div class="ui-list__header">
+		<span>支付密码状态</span>
+		<p v-show="isOpen">关</p>
+		<p v-else>开</p>
+		<!-- <div v-if="selector" class="ui-select" v-bind:class="{'is-activeR': selectR}" v-touch:tap="onPwdTap"><span></span></div> -->
+	</div>
+	<!-- <div class="ui-list__changePwd" v-touch:tap="onChangePwdTap">
+		<span>修改支付密码</span>
+	</div>
+	<div class="ui-list__contain">
+		<div class="ui-list__item">
+			<span>手机号码</span>
+			<input type=tel v-model="mobile" disabled placeholder=''/>
+		</div>
+		<div class="ui-list__item is-code">
+			<span>验证码</span>
+			<input type=tel v-model="code" placeholder='输入验证码'/>
+			<p v-touch:tap="onGetCodeTap">获取验证码</p>
+		</div>
+		<div class="ui-list__item" v-show="showPwd">
+			<span>支付密码</span>
+			<input type=tel v-model="payPwd" placeholder='请输入6个数字的密码'/>
+		</div>
+		<div class="ui-list__item" v-show="showPwd">
+			<span>确认密码</span>
+			<input type=tel v-model="payPwdAgain" placeholder=''/>
+		</div>
+	</div> -->
+	<div v-show="isOpen">
+		<div class="ui-list__tip">
+			<span>您尚未启用支付密码保护！</span>
+		</div>
+		<div class="ui-list__bst" v-show="isOpen">
+			<span v-touch:tap="onOpenTap">开启</span>
+		</div>
+	</div>
+	<div v-else>
+		<div class="ui-list__setUpPwd" v-else>
+			<div class="ui-list__itemHeader">
+				<span>重设密码</span>
+				<div class="ui-list__item" v-touch:tap="onChangePwdTap">
+					<p class="is-line">
+						<span>我记得原支付密码</span>
+						<i></i>
+					</p>
+				</div>
+				<div class="ui-list__item" v-touch:tap="onForgetPwdTap">
+					<p>
+						<span>我忘记支付密码了</span>
+						<i></i>
+					</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="ui-list__bst" v-else>
+			<span v-touch:tap="onCloseTap">关闭支付密码</span>
+		</div>
+	</div>
+	
+</div>

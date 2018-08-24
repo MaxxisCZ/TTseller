@@ -1,0 +1,43 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>添加配送员</p>
+        </div>
+        <div class="ui-addShopper">
+            <div class="ui-shopper">
+                <p>姓名:</p>
+                <div>
+                    <input type="text" v-model="name">
+                </div>
+            </div>
+            <div class="ui-shopper">
+                <p>手机号:</p>
+                <div>
+                    <input type="number" v-model="mobile" v-on:change="isPhone" />
+                </div>
+            </div>
+            <div class="ui-shopper">
+                <p>性别:</p>
+                <div>
+                    <select class="shortSelect" v-model="sex">
+                        <option>男</option>
+                        <option>女</option>
+                    </select>
+                    <input type="text" v-model="sex" />
+                </div>
+            </div>
+            <div class="ui-shopper">
+                <p>出生年月日:</p>
+                <div>
+                    <input v-model="birth" v-touch:tap="picker" readOnly>
+                </div>
+            </div>
+
+        </div>
+        <div v-touch:tap="onAddShopperTap">
+            <p v-touch:tap="onAddShopperTap">添&nbsp;&nbsp;&nbsp;加</p>
+        </div>
+    </div>
+</div>

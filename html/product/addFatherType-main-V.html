@@ -1,0 +1,25 @@
+<div class="ui-list">
+	<div class="ui-list__title">
+		<span>
+			<p v-touch:tap="onAllAddTap">全部添加</p>
+		</span>
+		<span>类别ID</span>
+		<span>类别名称</span>
+		<span>一键添加</span>
+	</div>
+	<div class="ui-list__item" v-for="item in fatherList">
+		<span></span>
+		<span>{{item.fatherID}}</span>
+		<span>{{item.type}}</span>
+		<i class="ui-list__arrow" v-bind:class="{'is-show': item.isShow}" v-touch:tap="onShowTypeTap($index)"></i>
+		<i class="ui-list__add" v-touch:tap="onAddFatherTap($index)"></i>
+		<div class="ui-list__childList" v-show="item.isShow">
+			<div class="ui-list__childItem" v-for="childItem in childList">
+				<span></span>
+				<span>{{childItem.childID}}</span>
+				<span>{{childItem.childName}}</span>
+				<i v-touch:tap="onAddChildTap($index)"></i>
+			</div>
+		</div>
+	</div>
+</div>

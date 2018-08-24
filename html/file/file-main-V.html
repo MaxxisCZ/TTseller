@@ -1,0 +1,14 @@
+<div class="ui-list">
+	<div class="ui-list__top">
+		<span>文件名</span>
+		<p>路径
+			<i>删除</i>
+		</p>
+	</div>
+	<div class="ui-list__item" v-for="item in list" v-touch:tap="onReadTap(item.url,$event,$index)">
+		<span>{{item.name}}</span>
+		<p>{{item.url}}
+			<i class="ui-list__del">删除</i>
+		</p>
+	</div>
+</div>

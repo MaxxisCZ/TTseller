@@ -1,0 +1,128 @@
+<div class="ui-list">
+	<div class="ui-list__detail">
+	<li>
+		<span><b class="center-hack"></b><span>订单编号：{{detail.orderNum}}</span></span>
+		<p>用户姓名：{{detail.call}}</p>
+	</li>
+
+	<li>
+		<span v-touch:tap="onUserDetailTap()">手机号：{{detail.phoneNum}}</span>
+		<p>产品数量：{{detail.orderCount}}</p>
+	</li>
+
+	<li>
+		<span>产品金额：{{detail.sumPrice}}元</span>
+		<p>应付金额：{{detail.bill}}元</p>
+	</li>
+
+	<li>
+		<span>收货人姓名：{{detail.recName}}</span>
+		<p>折扣金额：{{detail.discountPrice}}元</p>
+	</li>
+
+	<li>
+		<span>支付方式：{{detail.payWay}}</span>
+	</li>
+
+	<li>T币抵扣：{{detail.points}}币</li>
+	<li>邮费：{{detail.postage}}元</li>
+	<li>付款时间：{{detail.payTime}}</li>
+	<li>发货时间：{{detail.sendTime}}</li>
+	<!-- <ul>
+		<p>交货时间：</p>
+		<input class="is-time" v-model="detail.getTime"  v-touch:tap="picker" readOnly/>
+	</ul> -->
+	<ul>
+		<p>交货时间：</p>
+		<div>{{detail.getTime}}</div>
+		<select v-model="detail.getTime">
+			<option v-for="option in deliveryTime" v-bind:value="option.time">{{option.time}}</option>
+		</select>
+	</ul>
+	<ul>
+		<p>收货人手机号：</p>
+		<input class="is-phone" type="tel" v-model="detail.recPhone" />
+	</ul>
+	<ul>
+		<p>下单时间：</p>
+		<div>{{detail.orderTime}}</div>
+	</ul>
+	<li>接单人员姓名：{{detail.stname}}</li>
+	<li>接单人员电话：{{detail.stmobile}}</li>
+	<li>
+		<p>订单状态：</p>
+		<select v-model="detail.selected">
+			<option v-for="option in options" v-bind:value="option.value">{{option.text}}</option>
+		</select>
+		<p>
+			<div class="ui-list__arrow">
+				<span></span>
+			</div>
+		</p>
+	</li>
+	<ul>
+		<p>收货地址：</p>
+		<span><b class="center-hack"></b><span>{{detail.addr}}</span></span>
+	</ul>
+	<!-- <ul>
+		<p>退货理由：</p>
+		<div>XXXXXXXXXXXX</div>
+	</ul>
+	<ul>
+		<p>退货时间：</p>
+		<div>2016/XX/XX</div>
+	</ul> -->
+	<ul>
+		<p>退单时间：</p>
+		<div>{{detail.refundTime}}</div>
+	</ul>
+	<div class="ui-list__orderMessage">
+		<span>退单理由</span>
+	</div>
+	<div class="ui-list__orderMessageL">
+		<span>{{detail.orderMessage}}</span>
+	</div>
+	<li>验证码：
+		<div>
+			<input type="text" v-model="inputCode" />
+		</div>
+		<code v-touch:tap="onCodeTap">{{code}}</code>
+	</li>
+	<footer>
+		<li>
+			<!-- <span v-touch:tap="onAddressTap">修改地址</span> -->
+		</li>
+		<li>
+			<span v-touch:tap="onSubmitTap">保 存</span>
+		</li>
+	</footer>
+</div>
+
+<div class="ui-list__goods" v-for="item in detail.goods">
+	<p style="background-image:url({{item.avatar | trans-avatar}})"></p>
+	<div>
+		<span>{{item.title}}</span>
+		<p>
+			<span>数量：</span>
+			<input type="number" placeholder="{{item.amount}}" v-model="item.amount" readOnly/>
+		</p>
+		<span class="is-item">
+			<span>规格：{{item.standard}}</span>
+		</span>
+		<span class="is-item">
+			<span>单价：</span>
+			<p>￥{{item.price}}</p>
+		</span>
+		<span class="is-item">
+			<span>单品总价：</span>
+			<p>￥{{item.sumPrice}}元</p>
+		</span>
+	</div>
+	<!-- <span v-touch:tap="onRefundSingleTap($index)">退款</span> -->
+</div>
+</div>
+
+<!-- <div class="ui-list__pre">
+	<p><span class="is-red" v-touch:tap="onRefundAllTap">退整单</span></p>
+	<p><span class="is-green" v-touch:tap="onAmountTap">保存</span></p>
+</div> -->

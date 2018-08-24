@@ -1,0 +1,33 @@
+<div id="content">
+    <div class="ui-coupon" >
+        <p class="ui-coupon__account">账号: {{detail.account}}</p>
+        <div v-for="item in detail.list">
+            <div class="ui-coupon__line">
+                <table calss="ui-coupon__table">
+                    <tr class="ui-table__base">
+                        <td>记录ID</td>
+                        <td>获得时间</td>
+                        <td>失效时间</td>
+                        <td>限额</td>
+                    </tr>
+                    <tr>
+                        <td>{{item.couponID}}</td>
+                        <td>{{item.couponGetData}}</td>
+                        <td>{{item.couponLostData}}</td>
+                        <td>{{item.couponLimit}}</td>
+                    </tr>
+                </table>
+                <table class="ui-table__remark">
+                    <tr>
+                        <td class="ui-remark__title">是否有效</td>
+                        <td class="ui-remark__value">{{item.isCouponWork}}</td>
+                        <td class="ui-remark__title">面值</td>
+                        <td class="ui-remark__value">{{item.faceValue}}</td>
+                        <td class="ui-remark__title">发放原因</td>
+                        <td class="ui-remark__value">{{item.reason}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

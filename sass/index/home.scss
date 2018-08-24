@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import "../_config";
+body {
+    background-color: #ffffff;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.ui-home__body{
+    overflow: hidden;
+}
+.ui-home__eachLine {
+    // position: relative;
+    display: block;
+    height: 2.06rem;
+    width: 100%;
+    font-size: 0;
+    color: #454545;
+    // margin-left: .1rem;
+}
+
+.ui-list {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-top: 1.6rem;
+    text-align: center;
+    font-size: .24rem;
+    &>div:nth-child(1) {           
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: .24rem;
+            margin: auto;
+            width: 1.01rem;
+            height: .94rem;
+            // background-image: url(../../image/index/order.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+    }
+    &>div:nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: .24rem;
+            margin: auto;
+            width: 1.01rem;
+            height: .94rem;
+            background-image: url(../../image/index/user.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        
+    }
+    &>div:nth-child(3) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: .24rem;
+            margin: auto;
+            width: 1.01rem;
+            height: .94rem;
+            background-image: url(../../image/index/product.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+    }
+    &>div:nth-child(4) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: .24rem;
+            margin: auto;
+            width: 1.01rem;
+            height: .94rem;
+            background-image: url(../../image/index/activity.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+ 
+    }
+}

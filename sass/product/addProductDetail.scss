@@ -1,0 +1,586 @@
+.ui-productDetail__body,
+.ui-product__add,
+.ui-body__info {
+	color: #616e88;
+}
+
+.ui-title {
+    height: .64rem;
+    width: 100%;
+    text-align: center;
+    line-height: .84rem;
+    font-size: .34rem;
+}
+
+.ui-info__fullLine {
+    display: flex;
+    text-align: center;
+    height: .6rem;
+    line-height: .6rem;
+    margin-top: .13rem;
+    padding-right: .18rem;
+    font-size: .28rem;
+    &>p {
+        flex: 1;
+    }
+    &>input {
+        text-align: center;
+        flex: 1;
+        width: 100%;
+        height: .6rem;
+        font-size: .28rem;
+        line-height: .3rem;
+        border: none;
+    }
+}
+
+.ui-info__notFullLine {
+    display: flex;
+    text-align: center;
+    margin-top: .13rem;
+    padding-right: .18rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .28rem;
+    &>p {
+        flex: 1;
+    }
+    &>input {
+        text-align: center;
+        flex: 1;
+        width: 100%;
+        height: .6rem;
+        border: none;
+        font-size: .28rem;
+        line-height: .3rem;
+    }
+    &>div {
+        flex: 1;
+        display: inline-block;
+        position: relative;
+        &>input:first-child {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            height: .6rem;
+            display: inline-block;
+            width: 40%;
+            font-size: .28rem;
+            line-height: .3rem;
+            border: none;
+        }
+        &>input:last-child {
+            top: 0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            display: inline-block;
+            width: 40%;
+            border: none;
+            height: .6rem;
+            font-size: .28rem;
+            line-height: .3rem;
+        }
+        &>input {
+            height: .47rem;
+        }
+        &>div {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            height: 1px;
+            width: 10%;
+            background-color: #616e88;
+        }
+    }
+}
+
+.ui-info__rightFullLine {
+    display: flex;
+    position: relative;
+    margin-top: .13rem;
+    padding-right: .18rem;
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    font-size: .28rem;
+    &>p {
+        flex: 1;
+    }
+    &>input {
+        border: none;
+        width: 100%;
+        height: .6rem;
+        line-height: .6rem;
+        flex: 1;
+    }
+    &>div {
+        flex: 1;
+        position: relative;
+        &>input {
+            padding-left: 8px;
+            position: absolute;
+            left: 0;
+            height: .6rem;
+            line-height: .6rem;
+            width: 100%;
+            border: none;
+            background-color: #ffffff;
+        }
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     width: .27rem;
+        //     height: .16rem;
+        //     right: .15rem;
+        //     top: .25rem;
+        //     background-image: url(../../image/product/downArrow.png);
+        //     background-size: 100%;
+        //     background-repeat: no-repeat;
+        // }
+    }
+}
+
+.shortWeightSelect,
+.shortSelect {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    z-index: 99;
+    width: 100%;
+    height: .6rem;
+    outline: none;
+    border: none;
+}
+
+.ui-info__rightNotFullLine {
+    display: flex;
+    position: relative;
+    margin-top: .13rem;
+    padding-right: .18rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .28rem;
+    text-align: center;
+    &>p {
+        flex: 1;
+    }
+    &>input {
+        border: none;
+        width: 100%;
+        height: .6rem;
+        line-height: .6rem;
+        flex: 1;
+        font-size: .28rem;
+    }
+    &>div:nth-child(2) {
+        flex: 1;
+        position: relative;
+        &>input {
+            padding-left: 8px;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: .6rem;
+            line-height: .6rem;
+            border: none;
+            background-color: #ffffff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     width: .27rem;
+        //     height: .16rem;
+        //     right: .1rem;
+        //     top: .2rem;
+        //     background-image: url(../../image/product/downArrow.png);
+        //     background-size: 100%;
+        //     background-repeat: no-repeat;
+
+        // }
+    }
+    &>div:last-child {
+        flex: 1;
+        position: relative;
+        &>input {
+            height: .6rem;
+            line-height: .6rem;
+            padding-left: 8px;
+            position: absolute;
+            left: 0;
+            width: 70%;
+            border: none;
+            background-color: #ffffff;
+        }
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     width: .27rem;
+        //     height: .16rem;
+        //     right: .15rem;
+        //     top: .15rem;
+        //     background-image: url(../../image/product/downArrow.png);
+        //     background-size: 100%;
+        //     background-repeat: no-repeat;
+        // }
+    }
+}
+
+.shortLongSelect {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: .6rem;
+    opacity: 0;
+    z-index: 99;
+    outline: none;
+    border: none;
+}
+
+.ui-info__allLine {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-top: .13rem;
+    padding-right: .18rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .28rem;
+    &>p {
+        flex: 1;
+    }
+    &>div {
+        flex: 3;
+        display: inline-block;
+        position: relative;
+        &>div:first-child {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            display: inline-block;
+            width: 46%;
+            font-size: .28rem;
+            height: .6rem;
+            line-height: .6rem;
+            background-color: #ffffff;
+            border: none;
+            &>input {
+                position: absolute;
+                left: 0;
+                height: .6rem;
+                line-height: .6rem;
+                display: inline-block;
+                width: 100%;
+                border: none;
+                opacity: 0;
+                z-index: 1;
+            }
+            &>p {
+                position: absolute;
+                left: 0;
+                text-align: center;
+                display: inline-block;
+                width: 100%;
+                font-size: .22rem;
+                height: .6rem;
+                line-height: .6rem;
+                border: none;
+                z-index: 0;
+            }
+        }
+        &>div:nth-child(2) {
+            // flex: 1;
+            position: absolute;
+            top: 50%;
+            left: 48.5%;
+            height: 1px;
+            width: 3%;
+            // display: inline-block;
+            background-color: #616e88;
+        }
+        &>div:last-child {
+            top: 0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            display: inline-block;
+            width: 46%;
+            border: none;
+            font-size: .22rem;
+            height: .6rem;
+            line-height: .6rem;
+            background-color: #ffffff;
+            &>input {
+                top: 0;
+                position: absolute;
+                right: 0;
+                opacity: 0;
+                width: 100%;
+                z-index: 1;
+                height: .6rem;
+                line-height: .6rem;
+            }
+            &>p {
+                top: 0;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                display: inline-block;
+                width: 100%;
+                border: none;
+                font-size: .22rem;
+                height: .6rem;
+                line-height: .6rem;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+.ui-info__halfLine {
+    width: 50%;
+    display: flex;
+    position: relative;
+    margin-top: .13rem;
+    padding-right: .18rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .28rem;
+    text-align: center;
+    &>p {
+        flex: 1;
+    }
+    &>input {
+        border: none;
+        width: 100%;
+        height: .6rem;
+        line-height: .6rem;
+        flex: 1;
+    }
+    &>div {
+        flex: 1;
+        position: relative;
+        &>input {
+            height: .6rem;
+            line-height: .6rem;
+            padding-left: 8px;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border: none;
+            background-color: #ffffff;
+        }
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     width: .27rem;
+        //     height: .16rem;
+        //     right: .15rem;
+        //     top: .15rem;
+        //     background-image: url(../../image/product/downArrow.png);
+        //     background-size: 100%;
+        //     background-repeat: no-repeat;
+        // }
+    }
+}
+
+.ui-info__almostLine {
+    width: 85%;
+    display: flex;
+    height: .6rem;
+    line-height: .6rem;
+    margin-top: .13rem;
+    font-size: .28rem;
+    text-align: center;
+    &>p {
+        flex: 1;
+    }
+    &>div {
+        position: relative;
+        flex: 1;
+        &>input {
+            padding-left: 8px;
+            position: absolute;
+            left: 0;
+            border: none;
+            width: 50%;
+        }
+    }
+}
+
+.ui-pic__big {
+    width: 100%;
+    height: 3.5rem;
+    font-size: .22rem;
+    &>div:last-child {
+        padding-top: .85rem;
+        text-align: center;
+        display: flex;
+        &>p {
+            flex: 1;
+            color: #ccc;
+        }
+    }
+}
+
+.ui-addBigPic {
+    width: 100%;
+    height: 2.16rem;
+    display: flex;
+    &>div {
+        flex: 1;
+        width: 100%;
+        position: relative;
+        &>div {
+            position: absolute;
+            top: 0rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 1.73rem;
+            width: 1.73rem;
+            background-color: #ffffff;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid #ffffff;
+        }
+    }
+}
+
+.ui-pic__choose {
+    width: 100%;
+    display: flex;
+    &>div {
+        text-align: center;
+        flex: 1;
+        position: relative;
+        &>div {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: .7rem;
+            line-height: .7rem;
+            width: 1.25rem;
+            background-color: #fff;
+        }
+    }
+}
+
+.ui-describe {
+    padding-top: .63rem;
+    padding-bottom: .33rem;
+    width: 100%;
+    font-size: .22rem;
+    text-align: center;
+    color: #616e88;
+}
+
+.ui-product__describe {
+    width: 100%;
+}
+
+.detail-describe {
+    width: 100%;
+}
+
+.ui-product__add {
+    margin-top: .33rem;
+    width: 100%;
+    height: .6rem;
+    display: flex;
+    &>div {
+        flex: 1;
+        position: relative;
+        text-align: center;
+        &>div {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0rem;
+            bottom: 0;
+            margin: auto;
+            height: .7rem;
+            line-height: .7rem;
+            width: 1.25rem;
+            background-color: #fff;
+        }
+    }
+    &>div:last-child {
+        &>a {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0rem;
+            bottom: 0;
+            margin: auto;
+            height: .7rem;
+            line-height: .7rem;
+            width: 1.25rem;
+            background-color: #fff;
+        }
+    }
+}
+
+.ui-product__Specifications {
+    margin-top: .53rem;
+    width: 100%;
+    height: 1.62rem;
+    background-color: #fff1dc;
+    font-size: .22rem;
+    color: #ff737f;
+    &>div {
+        width: 100%;
+        position: relative;
+        &>p {
+            padding-top: .22rem;
+            font-size: .28rem;
+            text-align: center;
+        }
+        &>div {
+            position: absolute;
+            top: .2rem;
+            right: .3rem;
+            height: .34rem;
+            width: .34rem;
+            background-image: url(../../image/product/hide.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+.ui-Specifications__detailone {
+    width: 100%;
+    &>table {
+        margin-top: .26rem;
+        text-align: center;
+        width: 100%;
+        font-weight: bolder;
+    }
+}
+
+.ui-list__button {
+    display: block;
+    width: 100%;
+    height: 1.2rem;
+    text-align: center;
+    padding: .2rem 0;
+    &>span {
+        display: inline-block;
+        width: 2.4rem;
+        line-height: .8rem;
+        font-size: .36rem;
+        color: #fff;
+        text-align: center;
+        border-radius: .12rem;
+        background-color: red;
+        &:active {
+            background-color: blue;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@import "../_config";
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+.ui-totalMoney {
+    display: block;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+}
+.ui-totalMoney__text {
+    display: block;
+    text-align: center;
+    font-size: 0.24rem;
+    color: $mainColor;
+    & > span {
+        font-size: 0.62rem;
+    }
+}
+.ui-totalMoney__row {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0.62rem;
+    line-height: 0.62rem;
+    background-color: #efeff4;
+    font-size: 0.24rem;
+    &.has-arrow {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 36px;
+            height: 44px;
+            background-size: 8px 16px;
+            @include bgi-center( url(../../image/me/arrowGrey.png) );
+        }
+    }
+}
+.ui-totalMoney__month {
+    display: block;
+    padding-left: 0.32rem;
+    color: #6c6c6d;
+}
+.ui-totalMoney__bill {
+    display: block;
+    position: absolute;
+    right: 0.66rem;
+    top: 0;
+}
+.ui-list {
+    display: block;
+    width: 100%;
+}
+.ui-list__item {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-flow: row;
+    width: 100%;
+    height: 1.16rem;
+}
+.ui-list__time{
+    padding-top: 0.32rem;
+    padding-left: 0.32rem;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: normal;
+    color: #969696;
+}
+.ui-list__circle{
+    margin-left: 0.3rem;
+    margin-top: 0.2rem;
+    width: 0.74rem;
+    height: 0.74rem;
+    // background-color: #f26797;
+    // border-radius: 50px;
+    background-repeat: no-repeat;
+    background-size: .74rem .74rem;
+    background-position: center center;
+    background-image: url(../../image/me/income.png);
+    &.is-negative{
+
+    background-image: url(../../image/me/pay.png);
+    }
+}
+.ui-list__title{
+    margin-left: 0.32rem;
+    margin-top: 0.2rem;
+    font-size: 0.28rem;
+    line-height: .4rem;
+    color: #616e88;
+}
+.ui-list__moneyDetail{
+    color: #000;
+}
+.is-line{
+    display: block;
+    margin-left: 0.32rem;
+    height: 1px;
+    background-color: #ededed;
+}

@@ -1,0 +1,27 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>下载提示</p>
+        </div>
+        <div class="ui-downloadTip">
+            <div class="ui-tip">
+                <p>文件名:</p>
+                <div>
+                    <input placeHolder="slianglis.aspx" v-model="fileName">
+                </div>
+            </div>
+            <div class="ui-tip">
+                <p>目&nbsp;&nbsp;&nbsp;录:</p>
+                <div>
+                   <input placeHolder="/stosdj/dslagij/lsing" value="/download/myCostRecord/{{fileName}}">
+                </div>
+            </div>
+            <p>大小: {{fileSize}}</p>
+        </div>
+        <div>
+            <p v-touch:tap="onDownloadTap">下&nbsp;&nbsp;载</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div id="content">
+    <div class="ui-home__body">
+        <div class="ui-home__eachLine">
+            <div class="ui-list">
+                <div v-touch:tap="onOrderTap" style="background-image: url(../../image/index/order.png);"></div>
+                <p>订单管理</p>
+            </div>
+            <div class="ui-list">
+                <div style="background-image: url(../../image/index/user.png);" v-touch:tap="onUserTap"></div>
+                <p>用户管理</p>
+            </div>
+            <div class="ui-list">
+                <div style="background-image: url(../../image/index/product.png);" v-touch:tap="onProductTap"></div>
+                <p>产品管理</p>
+            </div>
+            <div class="ui-list">
+                <div style="background-image: url(../../image/index/activity.png);" v-touch:tap="onActivityTap"></div>
+                <p>活动管理</p>
+            </div>
+        </div>
+        <div class="ui-home__eachLine">
+            <div class="ui-list">
+                <div style="background-image: url(../../image/index/coupon.png);" v-touch:tap="onCouponTap"></div>
+                <p>优惠券</p>
+            </div>
+            <div class="ui-list">
+                <div style="background-image: url(../../image/index/distribution.png);" v-touch:tap="onDistributionTap"></div>
+                <p>配送管理</p>
+            </div>
+            <div class="ui-list">
+                <div v-touch:tap="onFinanceTap" style="background-image: url(../../image/index/finance.png);"></div>
+                <p>财务管理</p>
+            </div>
+            <div class="ui-list">
+                <div v-touch:tap="onEvaluateTap" style="background-image: url(../../image/index/evaluate.png);"></div>
+                <p>评价管理</p>
+            </div>
+        </div>
+        <div class="ui-home__eachLine">
+            <!-- <div class="ui-list">
+                <div style="background-image: url(../../image/index/cost.png);" v-touch:tap="onCostTap"></div>
+                <p>账本管理</p>
+            </div> -->
+            <div class="ui-list">
+                <div style="background-image: url(../../image/index/system.png);" v-touch:tap="onSystemTap"></div>
+                <p>管理员</p>
+            </div>
+            <div class="ui-list">
+                <div style="background-image: url(../../image/index/file.png);background-size: 92% 92%;" v-touch:tap="onFileTap"></div>
+                <p>文件管理</p>
+            </div>
+            <div class="ui-list">
+                <div style="background-image: url(../../image/index/scan.png);background-size: 92% 92%;" v-touch:tap="onScanTap"></div>
+                <p>扫一扫</p>
+            </div>
+        </div>
+    </div>
+</div>

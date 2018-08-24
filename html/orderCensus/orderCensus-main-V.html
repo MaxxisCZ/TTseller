@@ -1,0 +1,16 @@
+<div class="ui-list">
+	<div class="ui-list__title">
+		<span class="is-num">序号</span>
+		<span class="is-time">小区名称</span>
+		<span class="is-sumSale">销售额</span>
+		<span class="is-sumOrder">订单数量</span>
+		<span class="is-sumPeolpe">下单人数</span>
+	</div>
+	<div class="ui-list__detail" v-for="item in detail">
+		<span class="is-num">{{item.sorting}}</span>
+		<span class="is-time">{{item.quarters}}</span>
+		<span class="is-sumSale">{{item.salling}}</span>
+		<span class="is-sumOrder">{{item.order}}</span>
+		<span class="is-sumPeolpe">{{item.orderPeople}}</span>
+	</div>
+</div>

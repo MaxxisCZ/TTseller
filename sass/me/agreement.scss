@@ -1,0 +1,200 @@
+@charset "utf-8";
+@import "../_config";
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-list {
+	display: block;
+	width: 100%;
+	// height: 100%;
+	background-color: #eee;
+}
+
+.ui-list__item {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 1rem;
+	padding: .06rem .12rem .06rem 2.86rem;
+	&>span {
+		display: block;
+		// float: left;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 2.86rem;
+		line-height: 1rem;
+		font-size: .3rem;
+		color: #555;
+		padding-left: .14rem;
+	}
+	&>input {
+		display: block;
+		width: 100%;
+		height: .88rem;
+		line-height: .54rem;
+		font-size: .3rem;
+		color: #333;
+		padding: .1rem;
+		border: 1px solid #ddd;
+		border-radius: .1rem;
+		background-color: #fff;
+	}
+}
+
+.ui-list__title {
+	display: block;
+	width: 100%;
+	height: .88rem;
+	line-height: .88rem;
+	font-size: .3rem;
+	color: #555;
+	padding-left: .1rem;
+}
+
+.ui-list__picture {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 2.4rem;
+	padding-left: 50%;
+	border-bottom: 1px solid #c5c5c5;
+	&>span {
+		display: block;
+		// float: left;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		line-height: 2.4rem;
+		font-size: .3rem;
+		color: #555;
+		padding-left: .14rem;
+	}
+	&>p {
+		display: block;
+		width: 100%;
+		height: 2.4rem;
+		line-height: 2.4rem;
+		font-size: .32rem;
+		text-align: center;
+		color: #ccc;
+		background-color: #fff;
+		border-bottom: 1px solid #c5c5c5;
+		background-size: 100% 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: url(../../image/me/jay.png);
+		&.is-noborder {
+			border: none;
+		}
+	}
+	&.is-noborder {
+		border: none;
+	}
+}
+
+.ui-list__identity {
+	display: block;
+	width: 100%;
+	height: 2.4rem;
+	font-size: 0;
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	&>span {
+		display: block;
+		float: left;
+		width: 50%;
+		height: 2.4rem;
+		line-height: 2.4rem;
+		font-size: .3rem;
+		color: #c5c5c5;
+		text-align: center;
+		border-right: 1px solid #ccc;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 100% 100%;
+	}
+}
+
+.ui-list__agreement {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: .88rem;
+	line-height: .88rem;
+	font-size: .28rem;
+	color: #a0a0a0;
+	padding: 0 1.3rem 0 .72rem;
+	text-align: left;
+	&>i {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: .88rem;
+		height: .88rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: .32rem .32rem;
+		background-image: url(../../image/index/disAgreement.png);
+		&.is-agree {
+			background-image: url(../../image/index/agreement.png);
+		}
+	}
+	&>p {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: .1rem;
+		width: 1.2rem;
+		line-height: .88rem;
+		color: blue;
+		text-decoration: underline;
+	}
+}
+
+.ui-list__bottom {
+	display: block;
+	width: 100%;
+	height: 3rem;
+	text-align: center;
+	padding-top: 1rem;
+	font-size: 0;
+	&>span {
+		display: inline-block;
+		width: 2.4rem;
+		line-height: 1rem;
+		font-size: .36rem;
+		color: #fff;
+		text-align: center;
+		border-radius: .12rem;
+		background-color: #71d07d;
+		&:active {
+			background-color: #81e08d;
+		}
+	}
+	&>p {
+		display: block;
+		float: left;
+		width: 50%;
+		height: 1rem;
+		padding: .1rem 0;
+		text-align: center;
+		&>span {
+			display: inline-block;
+			width: 2rem;
+			line-height: .8rem;
+			font-size: .36rem;
+			color: #fff;
+			border-radius: .12rem;
+			background-color: #71d07d;
+			&:active {
+				background-color: #81e08d;
+			}
+		}
+	}
+}

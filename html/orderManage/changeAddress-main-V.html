@@ -1,0 +1,12 @@
+<div class="ui-list">
+	<div class="ui-list__detail" v-for="item in detail">
+		<!-- <li v-touch:tap="onDeleteTap($index)"></li> -->
+		<p v-touch:tap="onSelectedAddressTap($index)">
+			<span>{{item.name}}</span>
+			<span>{{item.phone}}</span>
+			<a>{{item.kind}}</a>
+		</p>
+		<span v-touch:tap="onSelectedAddressTap($index)">{{item.city}}[{{item.Address}}]</span>
+		<!-- <i v-touch:tap="onEditAddressTap($index)"></i> -->
+	</div>
+</div>

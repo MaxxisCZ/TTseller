@@ -1,0 +1,120 @@
+@import "../_config";
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-image: -webkit-linear-gradient(to top, #57b45e, #98e28b);
+    background-image: linear-gradient(to top, #57b45e, #98e28b);
+}
+.ui-login {
+    display: block;
+    width: 100%;
+}
+.ui-login__logo {
+    display: inline-block;
+    margin-top: 1.5rem;
+    width: 100%;
+    font-size: 0.22rem;
+    text-align: center;
+    vertical-align: middle;
+    & > img {
+        width: 3.1rem;
+        height: 1.74rem;
+        vertical-align: middle;
+    }
+    & > p {
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+        color: #3c904f;
+    }
+}
+.ui-login__inputBox {
+    display: block;
+    height: 0.9rem;
+    margin-left: 0.58rem;
+    margin-right: 0.58rem;
+    margin-top: 0.5rem;
+    padding: 0.1rem;
+    background-color: #9bdc96;
+    border-radius: 30px;
+    & > input {
+        display: block;
+        width: 100%;
+        height: 0.7rem;
+        padding-left: 0.68rem;
+        padding-right: 0.68rem;
+        font-size: 0.24rem;
+        text-align: center;
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        background-color: #FFF;
+    }
+}
+.ui-btn {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-flow: row;
+    margin-top: 0.64rem;
+}
+.ui-login__btn1 {
+    flex: 1;
+    width: 100%;
+    padding: 0.1rem;
+    margin-left: 0.9rem;
+    margin-right: 0.5rem;
+    background-color: #89ce89;
+    border-radius: 30px;
+    font-size: 0.24rem;
+    text-align: center;
+}
+.ui-login__btn2 {
+    flex: 1;
+    width: 100%;
+    padding: 0.1rem;
+    margin-right: 0.9rem;
+    background-color: #89ce89;
+    border-radius: 30px;
+    font-size: 0.24rem;
+    text-align: center;
+}
+.ui-login__loginBtn {
+    display: inline-block;
+    height: 0.56rem;
+    width: 100%;
+    line-height: 0.56rem;
+    background-color: #db5565;
+    text-align: center;
+    color: #FFF;
+    border-radius: 30px;
+}
+.ui-login__registBtn {
+    display: inline-block;
+    height: 0.56rem;
+    width: 100%;
+    line-height: 0.56rem;
+    background-color: #0bacd3;
+    text-align: center;
+    color: #FFF;
+    border-radius: 30px;
+}
+.ui-login__forget {
+    display: block;
+    margin-top: 0.42rem;
+    font-size: 0.24rem;
+    color: #FFF;
+    text-align: center;
+}
+
+.ui-list__footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: .72rem;
+    font-size: .26rem;
+    color: #fff;
+    text-align: center;
+    letter-spacing: .01rem;
+}

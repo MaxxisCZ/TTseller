@@ -1,0 +1,15 @@
+<div class="ui-list">
+    <div v-for="param in checkflagList" class="ui-list__item" v-show="isCheck">
+        <span class="money" v-touch:tap="onItemTap($index)" v-show="param.isCheck == 1">{{param.showMoney}}</span>
+        <p v-touch:tap="onItemTap($index)" v-show="param.isCheck == 1">
+            {{param.title}}
+        </p>
+        <i class="is-show" v-bind:class="{'is-hidden':hiddenMoney}" v-touch:tap="onShowMoneyTap" v-show="param.isCheck == 1"></i>
+    </div>
+    <div v-for="item in list" class="ui-list__item" v-show="!isCheck">
+        <span class="money" v-touch:tap="onItemTap($index)" v-show="item.isCheck == 1">{{item.showMoney}}</span>
+        <p v-touch:tap="onItemTap($index)" v-show="item.isCheck == 1">
+            {{item.title}}
+        </p>
+    </div>
+</div>

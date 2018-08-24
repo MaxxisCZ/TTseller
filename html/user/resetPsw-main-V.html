@@ -1,0 +1,21 @@
+<div class="ui-list__main">
+	<div class="ui-list__item">
+		<span>账号 :</span>
+		<input type="text" v-model="account"/>
+	</div>
+
+	<div class="ui-list__item">
+		<span>密码 :</span>
+		<input type="password" v-model="password"/>
+	</div>
+
+	<div class="ui-list__proving">
+		<span>验证码：</span>
+		<input type="text" v-model="idcode"/>
+		<p v-touch:tap="onCodeTap">{{code}}</p>
+	</div>
+
+	<div class="ui-list__bst">
+		<span v-touch:tap="onResetTap">重置</span>
+	</div>
+</div>

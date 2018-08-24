@@ -1,0 +1,119 @@
+<div class="ui-sendCoupon__main" v-bind:class="{'is-allHeight':!isSelectAllUser}">
+    <div class="ui-sendCoupon__shadow" v-show="isSending"></div>
+    <div class="ui-sendCoupon__choose" v-bind:class="{'is-allHeight':!isSelectAllUser}">
+        <div class="ui-sendCoupon__chooseUser">
+            <p>选择用户:</p>
+            <div class="ui-sendCoupon__user">
+                <div class="ui-chooseUser">
+                    <div class="ui-button" v-touch:tap="onChooseUserTap">
+                        <div class="ui-userRadio" v-bind:class="{'isSelectUser':isSelectAllUser}" v-touch:tap="onChooseUserTap"></div>
+                        <p>所有用户</p>
+                    </div>
+                </div>
+                <div class="ui-chooseUser" v-if="!isSelectAllUser">
+                    <div class="ui-button" v-touch:tap="onUserTap">
+                        <div class="ui-userRadio" v-bind:class="{'isSelectUser':!isSelectAllUser}"></div>
+                        <p>用户</p>
+                    </div>
+                    <input class="ui-chooseUser__input" type="tel" v-model="account">
+                </div>
+                <div class="ui-chooseUser" v-else>
+                    <div class="ui-button" v-touch:tap="onUserTap">
+                        <div class="ui-userRadio" v-bind:class="{'isSelectUser':!isSelectAllUser}" v-touch:tap="onUserTap"></div>
+                        <p>用户</p>
+                    </div>
+                    <input class="ui-chooseUser__input" type="tel" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="ui-sendCoupon__chooseType">
+            <p>选择券类型:</p>
+            <div class="ui-sendCoupon__type">
+                <div class="ui-chooseUser" v-if="isSelectCash">
+                    <div class="ui-button" v-touch:tap="onCashTap">
+                        <div class="ui-couponRadio" v-bind:class="{'isSelectCoupon':isSelectCash}" v-touch:tap="onCashTap" v-on></div>
+                        <p>现金券</p>
+                    </div>
+                    <input type="number" class="ui-coupon__input" v-model="cash" v-on:input="onInputFaceValue">
+                    <p>元</p>
+                </div>
+                <div class="ui-chooseUser" v-else>
+                    <div class="ui-button" v-touch:tap="onCashTap">
+                        <div class="ui-couponRadio" v-bind:class="{'isSelectCoupon':isSelectCash}" v-touch:tap="onCashTap"></div>
+                        <p>现金券</p>
+                    </div>
+                    <input type="number" class="ui-coupon__input" readonly>
+                    <p>元</p>
+                </div>
+                <div class="ui-chooseUser" v-if="!isSelectCash">
+                    <div class="ui-button" v-touch:tap="onCouponTap">
+                        <div class="ui-couponRadio" v-bind:class="{'isSelectCoupon':!isSelectCash}" v-touch:tap="onCouponTap"></div>
+                        <p>优惠券</p>
+                    </div>
+                    <input type="number" class="ui-coupon__input" v-model="coupon" v-on:input="onInputFaceValue">
+                    <p>元</p>
+                    <p>限额</p>
+                    <input type="number" class="ui-limit" v-model="limit" >
+                    <p>元</p>
+                </div>
+                <div class="ui-chooseUser" v-else>
+                    <div class="ui-button" v-touch:tap="onCouponTap">
+                        <div class="ui-couponRadio" v-bind:class="{'isSelectCoupon':!isSelectCash}" v-touch:tap="onCouponTap"></div>
+                        <p>优惠券</p>
+                    </div>
+                    <input type="number" class="ui-coupon__input" readonly>
+                    <p v-show="!isSelectAllUser">元</p>
+                    <p v-show="!isSelectAllUser">限额</p>
+                    <input type="number" class="ui-limit" v-model="limit" v-show="!isSelectAllUser">
+                    <p>元</p>
+                </div>
+            </div>
+            <div class="ui-sendCoupon__workTime">
+                <p>有效期为:</p>
+                <input v-model="deadline" type="number" class="ui-coupon__input">
+                <div class="ui-button_date">
+                    <div class="ui-button_day" v-touch:tap="onSelectTap($index)" v-for="item in list">
+                        <div class="ui-timeRadio" v-bind:class="{'isSelectTime':$index==dayOrMonth}" v-touch:tap="onSelectTap($index)"></div>
+                        <p>{{item.date}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-sendCoupon__submit">
+                <div class="ui-submit" v-touch:tap="onSubmitSendCouponTap" v-show="showSureBtn">
+                    确&nbsp;定
+                </div>
+            </div>
+        </div>
+    </div>
+    <div v-show="isSelectAllUser" class="ui-sendCoupon__selectAllUser">
+        <div class="ui-sendCoupon__program">
+            <div>
+                <p>
+                    现金券/优惠券批量发送程序
+                </p>
+            </div>
+            <div>
+                <div>
+                    <p>用户账号</p>
+                    <input v-model="allAccount" readonly/>
+                </div>
+                <div style="display:none;">
+                    <p>内容</p>
+                    <input readonly/>
+                </div>
+                <div>
+                    <p>状态</p>
+                    <input v-model="msg" readonly/>
+                </div>
+            </div>
+        </div>
+        <div class="ui-program__submit">
+            <div>
+                <div v-touch:tap="allUsersSubmit">确定</div>
+            </div>
+            <div>
+                <div v-touch:tap="onStopTap">暂停</div>
+            </div>
+        </div>
+    </div>
+</div>

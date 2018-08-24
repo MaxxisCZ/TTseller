@@ -1,0 +1,26 @@
+<div class="ui-list">
+	<div class="ui-list__top"></div>
+	<!-- <div class="ui-list__card" v-for="item in myCard" v-touch:tap="onSelectCardTap($index)">
+		<div class="is-logo" style="background-imges:url({{item.logo | trans-avatar}})"></div>
+		<p>{{item.bank}}</p>
+		<span>尾号{{item.lastNumber}} 储蓄卡</span>
+		<i v-bind:class="{'is-selected':item.isSelected}"></i>
+		<span class="is-num">1234</span>
+	</div> -->
+	<div class="ui-list__card">
+		<div v-for="item in myCard" v-touch:tap="onSelectCardTap($index)">
+			<a style="background-image:url({{item.logo | trans-avatar}})"></a>
+			<span>
+				<title>{{item.bank}}</title>
+				<li>储蓄卡</li>
+			</span>
+			<i v-bind:class="{'is-selected':item.isSelected}"></i>
+			<p>{{item.number}}</p>
+			<!-- <p>xxxx xxxx xxxx</p>
+			<p class="is-num">{{item.lastNumber}}</p> -->
+		</div>
+	</div>
+	<div class="ui-list__bst" v-touch:tap="onSumbitTap">
+		<span class="is-pass">确认</span>
+	</div>
+</div>

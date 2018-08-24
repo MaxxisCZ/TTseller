@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import "../_config";
+html,body{
+    background-color: transparent;
+    overflow:hidden;
+}
+.ui-list__select {
+    // display:block;
+    // display: table-row;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    box-orient: vertical; //垂直排列
+    background-color: #282828;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
+    // padding-top: 20px;
+    // padding: 0px 30px;
+    width: 2.46rem;
+    // height: 4.61rem;
+    color: #ffffff;
+    font-size: .28rem;
+    z-index: 99;
+    // opacity: 0;
+    border: none;
+
+    text-align: center;
+    &>p {
+        -moz-box-flex: 1;
+        -webkit-box-flex: 1;
+        box-flex: 1;
+        height: .8rem;
+        line-height: .8rem;
+        // padding-top: .12rem;
+        // padding-bottom: .12rem;
+        &:active {
+            background-color: #969696;
+        }
+    }
+
+    
+}
+.ui-shadow{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    opacity: 0;
+    // z-index: 99;
+}
+

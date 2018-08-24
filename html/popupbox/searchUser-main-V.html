@@ -1,0 +1,15 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>查找用户</p>
+        </div>
+        <div class="ui-addFP__input">
+            <input v-model="searchText" placeholder="请输入用户名或账号">
+        </div>
+        <div>
+            <p v-touch:tap="onSubmitTap">确认</p>
+        </div>
+    </div>
+</div>

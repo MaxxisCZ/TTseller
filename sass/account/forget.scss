@@ -1,0 +1,78 @@
+@import "../_config";
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+.ui-list {
+    display: block;
+    width: 100%;
+}
+.ui-list__item {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-flow: row;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+}
+.ui-list__title {
+    width: 2.1rem;
+    height: 1rem;
+    text-align: center;
+    font-size: 0.28rem;
+    color: #787878;
+}
+.ui-list__input {
+    flex: 1;
+    display: block;
+    position: relative;
+    padding-top: 0.15rem;
+    padding-right: 0.3rem;
+    & > input {
+        display: block;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+        width: 100%;
+        height: 0.7rem;
+        line-height: 1;
+        font-size: 0.28rem;
+        outline: none;
+        border-radius: 30px;
+        background-color: #e7e7e7;
+        border: none;
+    }
+}
+.ui-list__getCode {
+    display: block;
+    position: absolute;
+    right: 0.36rem;
+    top: 1.22rem;
+    width: 1.7rem;
+    height: 0.58rem;
+    line-height: 0.6rem;
+    background-color: #d0d0d0;
+    border-radius: 30px;
+    font-size: 0.28rem;
+    color: #989898;
+    text-align: center;
+}
+.is-newPassword {
+    display: block;
+    text-align: center;
+}
+.ui-forget__btn {
+    display: block;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    margin-top: 0.5rem;
+    margin-left: 0.36rem;
+    margin-right: 0.36rem;
+    font-size: 0.36rem;
+    color: #FFF;
+    background-color: $mainColor;
+    text-align: center;
+    border-radius: 20px;
+    letter-spacing: 0.2rem;
+}

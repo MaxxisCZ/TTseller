@@ -1,0 +1,18 @@
+<div class="ui-list">
+	<span class="ui-list__header">
+		账号：{{detail.account}}
+	</span>
+	<div class="ui-list__title">
+		<span class="is-source">获得或使用原因</span>
+		<span class="is-vaule">积分值</span>
+		<span class="is-useTime">获得或使用时间</span>
+		<!-- <span class="is-term">截止时间</span> -->
+	</div>
+	<div class="ui-list__detail" v-for="item in detail.list">
+		<span class="is-source"><b class="center-hack"></b><span>
+{{item.source}}</span></span>
+		<span class="is-vaule">{{item.vaule}}</span>
+		<span class="is-useTime">{{item.useTime}}</span>
+		<!-- <span class="is-term">{{item.term}}</span> -->
+	</div>
+</div>

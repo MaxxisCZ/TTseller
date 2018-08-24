@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+html,
+body {
+  height: 100%;
+  font-size: 50px;
+  color: #bababa;
+  background-color: #fff;
+  -webkit-tap-highlight-color: transparent; }
+
+.ui-body {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: .36rem;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  width: 5.26rem;
+  height: 5.6rem;
+  background-color: #ffffff;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  z-index: 99; }
+
+.ui-shadow {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5;
+  top: 0; }
+
+.ui-product__searchTitle {
+  display: block;
+  width: 100%;
+  line-height: 1.4rem;
+  font-size: .4rem;
+  color: #333;
+  text-align: center; }
+
+.ui-product__searchItem {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1.4rem;
+  font-size: .3rem;
+  padding: .2rem 1.4rem .2rem 1rem; }
+  .ui-product__searchItem > span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    line-height: 1.4rem;
+    color: #333;
+    font-size: .36rem;
+    text-align: center; }
+  .ui-product__searchItem > select {
+    display: block;
+    width: 100%;
+    line-height: .88rem;
+    border: none;
+    outline: none;
+    -webkit-border-radius: .08rem;
+       -moz-border-radius: .08rem;
+            border-radius: .08rem;
+    background-color: #eee; }
+  .ui-product__searchItem > i {
+    display: block;
+    position: absolute;
+    width: 0.4rem;
+    height: 0.2rem;
+    top: 0.52rem;
+    right: 1.54rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: 0.4rem 0.2rem;
+       -moz-background-size: 0.4rem 0.2rem;
+         -o-background-size: 0.4rem 0.2rem;
+            background-size: 0.4rem 0.2rem;
+    background-image: url(../../image/product/downArrow.png); }
+  .ui-product__searchItem > p {
+    display: block;
+    position: absolute;
+    top: .22rem;
+    right: .12rem;
+    width: 1.2rem;
+    height: .8rem;
+    line-height: .8rem;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius: .08rem;
+       -moz-border-radius: .08rem;
+            border-radius: .08rem;
+    background-color: #34c273; }
+    .ui-product__searchItem > p:active {
+      background-color: #34b273; }
+
+.ui-product__searchID {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 1.4rem;
+  font-size: .3rem;
+  padding: .2rem 1.4rem .2rem .4rem; }
+  .ui-product__searchID > input {
+    display: block;
+    width: 100%;
+    height: .88rem;
+    border: none;
+    outline: none;
+    -webkit-border-radius: .08rem;
+       -moz-border-radius: .08rem;
+            border-radius: .08rem;
+    background-color: #eee;
+    padding: .1rem; }
+  .ui-product__searchID > p {
+    display: block;
+    position: absolute;
+    top: .22rem;
+    right: .12rem;
+    width: 1.2rem;
+    height: .8rem;
+    line-height: .8rem;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius: .08rem;
+       -moz-border-radius: .08rem;
+            border-radius: .08rem;
+    background-color: #34c273; }
+    .ui-product__searchID > p:active {
+      background-color: #34b273; }
+
+
+/*# sourceMappingURL=data:application/json;base64,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 */

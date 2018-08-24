@@ -1,0 +1,17 @@
+<div class="ui-list__item">
+	<div class="ui-list__itemContent">
+		<span>订单打印次数</span>
+		<input type="tel" v-model="printtime" />
+	</div>
+	<div class="ui-list__itemContent">
+		<span>打印机</span>
+		<select v-model="selected">
+			<option>1</option>
+			<option>2</option>
+		</select>
+		<i></i>
+	</div>
+	<div class="ui-list__buttom">
+		<span v-touch:tap="onprintTap">保存设置</span>
+	</div>
+</div>

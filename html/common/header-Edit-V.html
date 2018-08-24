@@ -1,0 +1,12 @@
+<div id="header" class="ui-header is-base">
+    <div class="ui-header__leftBtn" v-touch:tap="onTapLeftBtn"><i class="is-arrow"></i></div>
+    <div v-touch:tap="onTitleTap" class="ui-header__title">{{title}}</div>
+    <div class="ui-header__rightTitle" v-touch:tap="onTapRightBtn" v-if="!isEdit">
+        <span class="ui-header__titleR">编辑
+    	</span>
+    </div>
+    <div class="ui-header__rightTitle" v-touch:tap="onTapRightBtn" v-if="isEdit">
+        <span class="ui-header__add">
+    	</span>
+    </div>
+</div>

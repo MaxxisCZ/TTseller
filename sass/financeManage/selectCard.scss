@@ -1,0 +1,115 @@
+.ui-list{
+	display: block;
+	width: 100%;
+	padding-top: .2rem;
+	background-color: #f7f6f3;
+}
+
+.ui-list__top{
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: .2rem;
+	background-color: #f7f6f3;
+}
+
+.ui-list__card{
+	display: block;
+	width: 100%;
+	padding: .2rem;
+	&>div{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 2.5rem;
+		border-radius: .1rem;
+		padding: .2rem 1.4rem;
+		background-color: #fff;
+		margin-bottom: .1rem;
+		&>span{
+			display: block;
+			position: absolute;
+			height: .8rem;
+			padding-left: .4rem;
+			&>title{
+				display: block;
+				height: .5rem;
+				line-height: .5rem;
+				font-size: .36rem;
+				color: black;
+				}
+			&>li{
+				display: block;
+				line-height: .3rem;
+				font-size: .24rem;
+				color: black;
+			}
+		}
+		&>p{
+			display: block;
+			position: absolute;
+			bottom: .16rem;
+			// right: 1.2rem;
+			right: .25rem;
+			height: .4rem;
+			line-height: .36rem;
+			font-size: .32rem;
+			color: black;
+			&.is-num{
+				font-size: .36rem;
+				right: .25rem;
+				bottom: .14rem;
+			}
+		}
+		&>i{
+			display: block;
+			position: absolute;
+			top: .24rem;
+			right: .3rem;
+			width: .32rem;
+			height: .32rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: .32rem .32rem;
+			background-image: url(../../image/financeManage/unSelected.png);
+			&.is-selected{
+				background-image: url(../../image/financeManage/selected.png);
+			}
+		}
+		&>a{
+			display: block;
+			position: absolute;
+			top: .2rem;
+			left: .3rem;
+			width: 1.4rem;
+			height: .75rem;
+			background-position: center center;
+			background-size: .75rem .75rem;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.ui-list__bst{
+	display: block;
+	width: 100%;
+	height: .75rem;
+	margin-top: .66rem;
+	padding: 0rem .22rem;
+	&>span{
+		display: block;
+		width: 100%;
+		height: .75rem;
+		line-height: .75rem;
+		font-size: .36rem;
+		color: #ececec;
+		text-align: center;
+		border-radius: .1rem;
+		background-color: #c6c6c6;
+		&.is-pass{
+			background-color: #34c273;
+		}
+	}
+}

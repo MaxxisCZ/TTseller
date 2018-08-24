@@ -1,0 +1,20 @@
+<div class="ui-list">
+	<span class="ui-list__topBackground"></span>
+	<div class="ui-list__top">
+		<span v-for="item in topList" v-bind:class="{'is-selected':item.isSelect}" v-touch:tap="onChangeTap($index)">{{item.title}}</span>
+	</div>
+	<div class="ui-list__menu" v-show="isCheck">
+		<div class="ui-list__item" v-for="item in detail" v-touch:tap="onDetailTap($index)">
+				<p class="{{item.tag}}">
+			</p>
+			<span>{{item.title}}</span>
+		</div>
+	</div>
+	<div class="ui-list__menu" v-else>
+		<div class="ui-list__item" v-for="item in statistics" v-touch:tap="onStatisticsTap($index)">
+			<p class="{{item.tag}}">
+			</p>
+			<span>{{item.title}}</span>
+		</div>
+	</div>
+</div>

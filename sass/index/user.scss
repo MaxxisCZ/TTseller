@@ -1,0 +1,146 @@
+body{
+	font-size: 0;
+}
+
+.ui-list{
+	width: 100%;
+	background-color: #f7f6f3;
+	padding-top: .7rem;
+	margin-bottom: .65rem;
+}
+
+.ui-list__headerBack{
+	display: block;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: .7rem;
+	background-color: #c2c2c2;
+}
+
+.ui-list__header{
+	display: block;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: .65rem;
+	line-height: .65rem;
+	// background-color: #c2c2c2;
+	background-color: #f3f3f3;
+	padding-bottom: .06rem;
+	z-index: 99;
+	&>li{
+		display: inline-block;
+		position: relative;
+		width: 16.6%;
+		// height: .65rem;
+		// line-height: .65rem;
+		font-size: .20rem;
+		color: #828282;
+		text-align: center;
+		&.is-click{
+			font-size: .24rem;
+			font-weight: bold;
+			&:after{
+			content: '';
+			position: absolute;
+			bottom: -.06rem;
+			left: 0;
+			width: 100%;
+			height: .06rem;
+			background-color: #81e08d;
+			}
+		}
+		
+	}
+}
+
+.ui-list__item{
+	display: block;
+	width: 100%;
+	height: .65rem;
+	line-height: .65rem;
+	background-color: #616e88;
+	&>span{
+		display: inline-block;
+		width: 25%;
+		font-size: .2rem;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+.ui-list__detail{
+	display: block;
+	width: 100%;
+	height: .65rem;
+	line-height: .65rem;
+	font-size: .20rem;
+	color: #929191;
+	&>a{
+		display: block;
+		float: left;
+		// width: 1.8rem;
+		width: 25%;
+		// text-align: center;
+		padding-left: .1rem;
+	}
+	&>i{
+		display: block;
+		float: left;
+		// width: 1.2rem;
+		width: 24%;
+		text-align: center;
+	}
+	&>time{
+		display: block;
+		float: left;
+		// width: 2.2rem;
+		width: 34.4%;
+		// text-align: center;
+	}
+	&>p{
+		display: block;
+		float: left;
+		// width: .5rem;
+		width: 7.9%;
+		text-align: center;
+	}
+	&:nth-child(2n){
+		background-color: #fff;
+	}
+}
+
+.ui-list__footer{
+	display: block;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	padding: 0rem .2rem;
+	height: .65rem;
+	line-height: .65rem;
+	background-color: #fff;
+	&>span{
+		display: inline-block;
+		width: 12.5%;
+		font-size: .2rem;
+		color: #828282;
+		text-align: center;
+		&.is-blue{
+			color: #593fee;
+		}
+	}
+	&>p{
+		display: inline-block;
+		width: 25%;
+		font-size: .2rem;
+		color: #828282;
+		text-align: center;
+	}
+}
+
+.ui-isBlue{
+	font-size: .2rem;
+	color: #593fee;
+}

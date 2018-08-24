@@ -1,0 +1,40 @@
+<div id="costContent">
+    <div class="ui-costM__main">
+        <div class="ui-costM__query">
+            <P>请选择查询的</P>
+            <div v-touch:tap="onselectYearTap">
+                <!-- <input type="tel" v-model="yearHead" /> -->
+                <select id="year" v-model="selectY" v-on:change="onYearChange">
+                    <option v-for="option in optionY" value="{{option.value}}">{{option.text}}</option>
+                </select>
+                <div>年</div>
+            </div>
+            <div>
+                <!-- <input type="tel" v-model="monthHead" /> -->
+                <select id="month" v-model="selectM">
+                    <option v-for="option in optionM" value="{{option.value}}">{{option.text}}</option>
+                </select>
+                <div>月</div>
+            </div>
+            <div>
+                <div v-touch:tap="onsearchTap()">搜索</div>
+            </div>
+        </div>
+        <div class="ui-costM__list">
+            <div class="ui-list__title">
+                <p>名称</p>
+                <p class="money">支出金额</p>
+                <p class="reason">支出理由</p>
+                <p class="time">记录时间</p>
+                <p>删除</p>
+            </div>
+            <div class="ui-hasList" v-for="item in list">
+                <p>{{item.costID}}</p>
+                <p class="money">{{item.costMoney}}</p>
+                <p class="reason">{{item.costReason}}</p>
+                <p class="time">{{item.costRecordTime}}</p>
+                <p class="delete" v-touch:tap="onDeleteTap($index)">删除</p>
+            </div>
+        </div>
+    </div>
+</div>

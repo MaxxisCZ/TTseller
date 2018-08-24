@@ -1,0 +1,240 @@
+.ui-list{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	background-color: #ececec;
+	color: #a5a5a5;
+	&.is-close{
+		background-color: #fff;
+	}
+}
+
+.ui-list__header{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 1.2rem;
+	font-size: .32rem;
+	padding-left: .6rem;
+	&>span{
+		display: block;
+		width: 100%;
+		line-height: 1.2rem;
+		font-size: .32rem;
+	}
+	&>p{
+		display: block;
+		position: absolute;
+		top: .44rem;
+		right: .5rem;
+		font-size: .32rem;
+	}
+}
+
+.ui-list__changePwd{
+	display: block;
+	width: 100%;
+	height: .66rem;
+	padding-left: .6rem;
+	background-color: #ececec;
+	&>span{
+		display: block;
+		width: 100%;
+		line-height: .66rem;
+		font-size: .26rem;
+	}
+}
+
+.ui-list__contain{
+	display: block;
+	height: 4.3rem;
+	padding: .3rem .2rem;
+}
+
+// .ui-list__item{
+// 	display: block;
+// 	position: relative;
+// 	width: 100%;
+// 	height: .8rem;
+// 	padding-left: 2rem;
+// 	padding-right: .2rem;
+// 	margin: .1rem 0;
+// 	border-radius: .18rem;
+// 	background-color: #ececec;
+// 	&>span{
+// 		display: block;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		width: 2rem;
+// 		height: .8rem;
+// 		line-height: .8rem;
+// 		font-size: .36rem;
+// 		color: #282828;
+// 		text-align: center;
+// 	}
+// 	&>input{
+// 		display: block;
+// 		width: 100%;
+// 		height: .8rem;
+// 		line-height: .4rem;
+// 		font-size: .32rem;
+// 		padding: .2rem .1rem;
+// 		background-color: #ececec;
+// 		&::-webkit-input-placeholder{
+// 			color: #CCCCCC;
+// 		}
+// 	}
+// 	&>p{
+// 		display: block;
+// 		position: absolute;
+// 		top: .1rem;
+// 		right: .1rem;
+// 		width: 1.8rem;
+// 		height: .6rem;
+// 		line-height: .6rem;
+// 		font-size: .3rem;
+// 		color: #fff;
+// 		text-align: center;
+// 		background-color: #34c273;
+// 		border-radius: .16rem;
+// 	}
+// 	&.is-code{
+// 		padding-right: 1.9rem;
+// 	}
+// }
+
+.ui-list__bst{
+	display: block;
+	width: 100%;
+	height: 2rem;
+	padding: 1rem .5rem .5rem;
+	&>span{
+		display: block;
+		width: 100%;
+		height: .88rem;
+		line-height: .88rem;
+		font-size: .36rem;
+		color: #fff;
+		text-align: center;
+		background-color: #34c273;
+		border-radius: .18rem;
+	}
+}
+
+.ui-select{
+    display: block;
+    position: absolute;
+    right: 0.3rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0.8rem;
+    height: 0.4rem;
+    background-color: #fff;
+    border-radius: 0.4rem 0.4rem;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+    &.is-activeG{
+        background-color: #20d420;
+        &>span{
+            left: 0.4rem;
+        }
+    }
+    &.is-activeR{
+        background-color: #FF3030;
+        &>span{
+            left: 0.4rem;
+        }
+    }
+    &>span{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.4rem;
+        height: 0.4rem;
+        background-color: #fff;
+        border-radius: 0.4rem;
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        transition: left 0.2s;
+    }
+}
+
+.ui-list__tip{
+	display: block;
+	width: 100%;
+	height: 4rem;
+	font-size: .32rem;
+	text-align: center;
+	color: #000;
+	padding-top: 30%;
+}
+
+.ui-list__setUpPwd{
+	display: block;
+	width: 100%;
+	height: 4rem;
+	font-size: 0;
+	text-align: center;
+	color: #000;
+	padding: .2rem;
+}
+
+.ui-list__itemHeader{
+	display: block;
+	width: 100%;
+	height: 4rem;
+	font-size: .28rem;
+	text-align: center;
+	color: #000;
+	border-radius: .12rem;
+	background-color: #fff;
+	&>span{
+		display: block;
+		width: 100%;
+		height: 1rem;
+		line-height: 1rem;
+		font-size: .4rem;
+		color: #666;
+		text-align: center;
+		border-radius: .12rem;
+	}
+}
+
+.ui-list__item{
+	display: block;
+	width: 100%;
+	height: 1.5rem;
+	padding: .1rem .26rem .3rem .32rem;
+	&>p{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 1.44rem;
+		line-height: 1.44rem;
+		font-size: .32rem;
+		text-align: left;
+		color: #000;
+		// padding-left: .3rem;
+		&>i{
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: .22rem;
+			height: 1.44rem;
+			background-repeat: no-repeat;
+			background-size: .22rem .4rem;
+			background-position: center center;
+			background-image: url(../../image/index/arrow.png);
+		}
+		&.is-line{
+			border-bottom: 1px solid #B7B7B7;
+		}
+	}
+	&:active{
+        background-color: #EBEBEB;
+    }
+}

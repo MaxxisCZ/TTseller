@@ -1,0 +1,20 @@
+<div class="ui-list">
+	<div class="ui-list__discount">
+		<div class="ui-list__discountTitle">第二天折扣:</div>
+		<input type="number" v-model="discount1" />
+		<span>折</span>
+	</div>
+	<div class="ui-list__discount">
+		<div class="ui-list__discountTitle">第三天折扣:</div>
+		<input type="number" v-model="discount2" />
+		<span>折</span>
+	</div>
+	<div class="ui-list__code">
+		<div class="ui-list__codeTitle">验证码</div>
+		<input type="text" v-model="inputCode"/>
+		<p v-touch:tap="onCodeTap()">{{code}}</p>
+	</div>
+	<div class="ui-list__buttom">
+		<span v-touch:tap="onSumbitTap()">确认</span>
+	</div>
+</div>

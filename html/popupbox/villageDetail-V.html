@@ -1,0 +1,41 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>小区详情</p>
+        </div>
+        <div class="ui-costRecord">
+            <div class="ui-villageDetail">
+                <p>小区名称</p>
+                <div>
+                    <input type="text" v-model="name">
+                </div>
+            </div>
+            <div class="ui-villageDetail">
+                <p>首字母简写</p>
+                <div>
+                    <input type="text" v-model="szm">
+                </div>
+            </div>
+            <div class="ui-villageDetail" v-show="unCheck">
+                <p>未通过理由</p>
+                <div>
+                    <input type="text" v-model="reason" readOnly>
+                </div>
+            </div>
+        </div>
+       <div class="ui-cancleAndOkButton">
+                <div>
+                    <div v-touch:tap="onSubmitTap" class="sure">确定</div>
+                </div>
+                <div>
+                    <div v-touch:tap="onCancelTap" class="no">
+                        取消
+                    </div>
+                </div>
+        </div>
+        <div v-show="isbutton">
+        </div>
+    </div>
+</div>

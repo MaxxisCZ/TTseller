@@ -1,0 +1,34 @@
+<div id="content">
+    <div class="ui-financeM__base">
+        <div class="ui-financeM__title">
+            <!-- <div class="ui-recharge" v-touch:tap="onRechargeTap">充值</div> -->
+            <div class="ui-balance">余额<span>(元)</span></div>
+            <!-- <div class="ui-withdrawCash" v-touch:tap="onCashTap">提现</div> -->
+        </div>
+        <div class="ui-financeM__count">
+            <div class="ui-number">{{showBalance}}</div>
+            <i class="is-show" v-bind:class="{'is-hidden':hiddenMoney}" v-touch:tap="onShowMoneyTap"></i>
+        </div>
+        <div class="ui-financeM_btn">
+            <div>
+                <div v-touch:tap="onRechargeTap">充值</div>
+            </div>
+            <div>
+                <div v-touch:tap="onCashTap">提现</div>
+            </div>
+        </div>
+        <div class="ui-financeM__toDetail">
+            <div v-touch:tap="onShowDetail">
+                <p>点击查看明细</p>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-financeM__detail" v-show="isShowDetail">
+        <div class="ui-detail__line" v-for="item in list">
+            <div class="ui-line__time">{{item.time}}</div>
+            <div class="ui-line__financeType"><b class="center-hack"></b><span>{{item.payReason}}</span></div>
+            <div class="ui-line__finance">{{item.money}}元</div>
+        </div>
+    </div>
+</div>

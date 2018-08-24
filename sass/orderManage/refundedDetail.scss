@@ -1,0 +1,361 @@
+.ui-list{
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	// padding-bottom: 1.2rem;
+}
+.ui-list__detail{
+	display: block;
+	width: 100%;
+	padding: .1rem .2rem;
+	background-color: #fff;
+	overflow: hidden;
+	&>li{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: .6rem;
+		line-height: .6rem;
+		font-size: .26rem;
+		color: #3e3e3e;
+		// padding: .1rem 0rem;
+		&>span{
+			display: inline-block;
+			font-size: .26rem;
+			color: #3e3e3e;
+			width: 60%;
+			height: 100%;
+			overflow: hidden;
+			&>span{
+				display: inline-block;
+			    line-height: 1.2;
+			    vertical-align: middle;
+			}
+		}
+		&>p{
+			display: inline;
+			width: 40%;
+		}
+		&>select{
+			display: inline-block;
+			position: absolute;
+			top: .06rem;
+			left: 1.3rem;
+			width: 2.5rem;
+			line-height: .4rem;
+			border: 1px solid #adadad;
+			background-color: #f6f6f6;
+			z-index: 9;
+			opacity: .5;
+			padding-left: .04rem;
+			outline: none;
+			&>option{
+				text-align: center;
+			}
+		}
+		&>div{
+			display: inline-block;
+			height: .4rem;
+			&>input{
+				width: 1.6rem;
+				line-height: .32rem;
+				font-size: .32rem;
+				color: #3e3e3e;
+				border: 1px solid #adadad;
+				background-color: #f6f6f6;
+				outline: none;
+				padding: .08rem .06rem;
+			}
+		}
+		&>code{
+			display: inline-block;
+			width: 1.5rem;
+			height: .6rem;
+			line-height: .6rem;
+			font-size: .4rem;
+			color: #121212;
+			letter-spacing: .04rem;
+			font-weight: bold;
+			font-style: italic;
+			text-align: center;
+			border: none;
+			outline: none;
+			// margin-top: .06rem;
+			background-color: #f8f8f8;
+		}
+	}
+	&>ul{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: .6rem;
+		font-size: .26rem;
+		color: #3e3e3e;
+		padding-left: 1.2rem;
+		// padding: .1rem 0rem;
+		&>p{
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			height: .6rem;
+			line-height: .6rem;
+			font-size: .24rem;
+		}
+		&>input{
+			display: inline-block;
+			width: 100%;
+			height: .6rem;
+			line-height: .6rem;
+			font-size: .26rem;
+			background-color: #fff;
+			border: none;
+			outline: none;
+			padding-left: .1rem;
+			padding-top: .02rem;
+			&.is-phone{
+				padding-top: .02rem;
+				padding-left: .4rem;
+			}
+			&.is-time{
+				padding-top: .02rem;
+				// line-height: .66rem;
+			}
+		}
+		&>div{
+			display: inline-block;
+			width: 100%;
+			height: .6rem;
+			line-height: .6rem;
+			padding-top: .01rem;
+		}
+		&>span{
+			// display: inline-block;
+			display: block;
+			width: 100%;
+			height: .6rem;
+			line-height: .3rem;
+			overflow: hidden;
+			padding-top: .01rem;
+			&>span{
+				display: inline-block;
+			    line-height: 1.2;
+			    vertical-align: middle;
+			}
+		}
+		&>select{
+			display: inline-block;
+			position: absolute;
+			top: .06rem;
+			left: 1.3rem;
+			width: 100%;
+			line-height: .46rem;
+			outline: none;
+			border: none;
+			z-index: 99;
+			opacity: 0;
+		}
+	}
+	&>footer{
+		display: block;
+		width: 100%;
+		height: .1.4rem;
+		padding: .4rem 0rem;
+		// line-height: .9rem;
+		font-size: 0;
+		&>li{
+			display: inline-block;
+			width: 47%;
+			text-align: center;
+			&>span{
+				display: inline-block;
+				width: 1.75rem;
+				height: .7rem;
+				line-height: .7rem;
+				font-size: .24rem;
+				color: #fff;
+				text-align: center;
+				border-radius: .06rem;
+				background-color: #81e08d;
+			}
+		}
+	}
+}
+
+.ui-list__orderMessage{
+	display: block;
+	width: 100%;
+	height: .6rem;
+	line-height: .6rem;
+	font-size: .28rem;
+	color: #3e3e3e;
+	background-color: #fff;
+	padding-left: .06rem;
+}
+
+.ui-list__orderMessageL{
+	display: block;
+	width: 100%;
+	height: 1.2rem;
+	line-height: .32rem;
+	font-size: .26rem;
+	color: #3e3e3e;
+	background-color: #f0f0f0;
+	padding: .04rem;
+	margin-bottom: .2rem;
+}
+
+.ui-list__arrow{
+	display: inline-block;
+	position: relative;
+	top: .08rem;
+	left: .3rem;
+	width: 2.5rem;
+	// width: 100%;
+	height: .4rem;
+	font-size: 0;
+	z-index: 1;
+	opacity: .5;
+	&>span{
+		display: block;
+		position: absolute;
+		top: -.1rem;
+		right: 0.4rem;
+		width: .4rem;
+		height: .65rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: .3rem .2rem;
+		background-image: url(../../image/index/unfold.png);
+	}
+	
+}
+
+.ui-list__goods{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 2.4rem;
+	padding-left: 2.4rem;
+	margin-top: .15rem;
+	background-color: #fff;
+	&>p{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 2.4rem;
+		height: 2.4rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 2.4rem 2.4rem;
+	}
+	&>div{
+		display: block;
+		width: 100%;
+		height: 2.4rem;
+		font-size: 0;
+		padding: .18rem .23rem;
+		&>span{
+			display: block;
+			width: 100%;
+			font-size: .4rem;
+			color: #1a1a19;
+			&.is-item{
+				display: inline-block;
+				height: .36rem;
+				line-height: .36rem;
+				font-size: .28rem;
+				&>p{
+					display: inline-block;
+					color: red;
+				}
+			}
+		}
+		&>p{
+			display: block;
+			width: 100%;
+			height: .56rem;
+			font-size: 0;
+			margin-top: .05rem;
+			margin-bottom: .05rem;
+			&>span{
+				display: inline-block;
+				height: .56rem;
+				line-height: .56rem;
+				font-size: .28rem;
+				color: #1a1a19;
+			}
+			&>input{
+				display: inline-block;
+				width: 1.2rem;
+				height: .56rem;
+				line-height: .28rem;
+				font-size: .32rem;
+				text-align: right;
+				padding: 0 .1rem;
+				background-color: #f2f2f2;
+				border: 1px solid #bdbbbb;
+			}
+		}
+	}
+	&>span{
+		display: block;
+		position: absolute;
+		top: 50%;
+		margin-top: -.35rem;
+		right: .23rem;
+		width: 1.6rem;
+		height: .7rem;
+		line-height: .7rem;
+		font-size: .24rem;
+		color: #fff;
+		text-align: center;
+		background-color: #81e08d;
+		border-radius: .06rem;
+	}
+}
+
+.ui-list__pre{
+	display: block;
+	width: 100%;
+	height: 1rem;
+	font-size: 0;
+	padding: .15rem;
+	text-align: center;
+	background-color: #fff;
+	margin-top: .18rem;
+	&>p{
+		display: inline-block;
+		position: relative;
+		width: 50%;
+		height: .7rem;
+		font-size: 0;
+		&>span{
+			display: block;
+			position: absolute;
+			right: 25%;
+			margin-left: -.86rem;
+			width: 1.72rem;
+			height: .7rem;
+			line-height: .7rem;
+			font-size: .26rem;
+			color: #fff;
+			text-align: center;
+			border-radius: .1rem;
+			&.is-red{
+				background-color: #fd7474;
+			}
+			&.is-green{
+				background-color: #81e08d;
+			}
+		}
+	}
+}
+
+.center-hack {
+    display: inline-block;
+    font-size: 0;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}

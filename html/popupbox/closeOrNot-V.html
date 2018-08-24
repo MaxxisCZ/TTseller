@@ -1,0 +1,21 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-closeOrNot">
+            <p>
+                确定开启（关闭）店铺？
+            </p>
+        </div>
+        <div class="ui-cancleAndOkButton">
+            <div v-touch:tap="sureTap">
+                <div>开启</div>
+            </div>
+            <div v-touch:tap="onCloseTap">
+                <div>关闭</div>
+            </div>
+        </div>
+        <div v-show="isbutton">
+        </div>
+    </div>
+</div>

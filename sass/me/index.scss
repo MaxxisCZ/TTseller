@@ -1,0 +1,128 @@
+@import "../_config";
+body {
+    margin: 0;
+    padding: 0;
+    // background-image: -webkit-linear-gradient(to top, #57b45e, #98e28b);
+    // background-image: linear-gradient(to top, #57b45e, #98e28b);
+    // background-color: $mainColor;
+    background-color: #fff;
+}
+.ui-userInfor {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 3.22rem;
+    background-color: $mainColor;
+}
+.ui-userInfor__avatar {
+    display: block;
+    position: absolute;
+    left: 0.4rem;
+    top: 0.46rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    @include bgi-cover(url(../../image/me/avatar3.jpg));
+    border-radius: 60px;
+    border: 3px solid #FFF;
+}
+.ui-userInfor__name {
+    display: block;
+    padding-left: 3.16rem;
+    padding-top: 0.7rem;
+    height: 1.14rem;
+    font-size: 0.36rem;
+    color: #fff;
+}
+.ui-userInfor__phone {
+    display: block;
+    padding-left: 3.16rem;
+    height: .5rem;
+    padding-top: .2rem;
+    font-size: 0.3rem;
+    color: #fff;
+}
+.ui-userInfor__status {
+    display: block;
+    padding-left: 3.16rem;
+    height: .8rem;
+    padding-top: .2rem;
+    font-size: 0.3rem;
+    color: #fff;
+}
+.ui-list {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding-top: .2rem;
+}
+.ui-list__item {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 0.32rem;
+    color: #4A4A4A;
+    & > p {
+        padding-left: 0.32rem;
+        &:active{
+            background-color: #EBEBEB;
+        }
+    }
+    &>.money{
+        display: block;
+        position: absolute;
+        left: 1.6rem;
+        top: 0rem;
+    }
+    &>.moneyDetail{
+        display: block;
+        position: absolute;
+        right: 0.76rem;
+        top: 0rem;
+        font-size: 0.2rem;
+        color: #fff;
+    }
+    &.has-arrow {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 36px;
+            height: 44px;
+            background-size: 8px 16px;
+            @include bgi-center( url(../../image/me/arrow.png) );
+        }
+    }
+    &:nth-child(3){
+        width: 80%;
+        & > i {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -25%;
+            width: 25%;
+            height: .9rem;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: .4rem .26rem;
+            &.is-show {
+                background-image: url(../../image/me/showEye.png);
+            }
+            &.is-hidden {
+                background-image: url(../../image/me/hiddenEye.png);
+            }
+        }
+    }
+}
+.is-line {
+    display: block;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    height: 1px;
+    background-color: #41a34d;
+}

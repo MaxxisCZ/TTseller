@@ -1,0 +1,111 @@
+.ui-list{
+	padding: 0;
+	margin-bottom: 1.4rem;
+	width: 100%;
+	background-color: #f0f0f0;
+}
+
+.ui-listHead__portrait{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 2.2rem;
+	padding: .3rem .4rem .3rem 1.76rem;
+	background-color: #fff;
+	&>span{
+		display: block;
+		position: absolute;
+		top: .3rem;
+		left: .3rem;
+		font-size: .28rem;
+		color: #535353;
+	}
+	&>li{
+		display: block;
+		width: 1.6rem;
+		height: 1.6rem;
+		border-radius: .8rem;
+		background-color: #d7d7d7;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 2rem 2rem;
+		background-image: url(../../image/index/jay.png);
+		overflow: hidden;
+	}
+}
+
+.ui-list__detail{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: .65rem;
+	line-height: .65rem;
+	font-size: .24rem;
+	color: #535353;
+	padding-left: 1.76rem;
+	background-color: #fff;
+	&>span{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1.76rem;
+		height: .72rem;
+		line-height: .72rem;
+		text-align: center;
+		font-size: .24rem;
+		color: #535353;
+	}
+}
+
+.ui-list__edit{
+	font-size: 0;
+	display: block;
+	width: 100%;
+	padding: .2rem;
+	background-color: #fff;
+	// padding: .2rem;
+	&>i{
+		display: inline-block;
+		// float: left;
+		text-align: center;
+		// margin: 0 auto;
+		width: 50%;
+		&>span{
+			display: inline-block;
+			// position: absolute;
+			// right: 50%;
+			// margin-right: -.3rem;
+			height: .6rem;
+			line-height: .6rem;
+			width: 1.9rem;
+			font-size: .28rem;
+			color: #394c3c;
+			text-align: center;
+			border-radius: .1rem;
+			background-color: #81e08d;
+		}
+	}
+}
+
+.ui-list__foot{
+	display: block;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 1.3rem;
+	padding: .37rem .68rem;
+	background-color: #fff;
+	z-index: 99;
+	&>span{
+		display: block;
+		width: 1.8rem;
+		height: .6rem;
+		line-height: .6rem;
+		text-align: center;
+		font-size: .28rem;
+		color: #535353;
+		border-radius: .1rem;
+		background-color: #81e08d;
+	}
+}

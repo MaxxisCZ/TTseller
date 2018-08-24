@@ -1,0 +1,20 @@
+<div class="ui-list">
+	<span class="ui-list__header">
+		账号：{{detail.account}}
+	</span>
+	<div class="ui-list__title">
+		<p>充值单号</p>
+		<p>充值金额</p>
+		<p>付款时间</p>
+		<p>付款方式</p>
+		<p>付款状态</p>
+	</div>
+	<div class="ui-list__detail" v-for="item in detail.list">
+		<!-- <span class="is-item"><b class="center-hack"></b><span>{{item.oddNumbers}}</span></span> -->
+		<p class="is-time">{{item.oddNumbers}}</p>
+		<span class="is-item"><b class="center-hack"></b><span>{{item.money}}</span></span>
+		<p class="is-time">{{item.time}}</p>
+		<span class="is-item"><b class="center-hack"></b><span>{{item.type}}</span></span>
+		<p>{{item.state}}</p>
+	</div>
+</div>

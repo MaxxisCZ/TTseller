@@ -1,0 +1,17 @@
+<div class="ui-list">
+	<div class="ui-list__contain">
+		<div class="ui-list__item">
+			<span>手机号码</span>
+			<!-- <div class="ui-list__mobile">{{mobile}}</div> -->
+			<input type=tel v-model="mobile" disabled placeholder=''/>
+		</div>
+		<div class="ui-list__item is-code">
+			<span>验证码</span>
+			<input type=tel v-model="code" placeholder='输入验证码'/>
+			<p v-touch:tap="onGetCodeTap">获取验证码</p>
+		</div>
+	</div>
+	<div class="ui-list__bst">
+		<span v-touch:tap="onSumbitTap">确认</span>
+	</div>
+</div>

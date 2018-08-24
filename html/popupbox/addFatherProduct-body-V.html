@@ -1,0 +1,15 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>添加父产品类型名称</p>
+        </div>
+        <div class="ui-addFP__input">
+            <input v-model="fatherName">
+        </div>
+        <div>
+            <p v-touch:tap="onSubmitTap">添加</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="ui-list">
+	<div class="ui-list__item">
+		<p>奖项名称:</p>
+		<input type="text" v-model="name"/>
+	</div>
+	<div class="ui-list__item">
+		<p>奖品类型:</p>
+		<select v-model="kindValue">
+			<option v-for="item in kind" v-bind:value="item.value">{{item.text}}</option>
+		</select>
+		<i></i>
+	</div>
+	<div class="ui-list__item">
+		<p>积分:</p>
+		<input type="text" v-model="point"/>
+	</div>
+	<div class="ui-list__item">
+		<p>选择券:</p>
+		<input type="text" />
+	</div>
+	<div class="ui-list__item">
+		<p>获奖概率:</p>
+		<input type="text" v-model="probability"/>
+	</div>
+	<div class="ui-list__buttom">
+		<span v-touch:tap="onAddRewardTap()">确认</span>
+	</div>
+</div>

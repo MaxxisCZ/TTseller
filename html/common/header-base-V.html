@@ -1,0 +1,11 @@
+<div id="header" class="ui-header is-base" v-bind:class="{'isHome':isHome}">
+    <div class="ui-header__leftBtn" v-touch:tap="onTapLeftBtn">
+    	<i class="is-arrow"></i>
+    	<span v-touch:tap="onCancelBtn" style="position: absolute;
+    right: .88rem;width:.9rem;top: 0;font-size:.3rem;color: #fff;margin:0;margin-right:.1rem;" v-show="showCancel">{{cancel}}</span>
+    	<span v-touch:tap="onSelectBtn" style="position: absolute;
+    right: 0rem;width:.9rem;top: 0;font-size:.3rem;color: #fff;" v-show="isMessage">{{select}}</span>
+    </div>
+    <div v-touch:tap="onTitleTap" class="ui-header__title">{{title}}</div>
+    <div class="ui-header__rightBtn" v-if="!!rightText" v-touch:tap="onTapRightBtn">{{rightText}}</div>
+</div>

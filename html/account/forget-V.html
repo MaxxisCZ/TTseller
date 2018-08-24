@@ -1,0 +1,52 @@
+<div class="ui-forget">
+    <div class="ui-list">
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                登录账号名
+            </div>
+            <div class="ui-list__input" >
+                <input type="text" v-model="loginName" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                手机号码
+            </div>
+            <div class="ui-list__input">
+                <input type="tel" v-model="phone"/>
+            </div>
+            <div class="ui-list__getCode" v-touch:tap="sendCode">
+                <p>
+                    {{codeText}}
+                </p>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                6位验证码
+            </div>
+            <div class="ui-list__input" >
+                <input type="tel" v-model="code" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                新密码
+            </div>
+            <div class="ui-list__input" >
+                <input type="password" placeholder="至少6位" v-model="password" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                确认新密码
+            </div>
+            <div class="ui-list__input">
+                <input type="password" v-model="newPassword" />
+            </div>
+        </div>
+    </div>
+    <div class="ui-forget__btn" v-touch:tap="confirm">
+        完成
+    </div>
+</div>

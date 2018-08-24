@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import "../_config";
+html {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    background-color: #ffffff;
+}
+
+.ui-coupon {
+    width: 100%;
+    color: #6e7a91;
+    font-size: .22rem;
+}
+
+.ui-coupon__account {
+    text-align: center;
+    // font-size: .22rem;
+    height: .64rem;
+    line-height: .64rem;
+    color: #f7f6f3;
+    background-color: #616e88;
+}
+
+.ui-coupon__line {
+    height: 1.28rem;
+    border-bottom: 4px solid #dcdcdc;
+}
+
+table {
+    margin-top: .17rem;
+    width: 100%;
+    text-align: center;
+    // font-size: .22rem;
+    border-top: 1px solid #616e88;
+    border-bottom: 1px solid #616e88;
+    height: .63rem;
+}
+
+td {
+    border-right: 1px solid #616e88;
+    &:last-child {
+        border: none;
+    }
+}
+
+.ui-table__base {
+    background-color: #dcdcdc;
+}
+
+.ui-table__remark {
+    margin-top: 0;
+    width: 100%;
+    height: .33rem;
+    line-height: .33rem;
+}
+
+.ui-remark__title {
+    background-color: #dcdcdc;
+    border-right: none;
+}
+
+.ui-remark__value {
+    min-width: .5rem;
+}

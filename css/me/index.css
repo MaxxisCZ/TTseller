@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; }
+
+.ui-userInfor {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 3.22rem;
+  background-color: #34c273; }
+
+.ui-userInfor__avatar {
+  display: block;
+  position: absolute;
+  left: 0.4rem;
+  top: 0.46rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-image: url(../../image/me/avatar3.jpg);
+  -webkit-border-radius: 60px;
+     -moz-border-radius: 60px;
+          border-radius: 60px;
+  border: 3px solid #FFF; }
+
+.ui-userInfor__name {
+  display: block;
+  padding-left: 3.16rem;
+  padding-top: 0.7rem;
+  height: 1.14rem;
+  font-size: 0.36rem;
+  color: #fff; }
+
+.ui-userInfor__phone {
+  display: block;
+  padding-left: 3.16rem;
+  height: .5rem;
+  padding-top: .2rem;
+  font-size: 0.3rem;
+  color: #fff; }
+
+.ui-userInfor__status {
+  display: block;
+  padding-left: 3.16rem;
+  height: .8rem;
+  padding-top: .2rem;
+  font-size: 0.3rem;
+  color: #fff; }
+
+.ui-list {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  padding-top: .2rem; }
+
+.ui-list__item {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.32rem;
+  color: #4A4A4A; }
+  .ui-list__item > p {
+    padding-left: 0.32rem; }
+    .ui-list__item > p:active {
+      background-color: #EBEBEB; }
+  .ui-list__item > .money {
+    display: block;
+    position: absolute;
+    left: 1.6rem;
+    top: 0rem; }
+  .ui-list__item > .moneyDetail {
+    display: block;
+    position: absolute;
+    right: 0.76rem;
+    top: 0rem;
+    font-size: 0.2rem;
+    color: #fff; }
+  .ui-list__item.has-arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 36px;
+    height: 44px;
+    -webkit-background-size: 8px 16px;
+       -moz-background-size: 8px 16px;
+         -o-background-size: 8px 16px;
+            background-size: 8px 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../../image/me/arrow.png); }
+  .ui-list__item:nth-child(3) {
+    width: 80%; }
+    .ui-list__item:nth-child(3) > i {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -25%;
+      width: 25%;
+      height: .9rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: .4rem .26rem;
+         -moz-background-size: .4rem .26rem;
+           -o-background-size: .4rem .26rem;
+              background-size: .4rem .26rem; }
+      .ui-list__item:nth-child(3) > i.is-show {
+        background-image: url(../../image/me/showEye.png); }
+      .ui-list__item:nth-child(3) > i.is-hidden {
+        background-image: url(../../image/me/hiddenEye.png); }
+
+.is-line {
+  display: block;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  height: 1px;
+  background-color: #41a34d; }
+
+
+/*# sourceMappingURL=data:application/json;base64,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 */

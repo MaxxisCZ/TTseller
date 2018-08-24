@@ -1,0 +1,14 @@
+<div class="ui-list">
+	<div class="ui-list__top">
+		<span>序号</span>
+		<span>登录名</span>
+		<span>姓名</span>
+		<span>删除</span>
+	</div>
+	<div class="ui-list__item" v-for="item in detail">
+		<span v-touch:tap="onManagerDetail($index)">{{item.number}}</span>
+		<span v-touch:tap="onManagerDetail($index)">{{item.loginname}}</span>
+		<span v-touch:tap="onManagerDetail($index)">{{item.name}}</span>
+		<span v-touch:tap="onDeleteTap($index)">删除</span>
+	</div>
+</div>

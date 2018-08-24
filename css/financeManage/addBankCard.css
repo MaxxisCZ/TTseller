@@ -1,0 +1,201 @@
+.ui-list {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0; }
+
+.ui-list__top {
+  display: block;
+  width: 100%;
+  line-height: .6rem;
+  font-size: .24rem;
+  color: #afafaf;
+  padding-left: .3rem; }
+
+.ui-list__header {
+  display: block;
+  width: 100%;
+  height: 1rem;
+  padding: 0 .2rem .2rem; }
+
+.ui-list__bank {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .32rem;
+  text-align: center;
+  background-color: #fff;
+  padding-right: 1.2rem;
+  -webkit-border-radius: .12rem;
+     -moz-border-radius: .12rem;
+          border-radius: .12rem;
+  border: none; }
+  .ui-list__bank > span {
+    display: block;
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    color: #282828;
+    text-align: center;
+    -webkit-border-radius: .12rem;
+       -moz-border-radius: .12rem;
+            border-radius: .12rem; }
+  .ui-list__bank > p {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.2rem;
+    height: .8rem;
+    -webkit-border-top-right-radius: .12rem;
+       -moz-border-radius-topright: .12rem;
+            border-top-right-radius: .12rem;
+    -webkit-border-bottom-right-radius: .12rem;
+       -moz-border-radius-bottomright: .12rem;
+            border-bottom-right-radius: .12rem;
+    background-color: #34c273;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: .26rem .26rem;
+       -moz-background-size: .26rem .26rem;
+         -o-background-size: .26rem .26rem;
+            background-size: .26rem .26rem;
+    background-image: url(../../image/financeManage/open.png); }
+  .ui-list__bank > select {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: .8rem;
+    font-size: .26rem;
+    border: none;
+    outline: none;
+    z-index: 99;
+    opacity: 0; }
+
+.ui-list__item {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2.92rem;
+  font-size: .32rem;
+  padding: 0 .2rem;
+  background-color: #fff; }
+  .ui-list__item > div {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: .74rem;
+    line-height: .72rem;
+    font-size: .32rem;
+    color: #282828;
+    padding: 0rem .88rem 0rem 1.4rem; }
+    .ui-list__item > div > p {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.4rem;
+      height: .72rem;
+      line-height: .72rem;
+      font-size: .28rem;
+      color: #282828;
+      text-align: center; }
+    .ui-list__item > div > span {
+      display: inline-block;
+      width: 100%;
+      height: .72rem;
+      line-height: .72rem;
+      font-size: .32rem;
+      color: #afafaf; }
+    .ui-list__item > div > input {
+      display: block;
+      width: 100%;
+      height: .72rem;
+      line-height: .54rem;
+      font-size: .32rem;
+      color: #2B2B2B;
+      background-color: #fff;
+      border: none;
+      outline: none; }
+      .ui-list__item > div > input::-webkit-input-placeholder {
+        color: #afafaf;
+        font-size: .32rem;
+        font-weight: normal; }
+    .ui-list__item > div > i {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: .72rem;
+      height: .72rem;
+      background-repeat: no-repeat;
+      background-position: left center;
+      -webkit-background-size: .4rem .4rem;
+         -moz-background-size: .4rem .4rem;
+           -o-background-size: .4rem .4rem;
+              background-size: .4rem .4rem;
+      background-image: url(../../image/financeManage/icon-explain.png); }
+    .ui-list__item > div.is-line {
+      border-bottom: 1px solid #afafaf; }
+  .ui-list__item > input {
+    display: block;
+    width: 100%;
+    line-height: .36rem;
+    font-size: .36rem;
+    color: #2B2B2B;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 0 .4rem .14rem;
+    border-bottom: 1px solid #afafaf; }
+    .ui-list__item > input::-webkit-input-placeholder {
+      color: #afafaf;
+      font-size: .32rem;
+      font-weight: normal; }
+    .ui-list__item > input.is-float {
+      position: absolute;
+      top: 1.48rem;
+      opacity: 0;
+      background-color: red; }
+  .ui-list__item > p {
+    display: block;
+    width: 100%;
+    height: .6rem;
+    font-size: .36rem;
+    color: #2B2B2B;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 0 .4rem .14rem;
+    border-bottom: 1px solid #afafaf; }
+
+.ui-list__botton {
+  display: block;
+  width: 100%;
+  padding: 1rem .2rem;
+  -webkit-border-radius: .06rem;
+     -moz-border-radius: .06rem;
+          border-radius: .06rem; }
+  .ui-list__botton > span {
+    display: block;
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+    color: #fff;
+    text-align: center;
+    background-color: #c6c6c6;
+    -webkit-border-radius: .06rem;
+       -moz-border-radius: .06rem;
+            border-radius: .06rem;
+    letter-spacing: .05rem; }
+    .ui-list__botton > span.is-next {
+      background-color: #34c273; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZEJhbmtDYXJkLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFlO0VBQ2YsYUFBWTtFQUNaLGNBQWE7RUFDYiwyQkFBMEIsRUFBRTs7QUFFOUI7RUFDRSxnQkFBZTtFQUNmLGFBQVk7RUFDWixvQkFBbUI7RUFDbkIsbUJBQWtCO0VBQ2xCLGdCQUFlO0VBQ2YscUJBQW9CLEVBQUU7O0FBRXhCO0VBQ0UsZ0JBQWU7RUFDZixhQUFZO0VBQ1osY0FBYTtFQUNiLHdCQUF1QixFQUFFOztBQUUzQjtFQUNFLGdCQUFlO0VBQ2Ysb0JBQW1CO0VBQ25CLGFBQVk7RUFDWixlQUFjO0VBQ2Qsb0JBQW1CO0VBQ25CLG1CQUFrQjtFQUNsQixvQkFBbUI7RUFDbkIsd0JBQXVCO0VBQ3ZCLHVCQUFzQjtFQUN0QiwrQkFBc0I7S0FBdEIsNEJBQXNCO1VBQXRCLHVCQUFzQjtFQUN0QixjQUFhLEVBQUU7RUFDZjtJQUNFLGdCQUFlO0lBQ2YsYUFBWTtJQUNaLGVBQWM7SUFDZCxvQkFBbUI7SUFDbkIsbUJBQWtCO0lBQ2xCLGdCQUFlO0lBQ2Ysb0JBQW1CO0lBQ25CLCtCQUFzQjtPQUF0Qiw0QkFBc0I7WUFBdEIsdUJBQXNCLEVBQUU7RUFDMUI7SUFDRSxnQkFBZTtJQUNmLG9CQUFtQjtJQUNuQixRQUFPO0lBQ1AsVUFBUztJQUNULGVBQWM7SUFDZCxlQUFjO0lBQ2QseUNBQWdDO09BQWhDLHFDQUFnQztZQUFoQyxpQ0FBZ0M7SUFDaEMsNENBQW1DO09BQW5DLHdDQUFtQztZQUFuQyxvQ0FBbUM7SUFDbkMsMkJBQTBCO0lBQzFCLG9DQUFtQztJQUNuQyw4QkFBNkI7SUFDN0Isd0NBQStCO09BQS9CLHFDQUErQjtTQUEvQixtQ0FBK0I7WUFBL0IsZ0NBQStCO0lBQy9CLDJEQUEwRCxFQUFFO0VBQzlEO0lBQ0UsZ0JBQWU7SUFDZixvQkFBbUI7SUFDbkIsUUFBTztJQUNQLFVBQVM7SUFDVCxhQUFZO0lBQ1osZUFBYztJQUNkLG1CQUFrQjtJQUNsQixjQUFhO0lBQ2IsZUFBYztJQUNkLGFBQVk7SUFDWixZQUFXLEVBQUU7O0FBRWpCO0VBQ0UsZ0JBQWU7RUFDZixvQkFBbUI7RUFDbkIsYUFBWTtFQUNaLGlCQUFnQjtFQUNoQixtQkFBa0I7RUFDbEIsa0JBQWlCO0VBQ2pCLHdCQUF1QixFQUFFO0VBQ3pCO0lBQ0UsZ0JBQWU7SUFDZixvQkFBbUI7SUFDbkIsYUFBWTtJQUNaLGdCQUFlO0lBQ2YscUJBQW9CO0lBQ3BCLG1CQUFrQjtJQUNsQixnQkFBZTtJQUNmLGtDQUFpQyxFQUFFO0lBQ25DO01BQ0UsZ0JBQWU7TUFDZixvQkFBbUI7TUFDbkIsUUFBTztNQUNQLFNBQVE7TUFDUixlQUFjO01BQ2QsZ0JBQWU7TUFDZixxQkFBb0I7TUFDcEIsbUJBQWtCO01BQ2xCLGdCQUFlO01BQ2Ysb0JBQW1CLEVBQUU7SUFDdkI7TUFDRSx1QkFBc0I7TUFDdEIsYUFBWTtNQUNaLGdCQUFlO01BQ2YscUJBQW9CO01BQ3BCLG1CQUFrQjtNQUNsQixnQkFBZSxFQUFFO0lBQ25CO01BQ0UsZ0JBQWU7TUFDZixhQUFZO01BQ1osZ0JBQWU7TUFDZixxQkFBb0I7TUFDcEIsbUJBQWtCO01BQ2xCLGdCQUFlO01BQ2Ysd0JBQXVCO01BQ3ZCLGNBQWE7TUFDYixlQUFjLEVBQUU7TUFDaEI7UUFDRSxnQkFBZTtRQUNmLG1CQUFrQjtRQUNsQixxQkFBb0IsRUFBRTtJQUMxQjtNQUNFLGdCQUFlO01BQ2Ysb0JBQW1CO01BQ25CLFFBQU87TUFDUCxVQUFTO01BQ1QsZUFBYztNQUNkLGdCQUFlO01BQ2YsOEJBQTZCO01BQzdCLGtDQUFpQztNQUNqQyxzQ0FBNkI7U0FBN0IsbUNBQTZCO1dBQTdCLGlDQUE2QjtjQUE3Qiw4QkFBNkI7TUFDN0IsbUVBQWtFLEVBQUU7SUFDdEU7TUFDRSxrQ0FBaUMsRUFBRTtFQUN2QztJQUNFLGdCQUFlO0lBQ2YsYUFBWTtJQUNaLHFCQUFvQjtJQUNwQixtQkFBa0I7SUFDbEIsZ0JBQWU7SUFDZix3QkFBdUI7SUFDdkIsY0FBYTtJQUNiLGVBQWM7SUFDZCx5QkFBd0I7SUFDeEIsa0NBQWlDLEVBQUU7SUFDbkM7TUFDRSxnQkFBZTtNQUNmLG1CQUFrQjtNQUNsQixxQkFBb0IsRUFBRTtJQUN4QjtNQUNFLG9CQUFtQjtNQUNuQixjQUFhO01BQ2IsWUFBVztNQUNYLHVCQUFzQixFQUFFO0VBQzVCO0lBQ0UsZ0JBQWU7SUFDZixhQUFZO0lBQ1osZUFBYztJQUNkLG1CQUFrQjtJQUNsQixnQkFBZTtJQUNmLHdCQUF1QjtJQUN2QixjQUFhO0lBQ2IsZUFBYztJQUNkLHlCQUF3QjtJQUN4QixrQ0FBaUMsRUFBRTs7QUFFdkM7RUFDRSxnQkFBZTtFQUNmLGFBQVk7RUFDWixxQkFBb0I7RUFDcEIsK0JBQXNCO0tBQXRCLDRCQUFzQjtVQUF0Qix1QkFBc0IsRUFBRTtFQUN4QjtJQUNFLGdCQUFlO0lBQ2YsYUFBWTtJQUNaLGVBQWM7SUFDZCxvQkFBbUI7SUFDbkIsbUJBQWtCO0lBQ2xCLGFBQVk7SUFDWixvQkFBbUI7SUFDbkIsMkJBQTBCO0lBQzFCLCtCQUFzQjtPQUF0Qiw0QkFBc0I7WUFBdEIsdUJBQXNCO0lBQ3RCLHdCQUF1QixFQUFFO0lBQ3pCO01BQ0UsMkJBQTBCLEVBQUUiLCJmaWxlIjoiZmluYW5jZU1hbmFnZS9hZGRCYW5rQ2FyZC5jc3MiLCJzb3VyY2VSb290IjoiLi4vc2Fzcy8ifQ== */

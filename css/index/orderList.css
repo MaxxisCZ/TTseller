@@ -1,0 +1,106 @@
+.ui-list {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding-top: .88rem; }
+
+.ui-list__topBackground {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: .88rem;
+  background-color: #c2c2c2; }
+
+.ui-list__top {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: .82rem;
+  font-size: 0;
+  background-color: #f3f3f3;
+  z-index: 99; }
+  .ui-list__top > span {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    line-height: .82rem;
+    font-size: .2rem;
+    color: #c9c9c9;
+    text-align: center;
+    background-color: #f3f3f3; }
+    .ui-list__top > span.is-selected {
+      color: #80df8b; }
+      .ui-list__top > span.is-selected:after {
+        content: '';
+        position: absolute;
+        bottom: -.06rem;
+        left: 0;
+        width: 100%;
+        height: .06rem;
+        background-color: #80df8b; }
+
+.ui-list__menu {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  padding: 0rem .3rem; }
+
+.ui-list__item {
+  display: inline-block;
+  position: relative;
+  width: 25%;
+  height: 1.4rem;
+  margin-top: .4rem;
+  padding-top: 1rem; }
+  .ui-list__item > p {
+    display: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: .98rem .98rem;
+       -moz-background-size: .98rem .98rem;
+         -o-background-size: .98rem .98rem;
+            background-size: .98rem .98rem; }
+    .ui-list__item > p.is-allOrder {
+      background-image: url(../../image/index/allOrder.png); }
+    .ui-list__item > p.is-planOrder {
+      background-image: url(../../image/index/planOrder.png); }
+    .ui-list__item > p.is-planShipped {
+      background-image: url(../../image/index/planShipped.png); }
+    .ui-list__item > p.is-planPayment {
+      background-image: url(../../image/index/planPayment.png); }
+    .ui-list__item > p.is-shipped {
+      background-image: url(../../image/index/shipped.png); }
+    .ui-list__item > p.is-finish {
+      background-image: url(../../image/index/finish.png); }
+    .ui-list__item > p.is-applyRefund {
+      background-image: url(../../image/index/applyRefund.png); }
+    .ui-list__item > p.is-cleanOrder {
+      background-image: url(../../image/index/cleanOrder.png); }
+    .ui-list__item > p.is-monthCensus {
+      background-image: url(../../image/index/monthCensus.png); }
+    .ui-list__item > p.is-timeCensus {
+      background-image: url(../../image/index/timeCensus.png); }
+    .ui-list__item > p.is-deliveryCensus {
+      background-image: url(../../image/index/deliveryCensus.png); }
+    .ui-list__item > p.is-orderCensus {
+      background-image: url(../../image/index/orderCensus.png); }
+    .ui-list__item > p.is-SallingCensus {
+      background-image: url(../../image/index/SallingCensus.png); }
+  .ui-list__item > span {
+    display: block;
+    width: 100%;
+    line-height: .5rem;
+    font-size: .24rem;
+    color: #454545;
+    text-align: center; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm9yZGVyTGlzdC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZTtFQUNmLGFBQVk7RUFDWixjQUFhO0VBQ2Isd0JBQXVCO0VBQ3ZCLHFCQUFvQixFQUFFOztBQUV4QjtFQUNFLGdCQUFlO0VBQ2YsaUJBQWdCO0VBQ2hCLFFBQU87RUFDUCxhQUFZO0VBQ1osZ0JBQWU7RUFDZiwyQkFBMEIsRUFBRTs7QUFFOUI7RUFDRSxnQkFBZTtFQUNmLGlCQUFnQjtFQUNoQixRQUFPO0VBQ1AsYUFBWTtFQUNaLGdCQUFlO0VBQ2YsY0FBYTtFQUNiLDJCQUEwQjtFQUMxQixhQUFZLEVBQUU7RUFDZDtJQUNFLHVCQUFzQjtJQUN0QixvQkFBbUI7SUFDbkIsWUFBVztJQUNYLHFCQUFvQjtJQUNwQixrQkFBaUI7SUFDakIsZ0JBQWU7SUFDZixvQkFBbUI7SUFDbkIsMkJBQTBCLEVBQUU7SUFDNUI7TUFDRSxnQkFBZSxFQUFFO01BQ2pCO1FBQ0UsYUFBWTtRQUNaLG9CQUFtQjtRQUNuQixpQkFBZ0I7UUFDaEIsU0FBUTtRQUNSLGFBQVk7UUFDWixnQkFBZTtRQUNmLDJCQUEwQixFQUFFOztBQUVwQztFQUNFLGdCQUFlO0VBQ2YsYUFBWTtFQUNaLGNBQWE7RUFDYixxQkFBb0IsRUFBRTs7QUFFeEI7RUFDRSx1QkFBc0I7RUFDdEIsb0JBQW1CO0VBQ25CLFlBQVc7RUFDWCxnQkFBZTtFQUNmLG1CQUFrQjtFQUNsQixtQkFBa0IsRUFBRTtFQUNwQjtJQUNFLGdCQUFlO0lBQ2Ysb0JBQW1CO0lBQ25CLFFBQU87SUFDUCxTQUFRO0lBQ1IsYUFBWTtJQUNaLGNBQWE7SUFDYiw4QkFBNkI7SUFDN0Isb0NBQW1DO0lBQ25DLHdDQUErQjtPQUEvQixxQ0FBK0I7U0FBL0IsbUNBQStCO1lBQS9CLGdDQUErQixFQUFFO0lBQ2pDO01BQ0UsdURBQXNELEVBQUU7SUFDMUQ7TUFDRSx3REFBdUQsRUFBRTtJQUMzRDtNQUNFLDBEQUF5RCxFQUFFO0lBQzdEO01BQ0UsMERBQXlELEVBQUU7SUFDN0Q7TUFDRSxzREFBcUQsRUFBRTtJQUN6RDtNQUNFLHFEQUFvRCxFQUFFO0lBQ3hEO01BQ0UsMERBQXlELEVBQUU7SUFDN0Q7TUFDRSx5REFBd0QsRUFBRTtJQUM1RDtNQUNFLDBEQUF5RCxFQUFFO0lBQzdEO01BQ0UseURBQXdELEVBQUU7SUFDNUQ7TUFDRSw2REFBNEQsRUFBRTtJQUNoRTtNQUNFLDBEQUF5RCxFQUFFO0lBQzdEO01BQ0UsNERBQTJELEVBQUU7RUFDakU7SUFDRSxnQkFBZTtJQUNmLGFBQVk7SUFDWixvQkFBbUI7SUFDbkIsbUJBQWtCO0lBQ2xCLGdCQUFlO0lBQ2Ysb0JBQW1CLEVBQUUiLCJmaWxlIjoiaW5kZXgvb3JkZXJMaXN0LmNzcyIsInNvdXJjZVJvb3QiOiIuLi9zYXNzLyJ9 */

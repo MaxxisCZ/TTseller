@@ -1,0 +1,21 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>配送时间段设置</p>
+        </div>
+        <div class="ui-costRecord">
+            <div class="ui-setSendingTime">
+                <p>提前下单时长:</p>
+                <div>
+                    <input v-model="hour">
+                </div>
+                <span>小时</span>
+            </div>
+        </div>
+        <div>
+            <p v-touch:tap="onSetTimeTap">确&nbsp;&nbsp;&nbsp;认</p>
+        </div>
+    </div>
+</div>

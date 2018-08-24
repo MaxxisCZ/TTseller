@@ -1,0 +1,20 @@
+<div class="ui-list">
+	<div class="ui-list__freight">
+		<p>运费</p>
+		<input type="tel" v-model="detail.money"/>
+		<span>元</span>
+	</div>
+	<div class="ui-list__freight">
+		<p>满额多少免运费</p>
+		<input type="tel" v-model="detail.full"/>
+		<span>元</span>
+	</div>
+	<div class="ui-list__code">
+		<p>验证码</p>
+		<input type="text" v-model="inputCode"/>
+		<span v-touch:tap="onCodeTap">{{code}}</span>
+	</div>
+	<div class="ui-list__bst">
+		<span v-touch:tap="onConfirmTap">确认</span>
+	</div>
+</div>

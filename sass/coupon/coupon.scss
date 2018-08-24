@@ -1,0 +1,236 @@
+@charset "utf-8";
+@import "../_config";
+html {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    background-color: #fff;
+}
+
+.ui-coupon {
+    display: block;
+    width: 100%;
+    color: #6e7a91;
+    font-size: .26rem;
+    padding-top: 1.68rem;
+}
+
+.ui-coupon__headerTap {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.88rem;
+    background-color: #e9e9e9;
+    line-height: .88rem;
+    text-align: center;
+    color: #c6c6c6;
+    z-index: 99;
+    &>p {
+        flex: 1;
+        font-size: .3rem;
+    }
+}
+
+.isTap {
+    background-color: #fff;
+    color:  #565656;
+    font-size: .24rem;
+}
+
+.ui-list__title {
+    display: block;
+    position: fixed;
+    top: .88rem;
+    left: 0;
+    height: .8rem;
+    width: 100%;
+    background-color: #616e88;
+    text-align: center;
+    line-height: .8rem;
+    font-size: .24rem;
+    color: #ffffff;
+    z-index: 99;
+    & > p {
+        display: block;
+        float: left;
+        width: 25%;
+        line-height: .8rem;
+        text-align: center;
+    }
+    & > span {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1rem;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+    }
+    &.is-del {
+        padding-left: 1rem;
+    }
+}
+
+
+.ui-note__title {
+    display: block;
+    position: fixed;
+    top: .88rem;
+    left: 0;
+    height: .8rem;
+    width: 100%;
+    background-color: #616e88;
+    text-align: center;
+    line-height: .8rem;
+    font-size: .24rem;
+    color: #ffffff;
+    z-index: 99;
+    & > p {
+        display: block;
+        float: left;
+        width: 20%;
+        line-height: .8rem;
+        text-align: center;
+        &.is-id {
+            width: 18%;
+            height: 100%;
+            overflow: hidden;
+            &>span{
+                display: inline-block;
+                line-height: 1.2;
+                vertical-align: middle;
+            }
+        }
+        &.is-reason {
+            width: 28%;
+        }
+        &.is-effective {
+            width: 16%;
+        }
+        &.is-time {
+            width: 24%;
+        }
+        &.is-value {
+            width: 14%;
+        }
+    }
+    & > span {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1rem;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+    }
+    &.is-del {
+        padding-left: 1rem;
+    }
+}
+
+.ui-isList {
+    display: block;
+    position: relative;
+    height: .8rem;
+    width: 100%;
+    line-height: .8rem;
+    font-size: .24rem;
+    color: #616e88;
+    & > i {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1rem;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: .32rem .32rem;
+        background-image: url(../../image/coupon/delete.png);
+    }
+    &.is-del {
+        padding-left: 1rem;
+    }
+}
+
+.ui-list__couponList {
+    display: block;
+    width: 100%;
+    height: .8rem;
+    text-align: center;
+    line-height: .8rem;
+    color: #616e88;
+    & > p {
+        display: block;
+        float: left;
+        width: 25%;
+        line-height: .8rem;
+        text-align: center;
+    }
+}
+
+.ui-list__couponNote {
+    display: block;
+    width: 100%;
+    height: .8rem;
+    text-align: center;
+    line-height: .8rem;
+    color: #616e88;
+    font-size: 0;
+    & > p {
+        display: inline-block;
+        float: left;
+        line-height: .8rem;
+        font-size: .26rem;
+        text-align: center;
+        padding: 0 .04rem;
+        &.is-id {
+            width: 18%;
+        }
+        &.is-reason {
+            width: 28%;
+            height: 100%;
+            overflow: hidden;
+            &>span{
+                display: inline-block;
+                line-height: 1.2;
+                vertical-align: middle;
+            }
+        }
+        &.is-effective {
+            width: 16%;
+        }
+        &.is-time {
+            width: 24%;
+            height: 100%;
+            overflow: hidden;
+            &>span{
+                display: inline-block;
+                line-height: 1.2;
+                vertical-align: middle;
+            }
+        }
+        &.is-value {
+            width: 14%;
+            white-space:nowrap; 
+            overflow:hidden; 
+            text-overflow:ellipsis;
+        }
+    }
+}
+
+.center-hack {
+    display: inline-block;
+    font-size: 0;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}

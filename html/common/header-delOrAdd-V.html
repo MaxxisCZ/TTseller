@@ -1,0 +1,15 @@
+<div id="header" class="ui-header is-base">
+    <div class="ui-header__leftBtn" v-touch:tap="onTapLeftBtn"><i class="is-arrow"></i></div>
+    <div v-touch:tap="onTitleTap" class="ui-header__title">{{title}}</div>
+
+    <div class="ui-header__delTitle" v-touch:tap="onTapRightBtn">
+        <span class="ui-header__del" v-show="!isEdit"></span>
+        <span class="ui-header__finish" v-else>完成
+        </span>
+    </div>
+    <div class="ui-header__rightAdd" v-touch:tap="onAddCouponTap">
+        <span class="ui-header__add">
+        </span>
+    </div>
+
+</div>

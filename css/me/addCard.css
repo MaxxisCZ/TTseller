@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+body,
+html {
+  margin: 0;
+  padding: 0; }
+
+.ui-addcard {
+  display: block;
+  width: 100%; }
+
+.ui-addCard__bind {
+  display: block;
+  padding-left: 0.3rem;
+  width: 100%;
+  height: 0.46rem;
+  line-height: 0.46rem;
+  font-size: 0.24rem; }
+
+.ui-addCard__input {
+  display: block;
+  background-color: #FFF; }
+
+.ui-addCard__row {
+  display: block;
+  position: relative;
+  height: 0.7rem; }
+  .ui-addCard__row > input {
+    display: block;
+    padding-left: 1.88rem;
+    width: 100%;
+    height: 0.7rem;
+    font-size: 0.34rem;
+    outline: none;
+    border: none; }
+
+.ui-addCard__leftText {
+  display: block;
+  position: absolute;
+  left: 0.6rem;
+  top: 0.2rem;
+  font-size: 0.28rem;
+  color: #000; }
+
+.ui-addCard__rightIcon {
+  display: block;
+  position: absolute;
+  right: 0.66rem;
+  top: 0.14rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-image: url(../../image/me/errorIcon.png); }
+
+.ui-addCard__line {
+  display: block;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  height: 1px;
+  background-color: #eee; }
+
+.ui-addCard__btn {
+  display: block;
+  height: 0.8rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  margin-top: 0.46rem;
+  line-height: 0.8rem;
+  text-align: center;
+  background-color: #34c273;
+  font-size: 0.38rem;
+  color: #FFF; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZENhcmQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGtCQUFpQjtBQUNqQjs7SUFFRztBQUNIOztJQUVHO0FBQ0gsMEJBQXlCO0FBQ3pCOzs7SUFHRztBQUNILG1CQUFrQjtBQUNsQixrQkFBaUI7QUFDakI7Ozs7O0lBS0c7QUFDSCxVQUFTO0FBQ1QsVUFBUztBQUNULGFBQVk7QUFDWixZQUFXO0FBQ1gsWUFBVztBQUNYLFdBQVU7QUFDVixZQUFXO0FBQ1gsV0FBVTtBQUNWLFdBQVU7QUFDVixXQUFVO0FBQ1YsU0FBUTtBQUNSLFdBQVU7QUFDVixXQUFVO0FBQ1YsV0FBVTtBQUNWLFlBQVc7QUFDWDs7RUFFRSxXQUFVO0VBQ1YsWUFBVyxFQUFFOztBQUVmO0VBQ0UsZ0JBQWU7RUFDZixhQUFZLEVBQUU7O0FBRWhCO0VBQ0UsZ0JBQWU7RUFDZixzQkFBcUI7RUFDckIsYUFBWTtFQUNaLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsb0JBQW1CLEVBQUU7O0FBRXZCO0VBQ0UsZ0JBQWU7RUFDZix3QkFBdUIsRUFBRTs7QUFFM0I7RUFDRSxnQkFBZTtFQUNmLG9CQUFtQjtFQUNuQixnQkFBZSxFQUFFO0VBQ2pCO0lBQ0UsZ0JBQWU7SUFDZix1QkFBc0I7SUFDdEIsYUFBWTtJQUNaLGdCQUFlO0lBQ2Ysb0JBQW1CO0lBQ25CLGVBQWM7SUFDZCxjQUFhLEVBQUU7O0FBRW5CO0VBQ0UsZ0JBQWU7RUFDZixvQkFBbUI7RUFDbkIsY0FBYTtFQUNiLGFBQVk7RUFDWixvQkFBbUI7RUFDbkIsYUFBWSxFQUFFOztBQUVoQjtFQUNFLGdCQUFlO0VBQ2Ysb0JBQW1CO0VBQ25CLGdCQUFlO0VBQ2YsY0FBYTtFQUNiLGVBQWM7RUFDZCxnQkFBZTtFQUNmLDhCQUE2QjtFQUM3QixvQ0FBbUM7RUFDbkMsZ0NBQXVCO0tBQXZCLDZCQUF1QjtPQUF2QiwyQkFBdUI7VUFBdkIsd0JBQXVCO0VBQ3ZCLHFEQUFvRCxFQUFFOztBQUV4RDtFQUNFLGdCQUFlO0VBQ2YscUJBQW9CO0VBQ3BCLHNCQUFxQjtFQUNyQixhQUFZO0VBQ1osd0JBQXVCLEVBQUU7O0FBRTNCO0VBQ0UsZ0JBQWU7RUFDZixnQkFBZTtFQUNmLHFCQUFvQjtFQUNwQixzQkFBcUI7RUFDckIscUJBQW9CO0VBQ3BCLHFCQUFvQjtFQUNwQixvQkFBbUI7RUFDbkIsMkJBQTBCO0VBQzFCLG9CQUFtQjtFQUNuQixhQUFZLEVBQUUiLCJmaWxlIjoibWUvYWRkQ2FyZC5jc3MiLCJzb3VyY2VSb290IjoiLi4vc2Fzcy8ifQ== */

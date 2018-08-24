@@ -1,0 +1,34 @@
+<div class="ui-login">
+    <div class="ui-login__logo">
+        <img src="../../image/account/logo.png" />
+        <p class="ui-login__title">
+            商家版
+        </p>
+    </div>
+    <div class="ui-login__input">
+        <div class="ui-login__inputBox">
+            <input type="text" placeholder="请输入账号" v-model="account" @keyup.enter="onLoginTap"/>
+        </div>
+        <div class="ui-login__inputBox">
+            <input type="password" placeholder="请输入密码" v-model="password" @keyup.enter="onLoginTap"/>
+        </div>
+    </div>
+    <div class="ui-btn">
+        <div class="ui-login__btn1"  v-touch:tap="onLoginTap">
+            <p class="ui-login__loginBtn">
+                登录
+            </p>
+        </div>
+        <div class="ui-login__btn2" v-touch:tap="onRegistTap">
+            <p class="ui-login__registBtn">
+                申请加盟
+            </p>
+        </div>
+    </div>
+    <div class="ui-login__forget" v-touch:tap="onForgetTap">
+        找回密码？
+    </div>
+    <div class="ui-list__footer" v-show="versionShow">
+        <span>{{version}}</span>
+    </div>
+</div>

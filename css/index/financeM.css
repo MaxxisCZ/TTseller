@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #34c273;
+  overflow-y: hidden; }
+
+#content {
+  background-color: #19a05e;
+  -webkit-background-size: 100% 100%;
+     -moz-background-size: 100%;
+       -o-background-size: 100%;
+          background-size: 100%; }
+
+.ui-financeM__base {
+  position: fixed;
+  top: 0;
+  height: 3.24rem;
+  width: 100%;
+  color: #ffffff;
+  background-color: #34c273;
+  overflow: hidden; }
+
+.ui-financeM__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: center; }
+
+.ui-balance {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: .25rem;
+  padding-top: .68rem; }
+
+.ui-recharge {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: .41rem;
+  padding-top: .6rem; }
+
+.ui-withdrawCash {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: .41rem;
+  padding-top: .6rem; }
+
+.ui-financeM__count {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: center; }
+
+.ui-number {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: .8rem;
+  padding-top: .38rem; }
+
+.ui-financeM__toDetail {
+  position: relative;
+  text-align: center;
+  font-size: .2rem;
+  padding-top: .42rem; }
+  .ui-financeM__toDetail > div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.1rem;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../../image/index/arrowDown.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    width: .25rem;
+    height: .14rem; }
+
+.ui-financeM__detail {
+  position: absolute;
+  top: 3.24rem;
+  left: 0;
+  width: 100%;
+  font-size: .26rem;
+  color: #ffffff;
+  height: 100%;
+  background-color: #19a05e;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  overflow: auto; }
+
+.ui-detail__line {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding-top: .32rem; }
+
+.ui-line__time {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+     -moz-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2; }
+
+.ui-line__financeType {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.ui-line__finance {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbmFuY2VNLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxrQkFBaUI7QUFDakI7O0lBRUc7QUFDSDs7SUFFRztBQUNILDBCQUF5QjtBQUN6Qjs7O0lBR0c7QUFDSCxtQkFBa0I7QUFDbEIsa0JBQWlCO0FBQ2pCOzs7OztJQUtHO0FBQ0gsVUFBUztBQUNULFVBQVM7QUFDVCxhQUFZO0FBQ1osWUFBVztBQUNYLFlBQVc7QUFDWCxXQUFVO0FBQ1YsWUFBVztBQUNYLFdBQVU7QUFDVixXQUFVO0FBQ1YsV0FBVTtBQUNWLFNBQVE7QUFDUixXQUFVO0FBQ1YsV0FBVTtBQUNWLFdBQVU7QUFDVixZQUFXO0FBQ1g7RUFDRSxXQUFVO0VBQ1YsWUFBVyxFQUFFOztBQUVmO0VBQ0UsMkJBQTBCO0VBQzFCLG9CQUFtQixFQUFFOztBQUV2QjtFQUNFLDJCQUEwQjtFQUMxQixvQ0FBc0I7S0FBdEIsNEJBQXNCO09BQXRCLDBCQUFzQjtVQUF0Qix1QkFBc0IsRUFBRTs7QUFFMUI7RUFDRSxpQkFBZ0I7RUFDaEIsUUFBTztFQUNQLGlCQUFnQjtFQUNoQixhQUFZO0VBQ1osZ0JBQWU7RUFDZiwyQkFBMEI7RUFDMUIsa0JBQWlCLEVBQUU7O0FBRXJCO0VBQ0Usc0JBQWM7RUFBZCx1QkFBYztFQUFkLG1CQUFjO0VBQWQsc0JBQWM7RUFBZCxlQUFjO0VBQ2QsYUFBWTtFQUNaLG9CQUFtQixFQUFFOztBQUV2QjtFQUNFLHFCQUFRO0VBQVIsaUJBQVE7S0FBUixrQkFBUTtNQUFSLGFBQVE7VUFBUixTQUFRO0VBQ1IsbUJBQWtCO0VBQ2xCLHFCQUFvQixFQUFFOztBQUV4QjtFQUNFLHFCQUFRO0VBQVIsaUJBQVE7S0FBUixrQkFBUTtNQUFSLGFBQVE7VUFBUixTQUFRO0VBQ1IsbUJBQWtCO0VBQ2xCLG9CQUFtQixFQUFFOztBQUV2QjtFQUNFLHFCQUFRO0VBQVIsaUJBQVE7S0FBUixrQkFBUTtNQUFSLGFBQVE7VUFBUixTQUFRO0VBQ1IsbUJBQWtCO0VBQ2xCLG9CQUFtQixFQUFFOztBQUV2QjtFQUNFLHNCQUFjO0VBQWQsdUJBQWM7RUFBZCxtQkFBYztFQUFkLHNCQUFjO0VBQWQsZUFBYztFQUNkLGFBQVk7RUFDWixvQkFBbUIsRUFBRTs7QUFFdkI7RUFDRSxxQkFBUTtFQUFSLGlCQUFRO0tBQVIsa0JBQVE7TUFBUixhQUFRO1VBQVIsU0FBUTtFQUNSLGtCQUFpQjtFQUNqQixxQkFBb0IsRUFBRTs7QUFFeEI7RUFDRSxvQkFBbUI7RUFDbkIsb0JBQW1CO0VBQ25CLGtCQUFpQjtFQUNqQixxQkFBb0IsRUFBRTtFQUN0QjtJQUNFLG9CQUFtQjtJQUNuQixTQUFRO0lBQ1IsVUFBUztJQUNULGFBQVk7SUFDWixXQUFVO0lBQ1YsY0FBYTtJQUNiLHdEQUF1RDtJQUN2RCw4QkFBNkI7SUFDN0IsZ0NBQXVCO09BQXZCLDZCQUF1QjtTQUF2QiwyQkFBdUI7WUFBdkIsd0JBQXVCO0lBQ3ZCLGVBQWM7SUFDZCxnQkFBZSxFQUFFOztBQUVyQjtFQUNFLG9CQUFtQjtFQUNuQixjQUFhO0VBQ2IsU0FBUTtFQUNSLGFBQVk7RUFDWixtQkFBa0I7RUFDbEIsZ0JBQWU7RUFDZixjQUFhO0VBQ2IsMkJBQTBCO0VBQzFCLGdDQUF1QjtLQUF2Qiw2QkFBdUI7T0FBdkIsMkJBQXVCO1VBQXZCLHdCQUF1QjtFQUN2QixnQkFBZSxFQUFFOztBQUVuQjtFQUNFLHNCQUFjO0VBQWQsdUJBQWM7RUFBZCxtQkFBYztFQUFkLHNCQUFjO0VBQWQsZUFBYztFQUNkLG9CQUFtQjtFQUNuQixxQkFBb0IsRUFBRTs7QUFFeEI7RUFDRSxxQkFBUTtFQUFSLGlCQUFRO0tBQVIsa0JBQVE7TUFBUixhQUFRO1VBQVIsU0FBUSxFQUFFOztBQUVaO0VBQ0UscUJBQVE7RUFBUixpQkFBUTtLQUFSLGtCQUFRO01BQVIsYUFBUTtVQUFSLFNBQVEsRUFBRTs7QUFFWjtFQUNFLHFCQUFRO0VBQVIsaUJBQVE7S0FBUixrQkFBUTtNQUFSLGFBQVE7VUFBUixTQUFRLEVBQUUiLCJmaWxlIjoiaW5kZXgvZmluYW5jZU0uY3NzIiwic291cmNlUm9vdCI6Ii4uL3Nhc3MvIn0= */

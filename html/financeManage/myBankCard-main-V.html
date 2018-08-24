@@ -1,0 +1,14 @@
+<div class="ui-list">
+	<div class="ui-list__card" v-bind:class="{'is-card':hasCard}">
+		<div v-for="item in myCard" v-touch:press="onDelTap($index)">
+			<i style="background-image:url({{item.logo | trans-avatar}})"></i>
+			<span>
+				<title>{{item.bank}}</title>
+				<li>{{item.name}}</li>
+			</span>
+			<p>{{item.number}}</p>
+			<!-- <p>xxxx xxxx xxxx</p>
+			<p class="is-num">{{item.number}}</p> -->
+		</div>
+	</div>
+</div>

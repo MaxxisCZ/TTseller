@@ -1,0 +1,217 @@
+<div class="ui-edit">
+    <div class="ui-list">
+        <div class="ui-list__shop">
+            <div class="ui-list__shopName">
+                店铺图片
+            </div>
+            <div class="ui-list__shopPhoto">
+                <p style="background-image:url({{detail.avatar | trans-avatar}})" v-touch:tap="onAvatarTap"></p>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                姓名
+            </div>
+            <div class="ui-list__input">
+                <input type="text" v-model="detail.name" />
+            </div>
+        </div>
+        <div class="ui-list__select">
+            <span>性别</span>
+            <p>
+                <select v-model="detail.sex">
+                    <option value="2">
+                        女
+                    </option>
+                    <option value="1">
+                        男
+                    </option>
+                </select>
+            </p>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                出生年月
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" v-touch:tap="picker" class="birth" v-model="detail.birth"></input>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                户口所在地
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" class="birthPlace" v-touch:tap="onRegionTap('region')" v-model="detail.region"></input>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                手机号码
+            </div>
+            <div class="ui-list__input">
+                <input type="number" v-model="detail.phone" readOnly/>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                QQ
+            </div>
+            <div class="ui-list__input">
+                <input type="text" v-model="detail.QQ" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                微信
+            </div>
+            <div class="ui-list__input">
+                <input type="text" v-model="detail.wechat" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                邮箱
+            </div>
+            <div class="ui-list__input">
+                <input type="text" v-model="detail.email" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                代理商名
+            </div>
+            <div class="ui-list__input">
+                <input type="text" v-model="detail.agentName" />
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                所在省
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" placeholder="省份" v-touch:tap="onRegionTap('nowPlace')" v-model="detail.province"></input>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                所在市
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" placeholder="地级市"  v-touch:tap="onRegionTap('nowPlace')" v-model="detail.city"></input>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                所在县
+            </div>
+            <div class="ui-list__input">
+                <input readOnly="true" placeholder="市、县级市、县" v-touch:tap="onRegionTap('nowPlace')" v-model="detail.county"></input>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                配送区域
+            </div>
+            <div class="ui-list__input">
+                <select class="area">
+                    <option v-for="item in areaList">
+                        {{item.name}}
+                    </option>
+                </select>
+                <!-- <span class="ui-list__select" v-show="show">所在区域</span> -->
+            </div>
+        </div>
+        <div class="ui-list__item is-addr">
+            <div class="ui-list__title is-addr">
+                联系地址
+            </div>
+            <div class="ui-list__input">
+                <textarea v-model="detail.addr" type="text"></textarea>
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                拟开店面
+            </div>
+            <div class="ui-list__input">
+                <input v-model="detail.shop" type="number" />
+            </div>
+            <div class="ui-list__text">
+                平方米
+            </div>
+        </div>
+        <div class="ui-list__item">
+            <div class="ui-list__title">
+                月租金
+            </div>
+            <div class="ui-list__input">
+                <input v-model="detail.rent" type="number" />
+            </div>
+            <div class="ui-list__text">
+                元/月
+            </div>
+        </div>
+    </div>
+    <div class="ui-detail">
+        <div class="ui-detail__signboard">
+            <div class="ui-detail__title">
+                门头可做招牌
+            </div>
+            <div class="ui-detail__size">
+                <div class="ui-detail__text">
+                    长
+                </div>
+                <input v-model="detail.length" type="number" />
+                <div class="ui-detail__text">
+                    宽
+                </div>
+                <input v-model="detail.width" type="number" />
+                <div class="ui-detail__text">
+                    高
+                </div>
+                <input v-model="detail.height" type="number" />
+            </div>
+        </div>
+        <div class="ui-detail__manage">
+            <div class="ui-detail__title">
+                管理人员
+            </div>
+            <div class="ui-detail__select">
+                <div class="ui-detail__item" v-for="item in checkList">
+                    <div class="ui-detail__subItem">
+                        <div class="ui-detail__box" v-touch:tap="onCheckTap($index)">
+                            <div v-bind:class="{'is-checked':$index == manager}">
+                            </div>
+                        </div>
+                        <div class="ui-detail__selectText">
+                            {{item.text}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-list__item">
+        <p class="ui-list__title">
+            欲投入资金
+        </p>
+        <div class="ui-list__input">
+            <input v-model="detail.money" type="number" />
+        </div>
+        <p class="ui-list__text">
+            元
+        </p>
+    </div>
+    <div class="ui-list__item">
+        <p class="ui-list__title">
+            管理时间
+        </p>
+        <div class="ui-list__input">
+            <input v-touch:tap="picker" readOnly="readOnly" class="time" v-model="detail.time"/>
+        </div>
+    </div>
+    <div class="ui-edit__btn" v-touch:tap="onSaveTap">
+        保存
+    </div>
+</div>

@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-image: -webkit-linear-gradient(to top, #57b45e, #98e28b);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#57b45e), to(#98e28b));
+  background-image: -webkit-linear-gradient(bottom, #57b45e, #98e28b);
+  background-image: -moz-linear-gradient(bottom, #57b45e, #98e28b);
+  background-image: -o-linear-gradient(bottom, #57b45e, #98e28b);
+  background-image: linear-gradient(to top, #57b45e, #98e28b); }
+
+.ui-login {
+  display: block;
+  width: 100%; }
+
+.ui-login__logo {
+  display: inline-block;
+  margin-top: 1.5rem;
+  width: 100%;
+  font-size: 0.22rem;
+  text-align: center;
+  vertical-align: middle; }
+  .ui-login__logo > img {
+    width: 3.1rem;
+    height: 1.74rem;
+    vertical-align: middle; }
+  .ui-login__logo > p {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    color: #3c904f; }
+
+.ui-login__inputBox {
+  display: block;
+  height: 0.9rem;
+  margin-left: 0.58rem;
+  margin-right: 0.58rem;
+  margin-top: 0.5rem;
+  padding: 0.1rem;
+  background-color: #9bdc96;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px; }
+  .ui-login__inputBox > input {
+    display: block;
+    width: 100%;
+    height: 0.7rem;
+    padding-left: 0.68rem;
+    padding-right: 0.68rem;
+    font-size: 0.24rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    -webkit-border-radius: 30px;
+       -moz-border-radius: 30px;
+            border-radius: 30px;
+    background-color: #FFF; }
+
+.ui-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  margin-top: 0.64rem; }
+
+.ui-login__btn1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  padding: 0.1rem;
+  margin-left: 0.9rem;
+  margin-right: 0.5rem;
+  background-color: #89ce89;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+  font-size: 0.24rem;
+  text-align: center; }
+
+.ui-login__btn2 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  padding: 0.1rem;
+  margin-right: 0.9rem;
+  background-color: #89ce89;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+  font-size: 0.24rem;
+  text-align: center; }
+
+.ui-login__loginBtn {
+  display: inline-block;
+  height: 0.56rem;
+  width: 100%;
+  line-height: 0.56rem;
+  background-color: #db5565;
+  text-align: center;
+  color: #FFF;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px; }
+
+.ui-login__registBtn {
+  display: inline-block;
+  height: 0.56rem;
+  width: 100%;
+  line-height: 0.56rem;
+  background-color: #0bacd3;
+  text-align: center;
+  color: #FFF;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px; }
+
+.ui-login__forget {
+  display: block;
+  margin-top: 0.42rem;
+  font-size: 0.24rem;
+  color: #FFF;
+  text-align: center; }
+
+.ui-list__footer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: .72rem;
+  font-size: .26rem;
+  color: #fff;
+  text-align: center;
+  letter-spacing: .01rem; }
+
+
+/*# sourceMappingURL=data:application/json;base64,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 */

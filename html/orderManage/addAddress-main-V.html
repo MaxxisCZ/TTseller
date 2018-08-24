@@ -1,0 +1,54 @@
+<div class="ui-list">
+	<div class="ui--list__header" v-touch:tap="onDefaultTap">
+		<i v-bind:class="{'is-select':address.isdefault}"></i>
+		<!-- <i class="is-select"></i> -->
+		<span>设为默认地址</span>
+	</div>
+
+	<div class="ui-list__item">
+		<p>收货人：</p>
+		<input type="text" placeholder="" v-model="address.peolpe" />
+	</div>
+	<div class="ui-list__item">
+		<p>手机号码：</p>
+		<input type="tel" placeholder="" v-model="address.mobile" />
+	</div>
+	<div class="ui-list__item">
+		<p>所在城市：</p>
+		<i v-touch:tap="onAreaTap">{{area.areaName}}-{{area.city}}-{{area.countrySide}}</i>
+	</div>
+	<div class="ui-list__item">
+		<p>所在小区：</p>
+		<input type="text" class="is-village" placeholder="" v-model="selected" readonly />
+		<span>选择小区
+			<select v-model="selected">
+				<option v-for="option in options" v-bind:value="option.villageName">{{option.villageName}}</option>
+			</select>
+		</span>
+		
+	</div>
+	<div class="ui-list__item">
+		<p>小区几栋：</p>
+		<input type="text" v-model="address.building" placeholder="格式:21" />
+	</div>
+	<div class="ui-list__item">
+		<p>几单元：</p>
+		<input type="text" v-model="address.level" placeholder="格式:1或A" />
+	</div>
+	<div class="ui-list__item">
+		<p>几楼几室：</p>
+		<input type="text" v-model="address.room" placeholder="格式:1楼1室" />
+	</div>
+	<div class="ui-list__item">
+		<p>地址分类</p>
+		<ul>
+			<li v-for="item in addrKind" v-touch:tap="onSelectTap($index)" v-bind:class="{'is-select':item.isSelect}">{{item.type}}</li>
+		</ul>
+	</div>
+
+	<input type="text" class="ui-list__detailAddr" placeholder="*请详细填写地址以便能准确快速送达" v-model="address.addr" /> 
+
+	<div class="ui-list__button">
+		<span v-touch:tap="onSubmitTap">提交保存</span>
+	</div>
+</div>

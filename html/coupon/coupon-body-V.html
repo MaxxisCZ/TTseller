@@ -1,0 +1,46 @@
+<div id="content">
+    <div class="ui-coupon">
+        <div class="ui-coupon__headerTap">
+            <p v-bind:class="{'isTap':isList}" v-touch:tap="onCouponList('A')">优惠券列表</p>
+            <p v-bind:class="{'isTap':!isList}" v-touch:tap="onCouponList('B')">优惠券记录列表</p>
+        </div>
+        <div v-show="isList">
+            <div class="ui-list__title" v-bind:class="{'is-del': isEdit}">
+                <span v-show="isEdit">删除</span>
+                <p>优惠券ID</p>
+                <p>类型</p>
+                <p>期限(天)</p>
+                <p>面值</p>
+            </div>
+            <div class="ui-isList" v-for="item in list"  v-bind:class="{'is-del': isEdit}">
+                <i v-touch:tap="onDeleteListTap($index)" v-show="isEdit"></i>
+                <div class="ui-list__couponList" v-touch:tap="onListDetailTap($index)">
+                    <p>{{item.couponID}}</p>
+                    <p>{{item.couponType}}</p>
+                    <p>{{item.couponWorkTime}}</p>
+                    <p>{{item.faceValue}}</p>
+                </div>
+            </div>
+        </div>
+        <div v-show="!isList">
+            <div class="ui-note__title" v-bind:class="{'is-del': isEdit}">
+                <span v-show="isEdit">删除</span>
+                <p class="is-id"><b class="center-hack"></b><span>优惠券记录ID</span></p>
+                <p class="is-reason">发放类型</p>
+                <p class="is-effective">是否有效</p>
+                <p class="is-time">失效时间</p>
+                <p class="is-value">面值</p>
+            </div>
+            <div class="ui-isList" v-for="item in recordList" v-bind:class="{'is-del': isEdit}">
+                <i v-touch:tap="onDeleteRecordTap($index)" v-show="isEdit"></i>
+                <div class="ui-list__couponNote">
+                    <p class="is-id">{{item.couponID}}</p>
+                    <p class="is-reason"><b class="center-hack"></b><span>{{item.reason}}</span></p>
+                    <p class="is-effective">{{item.isCouponWork}}</p>
+                    <p class="is-time"><b class="center-hack"></b><span>{{item.couponLostDate}}</span></p>
+                    <p class="is-value">{{item.faceValue}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

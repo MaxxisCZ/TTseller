@@ -1,0 +1,22 @@
+<div class="ui-shadow shadow" v-touch:tap="onCancelTap"></div>
+<div>
+    <div class="ui-body">
+        <div v-touch:tap="onCancelTap"></div>
+        <div class="ui-title">
+            <p>填写退单理由</p>
+        </div>
+        <div class="ui-refuseRec__input">
+            <textarea v-model="reason"></textarea>
+        </div>
+        <div class="ui-refuseIsOK">
+                <div>
+                    <div v-touch:tap="onCancelTap" class="no">
+                        取消
+                    </div>
+                </div>
+                <div>
+                    <div v-touch:tap="onSubmitTap" class="sure">确定</div>
+                </div>
+        </div>
+    </div>
+</div>
